@@ -31,8 +31,7 @@
             label = "func_bracket";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp KP_LPAR &kp KP_RPAR &kp LCBR &kp RCBR>;
+            bindings = <&macro_tap &kp KP_LPAR &kp KP_RPAR &kp LCBR &kp RCBR>;
         };
     };
   behaviors {
