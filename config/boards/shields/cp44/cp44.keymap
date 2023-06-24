@@ -78,8 +78,8 @@
     number_layer {
       bindings = <
         &none         &none           &none           &none           &none           &none                              &none         &kp N7         &kp N8      &kp N9      &none         &none
-        &none         &none           &none           &none           &trans          &none                              &none         &kp N1         &kp N2      &kp N3      &kp N4           &none
-        &none         &none           &none           &none           &none           &none              &kp C_MUTE      &none         &kp EQUAL      &none    &none    &none         &none
+        &none         &none           &none           &none           &trans          &none                              &none         &kp N1         &kp N2      &kp N3      &kp N4        &none
+        &none         &none           &none           &none           &none           &none              &kp C_MUTE      &none         &kp EQUAL      &none       &none       &none         &none
                                                       &trans          &trans          &trans    &trans     &kp N6        &kp N5         &kp N0      &trans
       >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -87,11 +87,12 @@
 
     function_layer {
       bindings = <
-        &trans         &none           &none           &none           &none           &none                             &none                            &kp F7         &kp F8      &kp F9      &kp F10         &kp C_AL_SCREENSAVER
-        &none         &none           &none           &none           &none           &none             &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS            &kp F1         &kp F2      &kp F3      &kp F4           &none
-        &none         &none           &none           &none           &none           &none    &kp C_VOICE_COMMAND     &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp F11        &kp F12     &none    &none         &none
-                                                      &trans          &trans          &trans   &trans    &kp F6           &kp F5                                &kp F0         &trans
+        &trans        &none           &none           &none           &none           &none                             &none                             &kp F7         &kp F8      &kp F9      &kp F10         &kp C_AL_SCREENSAVER
+        &none         &none           &none           &none           &none           &none             &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS            &kp F1         &kp F2      &kp F3      &kp F4          &none
+        &none         &none           &none           &none           &none           &none    &kp C_VOICE_COMMAND     &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp F11        &kp F12     &none       &none           &none
+                                                      &trans          &trans          &trans   &trans    &kp F6          &kp F5                           &kp F0         &trans
       >;
+      sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
     };
 
     normal_layer {
@@ -102,6 +103,7 @@
         &none         &none           &kp K_REDO      &kp DOWN        &kp UP          &kp PG_DN             &kp C_SNAPSHOT     &none         &kp BKSL      &kp PIPE      &none      &none     &none
                                                       &trans          &trans          &trans        &trans       &trans        &trans        &trans        &trans
       >;
+      sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
     };
 
     bracket_layer{
@@ -111,6 +113,7 @@
         &none         &none          &none             &none   &kp LBKT        &kp RBKT         &none              &none         &none         &none         &none         &none       &none
                                                        &trans          &trans          &trans    &trans    &trans       &trans         &trans         &trans
       >;
+      sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
     };
 
     other_layer {
@@ -120,6 +123,7 @@
         &none         &none           &none         &kp PSCRN      &kp PAUSE_BREAK     &none           &to QWERTY           &none         &none         &bt BT_CLR     &none         &out OUT_TOG  &bootloader
                                                     &trans          &trans             &trans     &trans      &trans        &trans        &trans        &trans
       >;
+      sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
     };
 
     qwerty_layer{
