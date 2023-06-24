@@ -26,12 +26,17 @@
     tapping-term-ms = <400>;
 };
 / {
-     macros {
+      macros {
         func_bracket: func_bracket {
             label = "func_bracket";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp KP_LPAR &kp KP_RPAR &kp LCBR &kp RCBR>;
+            wait-ms = <10>;
+            bindings
+                = <&kp KP_LPAR &kp KP_RPAR>
+                , <&macro_wait_time 10>
+                , <&kp LCBR &kp RCBR>
+                ;
         };
     };
   behaviors {
@@ -72,7 +77,7 @@
         &none         &none           &none           &none           &none           &none             &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS            &F1         &kp F2      &kp F3      &kp F4           &none
         &none         &none           &none           &none           &none           &none    &kp C_VOICE_COMMAND     &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &F11        &kp F12     &kp none    &kp none         &none
                                                       &trans          &trans          &trans   &trans    &F6           &F5                                &F0         &trans
-    }
+    };
 
     normal_layer {
     
@@ -80,21 +85,21 @@
         &none         &none           &kp K_UNDO      &kp K_CUT       &kp LC(A)       &kp PG_UP                                &none         &kp LEFT      &kp DOWN      &kp RIGHT     &none     &none
         &none         &none           &kp K_REDO      &kp DOWN        &kp UP          &kp PG_DN             &kp C_SNAPSHOT     &none         &kp BKSL      &kp PIPE      &none      &none     &none
                                                       &trans          &trans          &trans        &trans       &trans        &trans        &trans        &trans
-    }
+    };
 
     bracket_layer{
         &none         &none          &kp KP_DIVIDE     &kp KP_MINUS    &kp KP_LPAR     &kp KP_RPAR                         &none         &none         &none         &none         &none       &none
         &none         &none          &kp KP_MULTIPLY   &kp KP_PLUS     &kp LCBR        &kp RCBR                            &none         &none         &none         &none         &none       &none
         &none         &none          &none             &func_bracket   &kp LBKT        &kp RBKT         &none              &none         &none         &none         &none         &none       &none
                                                        &trans          &trans          &trans    &trans    &trans       &trans         &trans         &trans
-    }
+    };
 
     other_layer {
         &none         &none           &none         &kp SLCK       &kp HOME            &none                                &none         &none         &bootloader    &none         &none         &sys_reset
         &none         &none           &none         &kp INSERT     &kp END             &none                                &none         &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
         &none         &none           &none         &kp PSCRN      &kp PAUSE_BREAK     &none           &to QWERTY           &none         &none         &bt BT_CLR     &none         &out OUT_TOG  &bootloader
                                                     &trans          &trans             &trans     &trans      &trans        &trans        &trans        &trans
-    }
+    };
 
     qwerty_layer{
         &kp ESC     &kp Q     &kp W       &kp E     &kp R           &kp T                                &kp Y     &kp U     &kp I      &kp O    &kp P     &bspc_del
@@ -102,6 +107,6 @@
         &kp LSHFT   &kp Z     &kp X       &kp C     &kp V           &kp B            &to DEFAULT         &kp N     &kp M     &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT RET
                                      &mo BRACKET    &mo NORMAL      &kp SPACE    &kp SPACE  &kp SPACE    &kp SPACE       &mo FUNCTION     &mo NUMBER
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
-    }
+    };
         };
 };
