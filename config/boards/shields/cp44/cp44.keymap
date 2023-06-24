@@ -101,7 +101,6 @@
         &none         &none           &kp K_REDO      &kp DOWN        &kp UP          &kp PG_DN             &none              &none         &kp BSLH      &kp PIPE      &none      &none     &none
                                                       &trans          &trans          &trans        &trans       &trans        &trans        &trans        &trans
       >;
-      sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
     };
 
     bracket_layer{
@@ -111,7 +110,6 @@
         &none         &none          &none             &none           &kp LBKT        &kp RBKT         &none              &none         &none         &none         &none         &none       &none
                                                        &trans          &trans          &trans    &trans    &trans       &trans         &trans         &trans
       >;
-      sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
     };
 
     other_layer {
@@ -121,7 +119,6 @@
         &none         &none           &none         &kp PSCRN      &kp PAUSE_BREAK     &none           &to QWERTY           &none         &none         &bt BT_CLR     &none         &none         &bootloader
                                                     &trans          &trans             &trans     &trans      &trans        &trans        &trans        &trans
       >;
-      sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
     };
 
     qwerty_layer{
