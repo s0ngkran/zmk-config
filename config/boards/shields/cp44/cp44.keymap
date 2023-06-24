@@ -107,8 +107,8 @@
     bracket_layer{
       bindings = <
         &none         &none          &kp KP_DIVIDE     &kp KP_MINUS    &kp KP_LPAR     &kp KP_RPAR                         &none         &none         &none         &none         &none       &none
-        &none         &none          &kp KP_MULTIPLY   &kp KP_PLUS     &kp LCBR        &kp RCBR                            &none         &none         &none         &none         &none       &none
-        &none         &none          &none             &none   &kp LBKT        &kp RBKT         &none              &none         &none         &none         &none         &none       &none
+        &none         &none          &kp KP_MULTIPLY   &kp KP_PLUS     &kp LBRC        &kp LBRC                            &none         &none         &none         &none         &none       &none
+        &none         &none          &none             &none           &kp LBKT        &kp RBKT         &none              &none         &none         &none         &none         &none       &none
                                                        &trans          &trans          &trans    &trans    &trans       &trans         &trans         &trans
       >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
