@@ -96,9 +96,9 @@
 
     normal_layer {
       bindings = <
-        &none         &none           &none           &none           &kp K_PATSE     &kp K_COPY                               &none         &none         &kp UP        &none      &none     &kp BKSL
-        &none         &none           &kp K_UNDO      &kp K_CUT       &kp LC(A)       &kp PG_UP                                &none         &kp LEFT      &kp DOWN      &kp RIGHT  &none     &none
-        &none         &none           &kp K_REDO      &kp DOWN        &kp UP          &kp PG_DN             &kp C_SNAPSHOT     &none         &kp BKSL      &kp PIPE      &none      &none     &none
+        &none         &none           &none           &none           &kp LC(V)       &kp LC(C)                                &none         &none         &kp UP        &none      &none     &kp BKSL
+        &none         &none           &kp K_UNDO      &kp LC(X)       &kp LC(A)       &kp PG_UP                                &none         &kp LEFT      &kp DOWN      &kp RIGHT  &none     &none
+        &none         &none           &kp K_REDO      &kp DOWN        &kp UP          &kp PG_DN             &none              &none         &kp BKSL      &kp PIPE      &none      &none     &none
                                                       &trans          &trans          &trans        &trans       &trans        &trans        &trans        &trans
       >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
