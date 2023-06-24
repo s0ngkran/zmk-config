@@ -96,8 +96,8 @@
 
     normal_layer {
       bindings = <
-        &none         &none           &none          &none           &kp LG(V)       &kp LG(C)                                &none         &kp LS(TAP)   &kp UP       &kp TAP        &kp LG(L)     &kp BACKSPACE
-        &none         &kp LG(TAB)     &kp LG(Z)      &kp LG(X)       &kp LG(A)       &kp UP                                   &td0         &kp LEFT      &kp DOWN     &kp RIGHT      &kp RET       &kp RET
+        &none         &none           &none          &none           &kp LG(V)       &kp LG(C)                                &none         &kp LS(TAB)   &kp UP       &kp TAB        &kp LG(L)     &kp BACKSPACE
+        &none         &kp LG(TAB)     &kp LG(Z)      &kp LG(X)       &kp LG(A)       &kp UP                                   &td0          &kp LEFT      &kp DOWN     &kp RIGHT      &kp RET       &kp RET
         &none         &none           &kp LG(R)      &kp PG_DN       &kp PG_UP       &kp DOWN         &kp LA(LC(SPACE))       &none         &kp BSLH      &kp F12      &none          &none         &kp RET
                                                       &trans          &trans         &trans         &trans    &kp LG(SPACE)   &kp LG(SPACE) &kp RET        &trans
       >;

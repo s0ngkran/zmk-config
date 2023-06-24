@@ -1,6 +1,4 @@
 on: [push, pull_request, workflow_dispatch]
-env:
-  ZEPHYR_TOOLCHAIN_VARIANT: gnuarmemb
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
