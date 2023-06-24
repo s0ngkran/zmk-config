@@ -68,7 +68,7 @@
         &lt FUNCTION ESC       &kp SQT      &kp COMMA  &kp DOT             &kp P                  &kp Y                               &kp F      &kp G     &kp C     &kp R      &kp L    &kp FSLH  
         &kp CAPS               &kp A        &kp O      &kp E               &lt NUMBER U           &kp I                               &kp D      &kp H     &kp T     &kp N      &kp S    &kp MINUS 
         &sk LSHFT              &kp SEMI     &kp Q      &kp J               &kp K                  &kp X        &kp C_PLAY_PAUSE       &kp B      &kp M     &kp W     &kp V      &kp Z    &mt RSHFT RET  
-                                                                     &kp lctrl     &kp lalt   &lt NORMAL S   &mt rgui TAB   &none  &lt BRACKET SPACE   &kp RET   &lt OTHER GRAVE
+                              &kp LCTRL   &kp LALT  &mo 1    &kp RGUI            &kp SPACE  &mo 2     &kp BSPC   &kp RALT
       >;
       sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
     };
