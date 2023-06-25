@@ -52,6 +52,8 @@
 #define SCROLL_LEFT SCROLL_HOR(-U_MOUSE_SCROLL_MAX)
 #define SCROLL_RIGHT SCROLL_HOR(U_MOUSE_SCROLL_MAX)
 
+
+
 &mwh {
   time-to-max-speed-ms = <500>;                 /* <--- How long time until max speed is reached */
 };
@@ -67,7 +69,7 @@
                     label = "TAP_DANCE_0";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
-                    bindings = <&kp F4>, <&kp F6>;
+                    bindings = <&kp SEMI>, <&kp LS(SEMI)>;
                 };
          td1: tap_dancee {
                     compatible = "zmk,behavior-tap-dance";
@@ -143,10 +145,10 @@
 
     nav_layer {
       bindings = <
-        &none         &none           &none                  &kp LG(LA(LC(LS(N1))))  &kp LGUI                &none                                 &td0              &kp LEFT       &kp LC(K)  &kp RIGHT   &none       &td4
-        &none         &kp LCTRL       &kp LG(LA(LC(LS(N2)))) &kp LG(LA(LC(LS(N3))))  &mo NUM                 &kp LG(SPACE)                         &td1              &kp LC(H)      &kp LC(J)  &kp LC(L)   &kp UP      &none
-        &none         &none           &kp LG(LA(LC(LS(N0)))) &kp LG(LA(LC(LS(N4))))  &td3                    &kp LG(TAB)       &kp LA(LC(SPACE))   &td2              &none          &none      &kp LS(V)   &kp DOWN    &kp LS(RET)
-                                                             &none                   &none                  &none           &none       &td7     &kp RET           &kp PG_DN      &kp PG_UP
+        &none         &none           &none                  &kp LG(LA(LC(LS(N1))))  &kp LGUI                &none                                 &kp EQUAL         &kp LEFT       &kp LC(K)      &kp RIGHT   &none       &td4
+        &none         &kp LCTRL       &kp LG(LA(LC(LS(N2)))) &kp LG(LA(LC(LS(N3))))  &mo NUM                 &kp LG(SPACE)                         &td0              &kp LC(H)      &kp LC(J)      &kp LC(L)   &kp UP      &none
+        &none         &none           &kp LG(LA(LC(LS(N0)))) &kp LG(LA(LC(LS(N4))))  &none                   &kp LG(TAB)       &kp LA(LC(SPACE))   &kp LPAR          &kp RPAR       &kp LBRC       &kp LS(V)   &kp DOWN    &kp LS(RET)
+                                                             &none                   &none                   &none           &none       &td7     &kp RET             &kp PG_DN      &kp PG_UP
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
@@ -154,8 +156,8 @@
     num_layer {
       bindings = <
         &none         &none           &none           &kp LALT        &none           &none                             &kp PLUS     &kp N7         &kp N8      &kp N9      &none           &kp BSLH
-        &none         &kp LSHFT       &kp LCTRL       &kp LGUI        &none           &none                             &kp SEMI     &kp N1         &kp N2      &kp N3      &kp N4          &none
-        &none         &none           &none           &none           &none           &none         &kp C_MUTE          &kp EQUAL    &kp N0         &kp LPAR    &kp RPAR    &td5            &td6
+        &none         &kp LSHFT       &kp LCTRL       &kp LGUI        &none           &none                             &kp N0       &kp N1         &kp N2      &kp N3      &kp N4          &none
+        &none         &none           &none           &none           &none           &none         &kp C_MUTE          &kp LBKT     &kp RBKT       &kp RBRC    &kp LC(V)   &none           &none
                                                       &none           &none           &none       &none     &kp N6      &kp N5       &none          &none  
        >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
