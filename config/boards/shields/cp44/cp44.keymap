@@ -63,6 +63,18 @@
 };
 
 / {
+    macros {
+        zed_em_kay: zed_em_kay {
+            label = "ZM_zed_em_kay";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp Z &kp M &kp K>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+    };
   behaviors {
          td0: tap_dance {
                     compatible = "zmk,behavior-tap-dance";
@@ -145,7 +157,7 @@
 
     nav_layer {
       bindings = <
-        &none         &none           &none                  &kp LG(LA(LC(LS(N1))))  &kp LGUI                &none                                 &kp EQUAL         &kp LEFT       &kp LC(K)      &kp RIGHT   &none       &td4
+        &none         &none           &none                  &kp LG(LA(LC(LS(N1))))  &kp LGUI                &none                                 &kp EQUAL         &kp LEFT       &kp LC(K)      &kp RIGHT   &zed_em_kay &td4
         &none         &kp LCTRL       &kp LG(LA(LC(LS(N2)))) &kp LG(LA(LC(LS(N3))))  &mo NUM                 &kp LG(SPACE)                         &td0              &kp LC(H)      &kp LC(J)      &kp LC(L)   &kp UP      &none
         &none         &none           &kp LG(LA(LC(LS(N0)))) &kp LG(LA(LC(LS(N4))))  &none                   &kp LG(TAB)       &kp LA(LC(SPACE))   &kp LPAR          &kp RPAR       &kp LBRC       &kp LS(V)   &kp DOWN    &kp LS(RET)
                                                              &none                   &none                   &none           &none       &td7     &kp RET             &kp PG_DN      &kp PG_UP
