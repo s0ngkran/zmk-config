@@ -127,7 +127,7 @@
         &lt FUNC ESC       &kp SQT      &kp COMMA  &kp DOT   &kp P         &kp Y                                          &kp F      &kp G     &kp C     &kp R      &kp L   &kp FSLH  
         &to SHIFT          &kp A        &kp O      &kp E     &kp U         &kp I                                          &kp D      &kp H     &kp T     &kp N      &kp S   &kp MINUS 
         &kp LALT           &kp SEMI     &kp Q      &kp J     &kp K         &kp X        &kp C_PLAY_PAUSE                  &kp B      &kp M     &kp W     &kp V      &kp Z   &kp RET  
-                                                   &mo MOUSE &mt LGUI GRAVE &lt NAV SPACE &lt NUM RET     &kp LS(RET)     &mt LSHFT BACKSPACE &mt LCTRL TAB  &key_repeat 
+                                                   &mo MOUSE &mt LGUI GRAVE &lt NAV SPACE &lt NUM RET     &kp BACKSPACE     &mt LSHFT LS(RET) &mt LCTRL TAB  &key_repeat 
       >;
       sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
     };
