@@ -7,7 +7,7 @@
       bindings = <
         &none         &none          &none          &none       &none     &none                         &none         &none         &none         &none         &none       &none
         &none         &none          &none          &none       &none     &none                         &none         &none         &none         &none         &none       &none
-        &none         &none          &none          &none       &none     &none          &none         &none         &none         &none         &none         &none       &none
+        &none         &none          &none          &none       &none     &none          &none          &none         &none         &none         &none         &none       &none
                                                        &trans          &trans          &trans   &trans    &trans       &trans         &trans         &trans
       >;
     };
@@ -19,48 +19,23 @@
 #include <dt-bindings/zmk/rgb.h>
 
 #define DEFAULT 0
-#define NUMBER 1
-#define FUNCTION 2
-#define NORMAL 3
-#define BRACKET 4
-#define OTHER 5
-#define QWERTY 6
-#define JUMP 7
-#define NUMBER_UP 8
-#define JUMP2 9
-#define JUMP3 10
-#define JUMP4 11
-#define SWITCHER 12
-#define VIM_ADJ 13
-#define VIM_MOVE 14
-#define SHIFT 15
+#define SHIFT 1
+#define NAV 2
+#define NUM 3
+#define FUNC 4
+#define QWERTY 5
 
 &mt {
     tapping-term-ms = <200>;
 };
 / {
-  /*
-      macros {
-        func_bracket: func_bracket {
-            label = "func_bracket";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            bindings
-                = <&kp KP_LPAR &kp KP_RPAR>
-                , <&macro_wait_time 10>
-                , <&kp LCBR &kp RCBR>
-                ;
-        };
-    };
-    */
   behaviors {
-         td0: tap_dance_0 {
+         td: tap_dance {
                     compatible = "zmk,behavior-tap-dance";
-                    label = "TAP_DANCE_0";
-                    #binding-cells = <0>;
+                    label = "TAP_DANCE";
+                    #binding-cells = <2>;
                     tapping-term-ms = <200>;
-                    bindings = <&kp F9>, <&kp F10>;
+                    bindings = <&kp>, <&kp>;
                 };
     };
   keymap {
@@ -68,59 +43,51 @@
 
     default_layer {
       bindings = <
-        &lt FUNCTION ESC       &kp SQT      &lt VIM_MOVE COMMA  &lt NUMBER_UP DOT   &lt JUMP2 P         &kp Y                                                &kp F      &kp G     &kp C     &kp R      &kp L          &kp FSLH  
-        &mt CAPS TAB           &lt SHIFT A  &lt SWITCHER O      &lt NUMBER E        &lt JUMP U          &lt JUMP3 I                                          &kp D      &kp H     &kp T     &kp N      &lt SHIFT S    &kp MINUS 
-        &sk LSHFT              &kp SEMI     &lt VIM_ADJ Q       &kp J               &kp K               &lt JUMP4 X        &kp C_PLAY_PAUSE                  &kp B      &kp M     &kp W     &kp V      &kp Z          &mt RSHFT RET  
-                                                                       &kp LCTRL   &kp RGUI  &lt NORMAL SPACE    &mt LALT RET             &lt BRACKET RET     &lt BRACKET SPACE     &kp RET   &lt OTHER AT_SIGN
+        &lt FUNC ESC       &kp SQT      &kp COMMA  &kp DOT   &kp P         &kp Y                                          &kp F      &kp G     &kp C     &kp R      &kp L   &kp FSLH  
+        &to SHIFT          &kp A        &kp O      &kp E     &kp U         &kp I                                          &kp D      &kp H     &kp T     &kp N      &kp S   &kp MINUS 
+        &kp LALT           &kp SEMI     &kp Q      &kp J     &kp K         &kp X        &kp C_PLAY_PAUSE                  &kp B      &kp M     &kp W     &kp V      &kp Z   &kp RET  
+                                                   &none     &mt LGUI GRAVE &lt NAV SPACE &lt NUM RET     &kp LS(RET)     &mt LSHFT BACKSPACE &mt LCTRL TAB  &kp AT_SIGN 
       >;
       sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
     };
 
-    number_layer {
+    shift_layer {
       bindings = <
-        &none         &none           &none           &none           &none           &none                              &none         &kp N7         &kp N8      &kp N9      &none         &none
-        &none         &none           &none           &none           &none          &none                              &none         &kp N1         &kp N2      &kp N3      &kp N4        &none
-        &none         &none           &none           &none           &none           &none              &kp C_MUTE      &none         &kp EQUAL      &none       &none       &none         &none
-                                                      &trans          &trans          &trans    &trans     &kp N6        &kp N5         &kp N0      &trans
+        &trans      &kp LS(SQT)      &kp LS(COMMA)  &kp LS(DOT)   &kp LS(P)         &kp LS(Y)                               &kp LS(F)      &kp LS(G)     &kp LS(C)     &kp LS(R)      &kp LS(L)          &kp LS(FSLH)  
+        &to DEFAULT &kp LS(A)        &kp LS(O)      &kp LS(E)     &kp LS(U)         &kp LS(I)                               &kp LS(D)      &kp LS(H)     &kp LS(T)     &kp LS(N)      &kp LS(S)          &kp LS(MINUS) 
+        &trans      &kp LS(SEMI)     &kp LS(Q)      &kp LS(J)     &kp LS(K)         &kp LS(X)        &to DEFAULT            &kp LS(B)      &kp LS(M)     &kp LS(W)     &kp LS(V)      &kp LS(Z)          &kp LS(RET)  
+                                                    &none         &kp LS(GRAVE)     &kp LS(SPACE)    &kp LS(RET)   &kp RET  &kp DELETE     &trans        &kp LS(AT_SIGN)
       >;
+      sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+    };
+
+    nav_layer {
+      bindings = <
+        &none         &none           &none                  &none                   &none                   &none                                 &td F4 F6         &kp LG(V)      &kp LG(C)   &kp LG(X)   &none         &none
+        &none  &kp LG(LA(LC(LS(N0)))) &kp LG(LA(LC(LS(N1)))) &kp LG(LA(LC(LS(N2))))  &kp LG(LA(LC(LS(N3))))  &kp LG(SPACE)                         &td F9 F10        &kp LEFT       &kp DOWN    &kp UP      &kp RIGHT     &none
+        &none         &none           &kp LCTRL              &kp LG(LA(LC(LS(N4))))  &kp LG(TAB)             &td F8 LC(N1)     &kp LA(LC(SPACE))   &td F2 F3         &kp LC(H)      &kp LC(J)   &kp LC(K)   &kp LC(L)     &none
+                                                             &none                   &trans                  &none       &none       &td Q F12     &kp RET      &kp PG_DN   &kp PG_UP
+      >;
+      sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
+
+    num_layer {
+      bindings = <
+        &none         &none           &none           &none           &none           &none                             &kp PLUS     &kp N7         &kp N8      &kp N9      &none           &kp BSLH
+        &none         &kp LCTRL       &kp LALT        &kp LSHFT       &kp LGUI        &none                             &kp SEMI     &kp N1         &kp N2      &kp N3      &kp N4          &none
+        &none         &none           &none           &none           &none           &none             &kp C_MUTE      &kp EQUAL    &kp N0         &kp LPAR    &kp RPAR    &none           &none
+                                                      &none           &none           &none    &none     &kp N6         &kp N5       &td LBRC LBKT  &td RBRC RBKT  
+       >;
+    };
 
     function_layer {
       bindings = <
-        &none        &none           &none           &none           &none           &none                             &none                              &kp F7         &kp F8      &kp F9      &kp F10         &none
-        &none         &none           &none           &none           &none           &none                             &none                              &kp F1         &kp F2      &kp F3      &kp F4          &none
-        &none         &none           &none           &none           &none           &none                 &none       &none                              &kp F11        &kp F12     &kp F13     &kp F14         &none
-                                                      &trans          &trans          &trans    &trans     &kp F6        &kp F5         &kp F15      &trans
+        &none         &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                      &none         &kp F7         &kp F8      &kp F9      &kp F10         &none
+        &none         &bt BT_CLR      &none           &none           &none           &none                             &none         &kp F1         &kp F2      &kp F3      &kp F4          &none
+        &bootloader   &sys_reset      &none           &none           &none           &none              &to QWERTY     &none         &kp F11        &kp F12     &kp F13     &kp F14         &none
+                                                      &none           &none           &none    &none     &kp F6        &kp F5         &kp F15      &none
       >;
-    };
-
-    normal_layer {
-      bindings = <
-        &none         &none           &none          &none           &kp LG(V)       &kp LG(C)                                &none         &kp LS(TAB)   &kp UP       &kp TAB        &kp LG(L)     &kp BACKSPACE
-        &none         &kp LG(TAB)     &kp LG(Z)      &kp LG(X)       &kp LG(A)       &kp UP                                   &td0          &kp LEFT      &kp DOWN     &kp RIGHT      &kp RET       &kp RET
-        &none         &none           &kp LG(R)      &kp PG_DN       &kp PG_UP       &kp DOWN         &kp LA(LC(SPACE))       &none         &kp BSLH      &kp F12      &none          &none         &kp RET
-                                                      &trans          &trans         &trans         &trans    &kp LG(SPACE)   &kp LG(SPACE) &kp RET        &trans
-      >;
-      sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
-    };
-
-
-    bracket_layer{
-      bindings = <
-        &kp GRAVE         &none          &kp FSLH          &kp MINUS       &kp LS(N9)      &kp LS(N0)                         &none         &none         &none         &none         &none       &none
-        &none         &none          &kp LS(N8)        &kp LS(EQUAL)   &kp LBRC        &kp RBRC                            &none         &none         &none         &none         &none       &none
-        &none         &none          &none             &none           &kp LBKT        &kp RBKT         &none              &none         &none         &none         &none         &none       &none
-                                                       &trans          &trans          &none        &none    &trans        &trans         &trans         &trans
-      >;
-    };
-
-    other_layer {
-      bindings = <
-        &none         &none           &none         &kp PSCRN      &kp HOME            &none                                &none         &none         &bootloader    &none         &none         &sys_reset
-        &none         &none           &none         &kp INSERT     &kp END             &none                                &none         &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-        &none         &none           &none         &kp SLCK      &kp PAUSE_BREAK     &none           &to QWERTY           &none         &none         &bt BT_CLR     &none         &none         &bootloader
-                                                    &trans          &trans             &trans     &trans      &trans        &trans        &trans        &trans
-      >;
+      sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
     };
 
    qwerty_layer{
@@ -128,83 +95,9 @@
         &kp ESC     &kp Q     &kp W       &kp E     &kp R           &kp T                                &kp Y     &kp U     &kp I      &kp O    &kp P     &kp BACKSPACE
         &kp TAB     &kp A     &kp S       &kp D     &kp F           &kp G                                &kp H     &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
         &kp LSHFT   &kp Z     &kp X       &kp C     &kp V           &kp B            &to DEFAULT         &kp N     &kp M     &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT RET
-                                     &mo BRACKET    &mo NORMAL      &kp SPACE    &kp SPACE  &kp SPACE    &kp SPACE       &mo FUNCTION     &mo NUMBER
+                                          &none     &none           &kp SPACE   &kp SPACE    &kp SPACE   &kp SPACE &none     &none
       >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
-    };
-
-    jump_layer{
-      bindings = <
-        &none         &none          &none          &none       &none     &none                         &none                    &kp LG(LA(LC(LS(N7))))    &kp LG(LA(LC(LS(N8))))     &kp LG(LA(LC(LS(N9))))   &none                    &none
-        &none         &none          &none          &none       &none     &none                         &kp LG(LA(LC(LS(N0))))   &kp LG(LA(LC(LS(N1))))    &kp LG(LA(LC(LS(N2))))     &kp LG(LA(LC(LS(N3))))   &kp LG(LA(LC(LS(N4))))   &none
-        &none         &none          &none          &none       &none     &none          &none          &none                    &kp LG(TAB)               &none         &none         &none       &none
-                                                       &trans          &trans          &trans   &kp LG(LA(LC(LS(N6))))    &kp LG(LA(LC(LS(N5))))       &kp LG(LA(LC(LS(N0))))         &trans         &trans
-      >;
-      sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
-    };
-    number_up_layer {
-      bindings = <
-        &none         &none           &none           &none           &none           &none                              &none         &kp LS(N7)     &kp LS(N8)     &kp LS(N9)   &none         &none
-        &none         &none           &none           &none           &none          &none                               &none         &kp LS(N1)     &kp LS(N2)     &kp LS(N3)   &kp LS(N4)        &none
-        &none         &none           &none           &none           &none           &none              &none           &none         &kp LS(EQUAL)  &none       &none       &none         &none
-                                                      &trans          &trans          &trans    &trans     &kp LS(N6)       &kp LS(N5)    &kp LS(N0)      &trans
-      >;
-    };
-    jump2_layer{
-      bindings = <
-        &none         &none          &none          &none       &none     &none                         &none         &kp LG(LA(LC(LS(H))))    &kp LG(LA(LC(LS(I))))     &kp LG(LA(LC(LS(J))))   &none                    &none
-        &none         &none          &none          &none       &none     &none                         &none         &kp LG(LA(LC(LS(A))))    &kp LG(LA(LC(LS(B))))     &kp LG(LA(LC(LS(C))))   &kp LG(LA(LC(LS(D))))   &none
-        &none         &none          &none          &none       &none     &none          &none          &none         &none                       &none         &none         &none       &none
-                                                       &trans          &trans          &trans   &kp LG(LA(LC(LS(F))))    &kp LG(LA(LC(LS(E))))       &trans         &trans         &trans
-      >;
-    };
-    jump3_index_finger_to_right__holding_i{
-      bindings = <
-        &none         &none          &none          &none       &none     &none                         &kp F2         &kp LC(N7)         &kp LC(N8)         &kp LC(N9)         &none        &none
-        &none         &none          &none          &none       &none     &none                         &kp F3         &kp LC(N1)         &kp LC(N2)         &kp LC(N3)         &kp LC(N4)   &none
-        &none         &none          &none          &none       &none     &none          &none          &kp F4         &kp LC(N0)         &kp F6             &none              &none        &none
-                                                       &trans          &trans          &trans   &trans     &kp LC(N6)       &kp LC(N5)         &kp LC(N0)         &trans
-      >;
-    };
-    jump4_layer{
-      bindings = <
-        &none         &none          &none          &none       &none     &none                         &none         &kp LA(LC(LS(N7)))    &kp LA(LC(LS(N8)))     &kp LA(LC(LS(N9)))   &none               &none
-        &none         &none          &none          &none       &none     &none                  &kp LA(LC(LS(N0)))   &kp LA(LC(LS(N1)))    &kp LA(LC(LS(N2)))     &kp LA(LC(LS(N3)))   &kp LA(LC(LS(N4)))   &none
-        &none         &none          &none          &none       &none     &none          &none          &none         &none                 &none         &none         &none       &none
-                                                       &trans          &trans          &trans   &kp LA(LC(LS(N6)))    &kp LA(LC(LS(N5)))       &kp LA(LC(LS(N0)))         &trans         &trans
-      >;
-    };
-    switcher_layer {
-      bindings = <
-        &none         &none          &none          &none       &none     &none                                     &none         &kp LG(N7)    &kp LG(N8)     &kp LG(N9)   &none        &none
-        &none         &none          &none          &none       &none     &none                                     &kp LG(TAB)   &kp LG(N1)    &kp LG(N2)     &kp LG(N3)   &kp LG(N4)   &none
-        &none         &none          &none          &none       &none     &none          &none                      &none         &none         &none          &none         &none       &none
-                                                    &trans      &trans    &trans     &trans       &kp LG(N6)       &kp LG(N5)    &kp LG(N0)    &trans         &trans
-      >;
-    };
-    vim_adj_holding_q {
-      bindings = <
-        &none         &none          &none          &none       &none     &none                                &none         &none         &kp LC(UP)                &none          &none     &none
-        &none         &none          &none          &none       &none     &none                                &none         &kp LC(LEFT)  &kp LC(DOWN)              &kp LC(RIGHT)  &none     &none
-        &none         &none          &none          &none       &none     &none             &none              &none         &none         &none                     &kp LC(V)      &none     &none
-                                           &trans          &trans         &trans         &trans    &trans      &trans        &trans        &trans
-      >;
-    };
-    vim_move_holding_comma {
-      bindings = <
-        &none         &none          &none          &none       &none     &none                                &none         &none         &kp LC(K)                &none      &none     &none
-        &none         &none          &none          &none       &none     &none                                &none         &kp LC(H)     &kp LC(J)                &kp LC(L)  &none     &none
-        &none         &none          &none          &none       &none     &none             &none              &none         &none         &none                    &kp LC(V)  &none     &none
-                                           &trans          &trans         &trans         &trans    &trans      &trans        &trans        &trans
-      >;
-    };
-    shift_layer {
-      bindings = <
-        &none       &kp LS(SQT)      &kp LS(COMMA)  &kp LS(DOT)   &kp LS(P)         &kp LS(Y)                               &kp LS(F)      &kp LS(G)     &kp LS(C)     &kp LS(R)      &kp LS(L)          &kp LS(FSLH)  
-        &none       &kp LS(A)        &kp LS(O)      &kp LS(E)     &kp LS(U)         &kp LS(I)                               &kp LS(D)      &kp LS(H)     &kp LS(T)     &kp LS(N)      &kp LS(S)          &kp LS(MINUS) 
-        &none       &kp LS(SEMI)     &kp LS(Q)      &kp LS(J)     &kp LS(K)         &kp LS(X)        &none                  &kp LS(B)      &kp LS(M)     &kp LS(W)     &kp LS(V)      &kp LS(Z)          &kp LS(RET)  
-                                                      &kp LS(LCTRL)   &kp LS(LALT)  &kp LS(RET)    &kp LS(TAB)   &kp DELETE &kp LS(RET)    &kp LS(RET)   &kp DOLLAR
-      >;
     };
 
         };
