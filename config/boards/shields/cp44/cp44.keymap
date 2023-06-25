@@ -27,7 +27,7 @@
 #define QWERTY 5
 #define MOUSE 6
 
-#define U_MOUSE_MOVE_MAX 3200                     /* <--- New max speed setting (default: 600) */
+#define U_MOUSE_MOVE_MAX 2700                     /* <--- New max speed setting (default: 600) */
 #undef MOVE_UP
 #undef MOVE_DOWN
 #undef MOVE_LEFT
@@ -38,7 +38,7 @@
 #define MOVE_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
 
 &mmv {
-	time-to-max-speed-ms = <900>;             /* <--- How long time until max speed is reached (default: 500) */
+	time-to-max-speed-ms = <700>;             /* <--- How long time until max speed is reached (default: 500) */
 };
 
 #define U_MOUSE_SCROLL_MAX 100                    /* <--- New max speed setting (default: 10) */
