@@ -90,14 +90,14 @@
                     label = "TAP_DANCE_1";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
-                    bindings = <&kp F9>, <&kp F10>;
+                    bindings = <&kp EQUAL>, <&kp PLUS>;
                 };
          td2: tap_dancee2 {
                     compatible = "zmk,behavior-tap-dance";
                     label = "TAP_DANCE_2";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
-                    bindings = <&kp F2>, <&kp F3>;
+                    bindings = <&kp LPAR>, <&kp RPAR>;
                 };
          td3: tap_dancee3 {
                     compatible = "zmk,behavior-tap-dance";
@@ -118,14 +118,14 @@
                     label = "TAP_DANCE_5";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
-                    bindings = <&kp LBRC>, <&kp LBKT>;
+                    bindings = <&kp LBRC>, <&kp RBRC>;
                 };
          td6: tap_dancee6 {
                     compatible = "zmk,behavior-tap-dance";
                     label = "TAP_DANCE_6";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
-                    bindings = <&kp RBRC>, <&kp RBKT>;
+                    bindings = <&kp LBKT>, <&kp RBKT>;
                 };
          td7: tap_dancee7 {
                     compatible = "zmk,behavior-tap-dance";
@@ -158,19 +158,19 @@
     };
     nav_layer {
       bindings = <
-        &none         &none           &kp LG(LA(LC(LS(N2)))) &kp LALT                &kp LG(LA(LC(LS(N1))))  &none                                 &kp EQUAL         &kp LEFT       &kp LC(K)      &kp RIGHT   &zed_em_kay &td4
-        &none         &kp LSHFT       &kp LCTRL              &kp LGUI                &mo NUM                 &kp LG(SPACE)                         &td0              &kp LC(H)      &kp LC(J)      &kp LC(L)   &kp UP      &none
-        &none         &none           &kp LG(LA(LC(LS(N0)))) &kp LG(LA(LC(LS(N4))))  &kp LG(LA(LC(LS(N3))))  &kp LG(TAB)       &kp LA(LC(SPACE))   &kp LPAR          &kp RPAR       &kp LBRC       &kp LS(V)   &kp DOWN    &kp LS(RET)
-                                                             &none                   &none                   &none           &none       &td7     &kp RET             &kp PG_DN      &kp PG_UP
+        &none         &none           &kp LG(LA(LC(LS(N2)))) &kp LALT                &kp LG(LA(LC(LS(N1))))  &none                                 &td1         &kp LEFT       &kp LC(K)      &kp RIGHT   &zed_em_kay &td4
+        &none         &kp LSHFT       &kp LCTRL              &kp LGUI                &mo NUM                 &kp LG(SPACE)                         &td0         &kp LC(H)      &kp LC(J)      &kp LC(L)   &kp UP      &none
+        &none         &none           &kp LG(LA(LC(LS(N0)))) &kp LG(LA(LC(LS(N4))))  &kp LG(LA(LC(LS(N3))))  &kp LG(TAB)       &kp LA(LC(SPACE))   &td2         &td5           &td6           &kp LS(V)   &kp DOWN    &kp LS(RET)
+                                                             &none                   &none                   &none           &none       &td7     &kp RET       &kp PG_DN      &kp PG_UP
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
 
     num_layer {
       bindings = <
-        &none         &none           &none           &trans          &none           &none                             &kp PLUS     &kp N7         &kp N8      &kp N9      &none           &kp BSLH
-        &none         &trans          &trans          &trans          &none           &none                             &kp N0       &kp N1         &kp N2      &kp N3      &kp N4          &none
-        &none         &none           &none           &none           &none           &none         &kp C_MUTE          &kp LBKT     &kp RBKT       &kp RBRC    &kp LC(V)   &none           &none
+        &none         &none           &none           &trans          &none           &none                             &none        &kp N7         &kp N8           &kp N9      &none           &kp BSLH
+        &none         &trans          &trans          &trans          &none           &none                             &kp N0       &kp N1         &kp N2           &kp N3      &kp N4          &none
+        &none         &none           &none           &none           &none           &none         &kp C_MUTE          &none        &kp MINUS      &kp LS(MINUS)    &kp LC(V)   &none           &none
                                                       &none           &none           &none       &none     &kp N6      &kp N5       &none          &none  
        >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
