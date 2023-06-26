@@ -159,7 +159,7 @@
     nav_layer {
       bindings = <
         &none         &none           &kp LG(LA(LC(LS(N2)))) &kp LALT                &kp LG(LA(LC(LS(N1))))  &none                                 &td1         &kp LEFT       &kp LC(K)      &kp RIGHT   &zed_em_kay &td4
-        &none         &kp LSHFT       &kp LCTRL              &kp LGUI                &mo NUM                 &kp LG(SPACE)                         &td0         &kp LC(H)      &kp LC(J)      &kp LC(L)   &kp UP      &none
+        &none         &kp LSHFT       &kp LCTRL              &kp LGUI                &lt NUM LG(LS(SPACE))   &kp LG(SPACE)                         &td0         &kp LC(H)      &kp LC(J)      &kp LC(L)   &kp UP      &none
         &none         &none           &kp LG(LA(LC(LS(N0)))) &kp LG(LA(LC(LS(N4))))  &kp LG(LA(LC(LS(N3))))  &kp LG(TAB)       &kp LA(LC(SPACE))   &td2         &td5           &td6           &kp LS(V)   &kp DOWN    &kp LS(RET)
                                                              &none                   &none                   &none           &none       &td7     &kp RET       &kp PG_DN      &kp PG_UP
       >;
@@ -168,9 +168,9 @@
 
     num_layer {
       bindings = <
-        &none         &none           &none           &trans          &none           &none                             &none        &kp N7         &kp N8           &kp N9      &none           &kp BSLH
+        &none         &none           &none           &trans          &none           &none                             &kp GRAVE    &kp N7         &kp N8           &kp N9      &none           &kp BSLH
         &none         &trans          &trans          &trans          &none           &none                             &kp N0       &kp N1         &kp N2           &kp N3      &kp N4          &none
-        &none         &none           &none           &none           &none           &none         &kp C_MUTE          &none        &kp MINUS      &kp LS(MINUS)    &kp LC(V)   &none           &none
+        &none         &none           &none           &none           &none           &none         &kp C_MUTE          &kp PLUS     &kp MINUS      &kp LS(MINUS)    &kp LC(V)   &none           &none
                                                       &none           &none           &none       &none     &kp N6      &kp N5       &none          &none  
        >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
