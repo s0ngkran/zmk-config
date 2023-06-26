@@ -158,9 +158,9 @@
     };
     nav_layer {
       bindings = <
-        &none         &kp LG(LA(LC(LS(F))))  &kp LG(LA(LC(LS(N2)))) &kp LALT                &kp LG(LA(LC(LS(N1))))  &none                                 &td1         &kp LEFT       &kp LC(K)      &kp RIGHT   &zed_em_kay &td4
-        &none         &kp LSHFT              &kp LCTRL              &mt LGUI LG(LS(J))      &lt NUM LG(LS(SPACE))   &kp LG(SPACE)                         &td0         &kp LC(H)      &kp LC(J)      &kp LC(L)   &kp UP      &none
-        &none         &none                  &kp LG(LA(LC(LS(N0)))) &kp LG(LA(LC(LS(N4))))  &kp LG(LA(LC(LS(N3))))  &kp LG(TAB)       &kp LA(LC(SPACE))   &td2         &td5           &td6           &kp LS(V)   &kp DOWN    &kp LS(RET)
+        &none         &kp LG(LA(LC(LS(F))))            &kp LG(LA(LC(LS(N2)))) &kp LALT                &kp LG(LA(LC(LS(N1))))  &none                                 &td1         &kp LEFT       &kp LC(K)      &kp RIGHT   &zed_em_kay &td4
+        &none         &mt LSHFT LG(LA(LC(LS(F))))      &kp LCTRL              &mt LGUI LG(LS(J))      &lt NUM LG(LS(SPACE))   &kp LG(SPACE)                         &td0         &kp LC(H)      &kp LC(J)      &kp LC(L)   &kp UP      &none
+        &none         &none                            &kp LG(LA(LC(LS(N0)))) &kp LG(LA(LC(LS(N4))))  &kp LG(LA(LC(LS(N3))))  &kp LG(TAB)       &kp LA(LC(SPACE))   &td2         &td5           &td6           &kp LS(V)   &kp DOWN    &kp LS(RET)
                                                              &none                   &none                   &none           &none       &td7     &kp RET       &kp PG_DN      &kp PG_UP
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
