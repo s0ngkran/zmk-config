@@ -143,142 +143,147 @@
                     bindings = <&sk LSHFT>, <&kp SPACE>;
                 };
     };
+
 combos {
         compatible = "zmk,combos";
         ccslash {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <19 9>;
             bindings = <&kp FSLH>;
         };
         ccplus {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <7 8>;
             bindings = <&kp PLUS>;
         };
-
         ccmulti {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <7 9>;
-            bindings = <&kp LS(8)>;
+            bindings = <&kp LS(N8)>;
         };
         ccminus {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <9 8>;
             bindings = <&kp MINUS>;
         };
         cclsone {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <7 19>;
-            bindings = <&kp LS(1)>;
+            bindings = <&kp LS(N1)>;
         };
         cclstwo {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <8 20>;
-            bindings = <&kp LS(2)>;
+            bindings = <&kp LS(N2)>;
         };
         cclsthree {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <9 21>;
-            bindings = <&kp LS(3)>;
+            bindings = <&kp LS(N3)>;
         };
         cclsfour {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <10 22>;
-            bindings = <&kp LS(4)>;
+            bindings = <&kp LS(N4)>;
         };
         cclpar {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <19 20>;
-            bindings = <&kp LS(9)>;
+            bindings = <&kp LS(N9)>;
         };
         ccequal {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <19 21>;
             bindings = <&kp EQUAL>;
         };
         ccrpar {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <20 21>;
-            bindings = <&kp LS(0)>;
+            bindings = <&kp LS(N0)>;
+        };
+        ccsemi {
+            timeout-ms = <75>;
+            key-positions = <21 22>;
+            bindings = <&kp SEMI>;
         };
         cccolon {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <20 22>;
             bindings = <&kp LS(SEMI)>;
         };
         ccq {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <19 32>;
             bindings = <&kp Q>;
         };
         ccunsc {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <20 33>;
             bindings = <&kp LS(MINUS)>;
         };
         cclbr {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <32 33>;
             bindings = <&kp LBRC>;
         };
 
         ccrbr {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <33 34>;
             bindings = <&kp RBRC>;
         };
         ccpipe {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <33 35>;
             bindings = <&kp LS(BSLH)>;
         };
         ccbslh {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <34 35>;
             bindings = <&kp BSLH>;
         };
         cclsfive{
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <42 19>;
-            bindings = <&kp LS(5)>;
+            bindings = <&kp LS(N5)>;
         };
         cclssix {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <42 20>;
-            bindings = <&kp LS(6)>;
+            bindings = <&kp LS(N6)>;
         };
         ccrepkey {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <42 32>;
             bindings = <&key_repeat>;
         };
         ccshret {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <42 22>;
             bindings = <&kp LS(RET)>;
         };
         ccautobkt {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <19 22>;
             bindings = <&zed_em_kay>;
         };
         ccshret {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <42 22>;
             bindings = <&kp LS(RET)>;
         };
         ccledq {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <42 11>;
             bindings = <&kp F12>;
         };
         cclbkt {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <41 19>;
             bindings = <&kp LBKT>;
         };
         ccrbkt {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <41 21>;
             bindings = <&kp RBKT>;
         };
