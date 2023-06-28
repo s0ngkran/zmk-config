@@ -294,6 +294,21 @@ combos {
             key-positions = <41 21>;
             bindings = <&kp RBKT>;
         };
+        ccn7 {
+            timeout-ms = <50>;
+            key-positions = <42 19 7>;
+            bindings = <&kp LS(N7)>;
+        };
+        ccn8 {
+            timeout-ms = <50>;
+            key-positions = <42 9 21>;
+            bindings = <&kp LS(N8)>;
+        };
+        ccn9 {
+            timeout-ms = <50>;
+            key-positions = <42 10 22>;
+            bindings = <&kp LS(N9)>;
+        };
 
     };
     /* 
