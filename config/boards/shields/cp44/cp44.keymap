@@ -237,7 +237,7 @@ combos {
             key-positions = <34 35>;
             bindings = <&kp BSLH>;
         };
-        cclsfive
+        cclsfive{
             timeout-ms = <50>;
             key-positions = <42 19>;
             bindings = <&kp LS(5)>;
