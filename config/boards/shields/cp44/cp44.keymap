@@ -157,21 +157,25 @@
                                                     &none         &none             &kp SPACE      &kp RET   &kp LS(RET)    &trans       &trans        &trans
       >;
     };
+
+
+
+
     nav_layer {
       bindings = <
-        &none         &kp LG(LA(LC(LS(F))))            &none                  &kp LALT                &kp LG(LA(LC(LS(N1))))  &none                                 &kp LS(MINUS) &kp PG_DN      &kp UP         &kp PG_UP   &zed_em_kay &td4
-        &none         &mt LSHFT LG(LA(LC(LS(S))))      &kp LCTRL              &kp LGUI                &kp LG(LA(LC(LS(N3))))  &kp LG(SPACE)                         &kp MINUS    &kp LEFT       &kp DOWN       &kp RIGHT   &td0        &none
-        &none         &none                            &kp LG(LA(LC(LS(N0)))) &kp LG(LA(LC(LS(N4))))  &kp LG(LA(LC(LS(N2))))  &kp LG(LS(J))       &kp LA(LC(SPACE)) &td6         &td5           &td2           &kp EQUAL   &kp PLUS    &kp LS(RET)
-                                                             &none                   &mo SYM            &lt NUM LG(LS(J))       &td7                         &none     &trans       &none      &none
+        &none         &kp LG(LA(LC(LS(F))))            &none                  &kp LALT                &kp LG(LA(LC(LS(N1))))  &none                                 &kp LS(MINUS)  &kp PG_DN      &kp UP         &kp PG_UP   &zed_em_kay &td4
+        &none         &mt LSHFT LG(LA(LC(LS(S))))      &kp LCTRL              &kp LGUI                &kp LG(LA(LC(LS(N3))))  &kp LG(SPACE)                         &kp MINUS      &kp LEFT       &kp DOWN       &kp RIGHT   &td0        &td7
+        &none         &none                            &kp LG(LA(LC(LS(N0)))) &kp LG(LA(LC(LS(N4))))  &kp LG(LA(LC(LS(N2))))  &none      &kp LA(LC(SPACE)) &td6     &td5           &td2           &kp EQUAL      &kp PLUS    &kp LS(RET)
+                                                             &none                   &mo SYM            &lt NUM LG(LS(J))       &kp TAB                         &none     &trans       &none      &none
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
 
     num_layer {
       bindings = <
-        &none         &none          &none          &none       &none     &none                            &none     &kp N7         &kp N8           &kp N9      &none           &none
-        &none         &mo LSHFT      &kp LCTRL      &kp LALT    &kp LGUI  &none                            &kp BSLH  &kp N1         &kp N2           &kp N3      &kp N4          &none
-        &none         &none          &none          &none       &none     &none        &kp C_MUTE          &kp PLUS  &kp MINUS      &kp LS(MINUS)    &none       &none           &none
+        &none         &none          &none          &kp LGUI    &none     &none                            &none     &kp N7         &kp N8           &kp N9      &none           &none
+        &none         &kp LSHFT      &kp LCTRL      &kp LALT    &none     &none                            &none     &kp N1         &kp N2           &kp N3      &kp N4          &none
+        &none         &none          &none          &none       &none     &none        &kp C_MUTE          &none     &kp N0         &none    &none       &none           &none
                                          &none           &none           &none       &none       &kp N6    &kp N5       &none          &none  
        >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -206,8 +210,8 @@
 
     sym_layer{
       bindings = <
-        &none         &none          &none          &none       &none     &none                              &none     &kp LS(N7)     &kp LS(N8)       &none       &none           &kp BSLH                     
-        &none         &mo LSHFT      &kp LCTRL      &kp LALT    &kp LGUI  &none                              &kp BSLH  &kp LS(N1)     &kp LS(N2)       &kp LS(N3)  &kp LS(N4)      &none                        
+        &none         &none          &none          &kp LGUI    &none     &none                              &none     &kp LS(N7)     &kp LS(N8)       &none       &none           &kp BSLH                     
+        &none         &kp LSHFT      &kp LCTRL      &kp LALT    &none     &none                              &kp BSLH  &kp LS(N1)     &kp LS(N2)       &kp LS(N3)  &kp LS(N4)      &none                        
         &none         &none          &none          &none       &none     &none       &none                  &kp PLUS  &kp MINUS      &kp LS(MINUS)    &none       &none           &none                        
                                                  &none          &trans    &none     &none      &kp LS(N6)    &kp LS(N5)    &none      &none
       >;
