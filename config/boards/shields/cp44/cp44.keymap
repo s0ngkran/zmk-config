@@ -136,6 +136,27 @@
                     bindings = <&kp LG(LA(LC(LS(N7))))>, <&kp LG(LA(LC(LS(N8))))>,<&kp LG(LA(LC(LS(N9))))>;
                 };
     };
+combos {
+        compatible = "zmk,combos";
+        combo1 {
+            timeout-ms = <50>;
+            key-positions = <19 20>;
+            bindings = <&kp EQUAL>;
+        };
+        combo2 {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&kp PLUS>;
+        };
+    };
+    /* 
+
+     0  1  2  3  4  5        6  7  8  9 10 11
+    12 13 14 15 16 17       18 19 20 21 22 23
+    24 25 26 27 28 29  30   31 32 33 34 35 36
+             37 38 39 40 41 42 43 44 
+
+    */
   keymap {
           compatible = "zmk,keymap";
 
@@ -144,7 +165,7 @@
         &lt FUNC ESC       &kp SQT      &kp COMMA  &kp DOT   &kp P         &kp Y                                          &kp F      &kp G     &kp C     &kp R      &kp L   &kp FSLH  
         &kp TAB            &kp A        &kp O      &kp E     &kp U         &kp I                                          &kp D      &kp H     &kp T     &kp N      &kp S   &kp MINUS 
         &kp LALT           &kp SEMI     &kp Q      &kp J     &kp K         &kp X        &kp C_PLAY_PAUSE                  &kp B      &kp M     &kp W     &kp V      &kp Z   &kp RET  
-                                                   &mo MOUSE &mt LCTRL TAB &mt LSHFT LS(RET) &kp BACKSPACE         &kp SPACE &lt NAV LG(LS(SPACE)) &mt LGUI GRAVE  &key_repeat 
+                                                   &mo MOUSE &mt LCTRL TAB &mt LSHFT LS(RET) &kp BACKSPACE         &kp SPACE &mo NAV  &mt LGUI GRAVE  &key_repeat 
       >;
       sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
     };
@@ -158,22 +179,19 @@
       >;
     };
 
-
-
-
     nav_layer {
       bindings = <
-        &none         &kp LG(LA(LC(LS(F))))            &none                  &kp LALT                &kp LG(LA(LC(LS(N1))))  &none                                 &kp LS(MINUS)  &kp PG_DN      &kp UP         &kp PG_UP   &zed_em_kay &td4
-        &none         &mt LSHFT LG(LA(LC(LS(S))))      &kp LCTRL              &kp LGUI                &kp LG(LA(LC(LS(N3))))  &kp LG(SPACE)                         &kp MINUS      &kp LEFT       &kp DOWN       &kp RIGHT   &td0        &td7
-        &none         &none                            &kp LG(LA(LC(LS(N0)))) &kp LG(LA(LC(LS(N4))))  &kp LG(LA(LC(LS(N2))))  &none      &kp LA(LC(SPACE)) &td6     &td5           &td2           &kp EQUAL      &kp PLUS    &kp LS(RET)
-                                                             &none                   &mo SYM            &lt NUM LG(LS(J))       &kp TAB                         &none     &trans       &none      &none
+        &none         &kp LG(LA(LC(LS(F))))            &none                  &kp LALT                &kp LG(LA(LC(LS(N1))))  &none                                     &kp LS(MINUS)  &kp PG_DN      &kp UP         &kp PG_UP   &zed_em_kay &td4
+        &none         &mt LSHFT LG(LA(LC(LS(S))))      &kp LCTRL              &kp LGUI                &kp LG(LA(LC(LS(N3))))  &kp LG(SPACE)                             &kp MINUS      &kp LEFT       &kp DOWN       &kp RIGHT   &td0        &td7
+        &none         &none                            &kp LG(LA(LC(LS(N0)))) &kp LG(LA(LC(LS(N4))))  &kp LG(LA(LC(LS(N2))))  &kp LG(LS(SPACE))   &kp LA(LC(SPACE))     &td6           &td5           &td2           &kp EQUAL   &kp PLUS    &kp LS(RET)
+                                                                              &none                   &mo SYM                 &lt NUM LG(LS(J))  &kp TAB     &none      &trans         &none          &none
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
 
     num_layer {
       bindings = <
-        &none         &none          &none          &kp LALT    &none     &none                            &none     &kp N7         &kp N8           &kp N9      &none           &none
+        &none         &none          &none          &kp LALT    &none     &none                            &none     &kp N7         &none            &kp N8      &kp N9          &none
         &none         &kp LSHFT      &kp LCTRL      &kp LGUI    &none     &none                            &none     &kp N1         &kp N2           &kp N3      &kp N4          &none
         &none         &none          &none          &none       &none     &none        &kp C_MUTE          &none     &kp N0         &none    &none       &none           &none
                                          &none           &none           &none       &none       &kp N6    &kp N5       &none          &none  
