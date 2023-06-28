@@ -173,8 +173,8 @@
 
     num_layer {
       bindings = <
-        &none         &none          &none          &kp LGUI    &none     &none                            &none     &kp N7         &kp N8           &kp N9      &none           &none
-        &none         &kp LSHFT      &kp LCTRL      &kp LALT    &none     &none                            &none     &kp N1         &kp N2           &kp N3      &kp N4          &none
+        &none         &none          &none          &kp LALT    &none     &none                            &none     &kp N7         &kp N8           &kp N9      &none           &none
+        &none         &kp LSHFT      &kp LCTRL      &kp LGUI    &none     &none                            &none     &kp N1         &kp N2           &kp N3      &kp N4          &none
         &none         &none          &none          &none       &none     &none        &kp C_MUTE          &none     &kp N0         &none    &none       &none           &none
                                          &none           &none           &none       &none       &kp N6    &kp N5       &none          &none  
        >;
@@ -210,8 +210,8 @@
 
     sym_layer{
       bindings = <
-        &none         &none          &none          &kp LGUI    &none     &none                              &none     &kp LS(N7)     &kp LS(N8)       &none       &none           &kp BSLH                     
-        &none         &kp LSHFT      &kp LCTRL      &kp LALT    &none     &none                              &kp BSLH  &kp LS(N1)     &kp LS(N2)       &kp LS(N3)  &kp LS(N4)      &none                        
+        &none         &none          &none          &kp LALT    &none     &none                              &none     &kp LS(N7)     &kp LS(N8)       &none       &none           &kp BSLH                     
+        &none         &kp LSHFT      &kp LCTRL      &kp LGUI    &none     &none                              &kp BSLH  &kp LS(N1)     &kp LS(N2)       &kp LS(N3)  &kp LS(N4)      &none                        
         &none         &none          &none          &none       &none     &none       &none                  &kp PLUS  &kp MINUS      &kp LS(MINUS)    &none       &none           &none                        
                                                  &none          &trans    &none     &none      &kp LS(N6)    &kp LS(N5)    &none      &none
       >;
