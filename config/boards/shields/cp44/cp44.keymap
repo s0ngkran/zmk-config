@@ -52,7 +52,7 @@
 #define SCROLL_DOWN SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
 #define SCROLL_LEFT SCROLL_HOR(-U_MOUSE_SCROLL_MAX)
 #define SCROLL_RIGHT SCROLL_HOR(U_MOUSE_SCROLL_MAX)
-
+#define xxx &none
 
 
 &mwh {
@@ -128,26 +128,161 @@
                     tapping-term-ms = <200>;
                     bindings = <&kp LBKT>, <&kp RBKT>;
                 };
-         td7: tap_dancee7 {
+ td7: tap_dancee7 {
                     compatible = "zmk,behavior-tap-dance";
                     label = "TAP_DANCE_7";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
                     bindings = <&kp LG(LA(LC(LS(N7))))>, <&kp LG(LA(LC(LS(N8))))>,<&kp LG(LA(LC(LS(N9))))>;
+                }
+         tdshiftspace: tdshiftspace {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "tdshiftspace";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <200>;
+                    bindings = <&sk LSHFT>, <&kp SPACE>;
                 };
     };
 combos {
         compatible = "zmk,combos";
-        combo1 {
+        ccslash {
             timeout-ms = <50>;
-            key-positions = <19 20>;
-            bindings = <&kp EQUAL>;
+            key-positions = <19 9>;
+            bindings = <&kp FSLH>;
         };
-        combo2 {
+        ccplus {
             timeout-ms = <50>;
-            key-positions = <20 21>;
+            key-positions = <7 8>;
             bindings = <&kp PLUS>;
         };
+
+        ccmulti {
+            timeout-ms = <50>;
+            key-positions = <7 9>;
+            bindings = <&kp LS(8)>;
+        };
+        ccminus {
+            timeout-ms = <50>;
+            key-positions = <9 8>;
+            bindings = <&kp MINUS>;
+        };
+        cclsone {
+            timeout-ms = <50>;
+            key-positions = <7 19>;
+            bindings = <&kp LS(1)>;
+        };
+        cclstwo {
+            timeout-ms = <50>;
+            key-positions = <8 20>;
+            bindings = <&kp LS(2)>;
+        };
+        cclsthree {
+            timeout-ms = <50>;
+            key-positions = <9 21>;
+            bindings = <&kp LS(3)>;
+        };
+        cclsfour {
+            timeout-ms = <50>;
+            key-positions = <10 22>;
+            bindings = <&kp LS(4)>;
+        };
+        cclpar {
+            timeout-ms = <50>;
+            key-positions = <19 20>;
+            bindings = <&kp LS(9)>;
+        };
+        ccequal {
+            timeout-ms = <50>;
+            key-positions = <19 21>;
+            bindings = <&kp EQUAL>;
+        };
+        ccrpar {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&kp LS(0)>;
+        };
+        cccolon {
+            timeout-ms = <50>;
+            key-positions = <20 22>;
+            bindings = <&kp LS(SEMI)>;
+        };
+        ccq {
+            timeout-ms = <50>;
+            key-positions = <19 32>;
+            bindings = <&kp Q>;
+        };
+        ccunsc {
+            timeout-ms = <50>;
+            key-positions = <20 33>;
+            bindings = <&kp LS(MINUS)>;
+        };
+        cclbr {
+            timeout-ms = <50>;
+            key-positions = <32 33>;
+            bindings = <&kp LBRC>;
+        };
+
+        ccrbr {
+            timeout-ms = <50>;
+            key-positions = <33 34>;
+            bindings = <&kp RBRC>;
+        };
+        ccpipe {
+            timeout-ms = <50>;
+            key-positions = <33 35>;
+            bindings = <&kp LS(BSLH)>;
+        };
+        ccbslh {
+            timeout-ms = <50>;
+            key-positions = <34 35>;
+            bindings = <&kp BSLH>;
+        };
+        cclsfive
+            timeout-ms = <50>;
+            key-positions = <42 19>;
+            bindings = <&kp LS(5)>;
+        };
+        cclssix {
+            timeout-ms = <50>;
+            key-positions = <42 20>;
+            bindings = <&kp LS(6)>;
+        };
+        ccrepkey {
+            timeout-ms = <50>;
+            key-positions = <42 32>;
+            bindings = <&key_repeat>;
+        };
+        ccshret {
+            timeout-ms = <50>;
+            key-positions = <42 22>;
+            bindings = <&kp LS(RET)>;
+        };
+        ccautobkt {
+            timeout-ms = <50>;
+            key-positions = <19 22>;
+            bindings = <&zed_em_kay>;
+        };
+        ccshret {
+            timeout-ms = <50>;
+            key-positions = <42 22>;
+            bindings = <&kp LS(RET)>;
+        };
+        ccledq {
+            timeout-ms = <50>;
+            key-positions = <42 11>;
+            bindings = <&kp F12>;
+        };
+        cclbkt {
+            timeout-ms = <50>;
+            key-positions = <41 19>;
+            bindings = <&kp LBKT>;
+        };
+        ccrbkt {
+            timeout-ms = <50>;
+            key-positions = <41 21>;
+            bindings = <&kp RBKT>;
+        };
+
     };
     /* 
 
@@ -165,7 +300,7 @@ combos {
         &lt FUNC ESC       &kp SQT      &kp COMMA  &kp DOT   &kp P         &kp Y                                          &kp F      &kp G     &kp C     &kp R      &kp L   &kp FSLH  
         &kp TAB            &kp A        &kp O      &kp E     &kp U         &kp I                                          &kp D      &kp H     &kp T     &kp N      &kp S   &kp MINUS 
         &kp LALT           &kp SEMI     &kp Q      &kp J     &kp K         &kp X        &kp C_PLAY_PAUSE                  &kp B      &kp M     &kp W     &kp V      &kp Z   &kp RET  
-                                                   &mo MOUSE &mt LCTRL TAB &mt LSHFT LS(RET) &kp BACKSPACE         &kp SPACE &mo NAV  &mt LGUI GRAVE  &key_repeat 
+                                                   &mo MOUSE &mt LCTRL TAB &lt NAV SPACE &lt NUM LG(LS(J)) &kp BACKSPACE  &tdshiftspace  &kp LGUI  &none 
       >;
       sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
     };
@@ -181,10 +316,10 @@ combos {
 
     nav_layer {
       bindings = <
-        &none         &kp LG(LA(LC(LS(F))))            &none                  &kp LALT                &kp LG(LA(LC(LS(N1))))  &none                                     &kp LS(MINUS)  &kp PG_DN      &kp UP         &kp PG_UP   &zed_em_kay &td4
-        &none         &mt LSHFT LG(LA(LC(LS(S))))      &kp LCTRL              &kp LGUI                &kp LG(LA(LC(LS(N3))))  &kp LG(SPACE)                             &kp MINUS      &kp LEFT       &kp DOWN       &kp RIGHT   &td0        &td7
-        &none         &none                            &kp LG(LA(LC(LS(N0)))) &kp LG(LA(LC(LS(N4))))  &kp LG(LA(LC(LS(N2))))  &kp LG(LS(SPACE))   &kp LA(LC(SPACE))     &td6           &td5           &td2           &kp EQUAL   &kp PLUS    &kp LS(RET)
-                                                                              &none                   &mo SYM                 &lt NUM LG(LS(J))  &kp TAB     &none      &trans         &none          &none
+        &none         &kp LG(LA(LC(LS(F))))            &none                  &kp LALT                &kp LG(LA(LC(LS(N1))))  &none                                     &none          &kp PG_DN      &kp UP         &kp PG_UP   xxx    xxx
+        &none         &mt LSHFT LG(LA(LC(LS(S))))      &kp LCTRL              &kp LGUI                &kp LG(LA(LC(LS(N3))))  &kp LG(SPACE)                             &none          &kp LEFT       &kp DOWN       &kp RIGHT   xxx    xxx
+        &none         &none                            &kp LG(LA(LC(LS(N0)))) &kp LG(LA(LC(LS(N4))))  &kp LG(LA(LC(LS(N2))))  &kp LG(LS(SPACE))   &kp LA(LC(SPACE))     &none          xxx            xxx            xxx         xxx    &kp LS(RET)
+                                                                              &none                   xxx                     &trans       xxx           &td7           xxx            &none          &none
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
@@ -193,8 +328,8 @@ combos {
       bindings = <
         &none         &none          &none          &kp LALT    &none     &none                            &none     &kp N7         &none            &kp N8      &kp N9          &none
         &none         &kp LSHFT      &kp LCTRL      &kp LGUI    &none     &none                            &none     &kp N1         &kp N2           &kp N3      &kp N4          &none
-        &none         &none          &none          &none       &none     &none        &kp C_MUTE          &none     &kp N0         &none    &none       &none           &none
-                                         &none           &none           &none       &none       &kp N6    &kp N5       &none          &none  
+        &none         &none          &none          &none       &none     &none        &kp C_MUTE          &none     &kp N0         &kp SPACE        &none       &none           &none
+                                         &none           &none           &none       &trans       &kp N6    &kp N5       &none          &none  
        >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
     };
