@@ -134,7 +134,7 @@
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
                     bindings = <&kp LG(LA(LC(LS(N7))))>, <&kp LG(LA(LC(LS(N8))))>,<&kp LG(LA(LC(LS(N9))))>;
-                }
+                };
          tdshiftspace: tdshiftspace {
                     compatible = "zmk,behavior-tap-dance";
                     label = "tdshiftspace";
