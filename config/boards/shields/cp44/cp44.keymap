@@ -63,6 +63,12 @@
     tapping-term-ms = <150>;
 };
 
+&sk {  // sticky-key config
+    release-after-ms = <900>;  // release after 0.6s
+    quick-release;             // no double capitalization when rolling keys
+};
+
+
 / {
     macros {
         zed_em_kay: zed_em_kay {
