@@ -335,7 +335,7 @@ te:
       bindings = <
         &none         &kp LG(LA(LC(LS(F))))            &none                  &kp LALT                &kp LG(LA(LC(LS(N1))))  &none                                     &none          &kp PG_DN      &kp UP         &kp PG_UP   xxx    xxx
         &none         &mt LSHFT LG(LA(LC(LS(S))))      &kp LCTRL              &kp LGUI                &kp LG(LA(LC(LS(N3))))  &kp LG(SPACE)                             &none          &kp LEFT       &kp DOWN       &kp RIGHT   xxx    xxx
-        &none         &none                            &kp LG(LA(LC(LS(N0)))) &kp LG(LA(LC(LS(N4))))  &kp LG(LA(LC(LS(N2))))  &kp LG(LS(J))   &kp LA(LC(SPACE))         &none          xxx            xxx            xxx         xxx    &kp LS(RET)
+        &none         &none                            &kp LG(LA(LC(LS(N0)))) &kp LG(LA(LC(LS(N4))))  &kp LG(LA(LC(LS(N2))))  &kp LG(LS(SPACE))   &kp LA(LC(SPACE))         &none          xxx            xxx            xxx         xxx    &kp LS(RET)
                                                                               &none                   xxx                     &trans       xxx           &td7           &kp RET        &none          &none
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
@@ -345,7 +345,7 @@ te:
       bindings = <
         &none         &none          &none          &kp LALT    &none     &none                            &none     &kp N7         &none            &kp N8      &kp N9          &kp SPACE
         &none         &kp LSHFT      &kp LCTRL      &kp LGUI    &none     &none                            &none     &kp N1         &kp N2           &kp N3      &kp N4          &none
-        &none         &none          &none          &none       &none     &none        &kp C_MUTE          &none     &kp N0         &kp SPACE        &none       &none           &none
+        &none         &none          &none          &none       &none     &kp LG(LS(J))   &kp C_MUTE       &none     &kp N0         &kp SPACE        &none       &none           &none
                                          &none           &none           &none       &trans       &kp N6    &kp N5       &none          &none  
        >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
