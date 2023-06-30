@@ -153,13 +153,8 @@
 
 combos {
         compatible = "zmk,combos";
-        ccslash {
-            timeout-ms = <50>;
-            key-positions = <19 9>;
-            bindings = <&kp FSLH>;
-        };
         ccplus {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <7 8>;
             bindings = <&kp PLUS>;
         };
@@ -194,7 +189,7 @@ combos {
             bindings = <&kp LS(N4)>;
         };
         cclpar {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <19 20>;
             bindings = <&kp LS(N9)>;
         };
@@ -204,7 +199,7 @@ combos {
             bindings = <&kp EQUAL>;
         };
         ccrpar {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <20 21>;
             bindings = <&kp LS(N0)>;
         };
@@ -223,7 +218,6 @@ combos {
             key-positions = <32 33>;
             bindings = <&kp LBRC>;
         };
-
         ccrbr {
             timeout-ms = <50>;
             key-positions = <33 34>;
@@ -356,10 +350,9 @@ te:
        >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
     };
-
     function_layer {
       bindings = <
-        &none         &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                      &none         &kp F7         &kp F8      &kp F9      &kp F10         &none
+        xxx           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                      &none         &kp F7         &kp F8      &kp F9      &kp F10         &none
         &none         &bt BT_CLR      &none           &none           &none           &none                             &none         &kp F1         &kp F2      &kp F3      &kp F4          &none
         &bootloader   &reset          &none           &none           &none           &none              &to QWERTY     &none         &kp F11        &kp F12     &kp F13     &kp F14         &none
                                                       &none           &none           &none    &none     &kp F6        &kp F5         &kp F15      &none
