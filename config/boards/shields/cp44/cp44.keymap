@@ -270,12 +270,12 @@ combos {
         };
         cclbkt {
             timeout-ms = <50>;
-            key-positions = <41 19>;
+            key-positions = <42 32>;
             bindings = <&kp LBKT>;
         };
         ccrbkt {
             timeout-ms = <50>;
-            key-positions = <41 21>;
+            key-positions = <42 33>;
             bindings = <&kp RBKT>;
         };
         ccn7 {
@@ -298,6 +298,17 @@ combos {
             key-positions = <16 15>;
             bindings = <&kp TAB>;
         };
+        ccgrave {
+            timeout-ms = <50>;
+            key-positions = <42 7>;
+            bindings = <&kp GRAVE>;
+        };
+        cclsgrave {
+            timeout-ms = <50>;
+            key-positions = <42 8>;
+            bindings = <&kp LS(GRAVE)>;
+        };
+
     };
     /* 
 
@@ -340,7 +351,6 @@ te:
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
-
     num_layer {
       bindings = <
         &none         &none          &none          &kp LALT    &none     &none                            &none     &kp N7         &none            &kp N8      &kp N9          &kp SPACE
