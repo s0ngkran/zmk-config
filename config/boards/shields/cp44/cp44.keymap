@@ -178,7 +178,7 @@ home row mod here
             global-quick-tap;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;    
-            hold-trigger-on-release; 
+      /*    hold-trigger-on-release;     */
         };
   hml: left_hand_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -190,7 +190,7 @@ home row mod here
             global-quick-tap;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;    
-            hold-trigger-on-release; 
+    /*      hold-trigger-on-release;      */
         };
 
     };
