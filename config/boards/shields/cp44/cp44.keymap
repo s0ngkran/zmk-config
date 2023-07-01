@@ -18,6 +18,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
 #define SHIFT 1
@@ -344,9 +345,9 @@ te:
 
     nav_layer {
       bindings = <
-        &none         &kp LG(LA(LC(LS(F))))            &none                  &kp LALT                &kp LG(LA(LC(LS(N1))))  &none                                     &none          &kp PG_DN      &kp UP         &kp PG_UP   xxx    xxx
-        &none         &mt LSHFT LG(LA(LC(LS(S))))      &kp LCTRL              &kp LGUI                &kp LG(LA(LC(LS(N3))))  &kp LG(SPACE)                             &none          &kp LEFT       &kp DOWN       &kp RIGHT   xxx    xxx
-        &none         &none                            &kp LG(LA(LC(LS(N0)))) &kp LG(LA(LC(LS(N4))))  &kp LG(LA(LC(LS(N2))))  &kp LG(LS(SPACE))   &kp LA(LC(SPACE))         &none          xxx            xxx            xxx         xxx    &kp LS(RET)
+        &none         &kp LG(LA(LC(LS(F))))            &none                  &kp LALT                &kp LG(LA(LC(LS(N1))))  &none                                     &none          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    xxx
+        &none         &mt LSHFT LG(LA(LC(LS(S))))      &kp LCTRL              &kp LGUI                &kp LG(LA(LC(LS(N3))))  &kp LG(SPACE)                             &none          &kp LEFT       &kp DOWN       &kp RIGHT   xxx          xxx
+        &none         &none                            &kp LG(LA(LC(LS(N0)))) &kp LG(LA(LC(LS(N4))))  &kp LG(LA(LC(LS(N2))))  &kp LG(LS(SPACE))   &kp LA(LC(SPACE))         &none          xxx            xxx            xxx     xxx    &kp LS(RET)
                                                                               &none                   xxx                     &trans       xxx           &td7           &kp RET        &none          &none
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
@@ -363,7 +364,7 @@ te:
     function_layer {
       bindings = <
         xxx           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                      &none         &kp F7         &kp F8      &kp F9      &kp F10         &none
-        &none         &bt BT_CLR      &none           &none           &none           &none                             &none         &kp F1         &kp F2      &kp F3      &kp F4          &none
+        &none         &bt BT_CLR      &none           &out OUT_BLE    &out OUT_USB    &none                             &none         &kp F1         &kp F2      &kp F3      &kp F4          &none
         &bootloader   &reset          &none           &none           &none           &none              &to QWERTY     &none         &kp F11        &kp F12     &kp F13     &kp F14         &none
                                                       &none           &none           &none    &none     &kp F6        &kp F5         &kp F15      &none
       >;
