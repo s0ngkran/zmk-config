@@ -297,7 +297,7 @@ combos {
         };
         cctab {
             timeout-ms = <DELAY_FAST>;
-            key-positions = <16 15>;
+            key-positions = <14 15>;
             bindings = <&kp TAB>;
         };
         ccgrave {
@@ -310,12 +310,21 @@ combos {
             key-positions = <42 8>;
             bindings = <&kp LS(GRAVE)>;
         };
-        cctogsym {
+        ccslsym {
             timeout-ms = <DELAY_FAST>;
-            key-positions = <14 15>;
-            bindings = <&to SYM>;
+            key-positions = <15 16>;
+            bindings = <&sl SYM>;
         };
-
+        ccnavspace {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <13 14>;
+            bindings = <&kp LG(LS(SPACE))>;
+        };
+        ccnavj {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <13 15>;
+            bindings = <&kp LG(LS(J))>;
+        };
     };
     /* 
 
@@ -335,7 +344,7 @@ te:
         &lt FUNC ESC       &kp SQT      &kp COMMA  &kp DOT   &kp P         &kp Y                                          &kp F      &kp G     &kp C     &kp R      &kp L   &kp FSLH  
         &kp TAB            &kp A        &kp O      &kp E     &kp U         &kp I                                          &kp D      &kp H     &kp T     &kp N      &kp S   &kp MINUS 
         &sk LALT           &kp SEMI     &kp Q      &kp J     &kp K         &kp X        &kp C_PLAY_PAUSE                  &kp B      &kp M     &kp W     &kp V      &kp Z   &kp RET  
-                                                   &mo MOUSE &sk LCTRL  &lt NAV SPACE &lt NUM LG(LS(SPACE)) &kp BACKSPACE  &sk LSHFT  &sk LGUI  &none 
+                                                   &mo MOUSE &sk LCTRL  &lt NAV SPACE &lt NUM SPACE        &kp BACKSPACE  &sk LSHFT  &sk LGUI  &none 
       >;
       sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
     };
@@ -352,8 +361,8 @@ te:
     nav_layer {
       bindings = <
         &none         &kp LG(LA(LC(LS(F))))            &none                  &kp LALT                &kp LG(LA(LC(LS(N1))))  &none                                     &none          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    xxx
-        &none         &mt LSHFT LG(LA(LC(LS(S))))      &kp LCTRL              &kp LGUI                &kp LG(LA(LC(LS(N3))))  &kp LG(SPACE)                             &none          &kp LEFT       &kp DOWN       &kp RIGHT   xxx          xxx
-        &none         &none                            &kp LG(LA(LC(LS(N0)))) &kp LG(LA(LC(LS(N4))))  &kp LG(LA(LC(LS(N2))))  &kp LG(LS(SPACE))   &kp LA(LC(SPACE))     &none          xxx            xxx            xxx         xxx          &kp LS(RET)
+        &none         &sk LSHFT                        &sk LCTRL              &sk LGUI                &kp LG(LA(LC(LS(N3))))  &kp LG(SPACE)                             &none          &kp LEFT       &kp DOWN       xxx         xxx          xxx
+        &none         &none                            &kp LG(LA(LC(LS(N0)))) &kp LG(LA(LC(LS(N4))))  &kp LG(LA(LC(LS(N2))))  xxx             &kp LA(LC(SPACE))         &none          xxx            xxx            xxx         xxx          &kp LS(RET)
                                                                               &none                   xxx                     &trans       xxx           &td7           &kp RET        &none          &none
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
@@ -362,7 +371,7 @@ te:
       bindings = <
         &none         &none          &none          &kp LALT    &none     &none                             &none              &kp N7         &none            &kp N8      &kp N9          &kp SPACE
         &none         &kp LSHFT      &kp LCTRL      &kp LGUI    &none     &none                             &kp BACKSPACE      &kp N1         &kp N2           &kp N3      &kp N4          &none
-        &none         &none          &none          &none       &none     &kp LG(LS(J))   &kp C_MUTE        &none              &kp N0         &kp SPACE        &none       &none           &none
+        &none         &none          &none          &none       &none     xxx             &kp C_MUTE        &none              &kp N0         &kp SPACE        &none       &none           &none
                                          &none           &none           &none       &trans       &kp N6    &kp N5             &none          &none  
        >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -396,8 +405,8 @@ te:
 
     sym_layer{
       bindings = <
-        &to DEFAULT   &none          &none          &kp LALT    &none         &none                              &none            &kp LS(N7)     xxx              &kp LS(N8)  &none           &kp BSLH                     
-        &none         &kp LSHFT      &kp LCTRL      &kp LGUI    &none         &none                              &kp BACKSPACE    &kp LS(N1)     &kp LS(N2)       &kp LS(N3)  &kp LS(N4)      &none                        
+        &none         &none          &none          &sk LALT    &none         &none                              &none            &kp LS(N7)     xxx              &kp LS(N8)  &none           &kp BSLH                     
+        &none         &sk LSHFT      &sk LCTRL      &sk LGUI    &none         &none                              &kp BACKSPACE    &kp LS(N1)     &kp LS(N2)       &kp LS(N3)  &kp LS(N4)      &none                        
         &sk LALT      &none          &none          &none       &none         &none       &none                  &kp PLUS         &kp MINUS      &kp LS(MINUS)    &none       &none           &none                        
                                                  &none          &sk LCTRL     &to DEFAULT   &none   &kp LS(N6)   &kp LS(N5)       &sk LGUI       &none
       >;
