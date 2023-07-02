@@ -349,7 +349,6 @@ combos {
     24 25 26 27 28 29  30   31 32 33 34 35 36
              37 38 39 40 41 42 43 44 
 
-te:
     */
 
   keymap {
@@ -360,7 +359,7 @@ te:
         &lt FUNC ESC       &kp SQT      &kp COMMA  &kp DOT   &kp P         &kp Y                                          &kp F      &kp G     &kp C     &kp R      &kp L   &kp FSLH  
         &kp TAB            &kp A        &kp O      &kp E     &kp U         &kp I                                          &kp D      &kp H     &kp T     &kp N      &kp S   &kp MINUS 
         &sk LALT           &kp SEMI     &kp Q      &kp J     &kp K         &kp X        &kp C_PLAY_PAUSE                  &kp B      &kp M     &kp W     &kp V      &kp Z   &kp RET  
-                                                   &mo MOUSE &sk LCTRL  &lt NAV SPACE &lt NUM SPACE        &kp BACKSPACE  &sk LSHFT  &sk LGUI  xxx 
+                                                   &mo MOUSE &sk LCTRL  &lt NAV SPACE &lt NUM SPACE        &kp BACKSPACE  &sk LSHFT  &kp LGUI  xxx 
       >;
       sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
     };
