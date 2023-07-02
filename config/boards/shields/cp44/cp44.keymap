@@ -29,6 +29,7 @@
 #define MOUSE 6
 #define SYM 7
 #define DELAY_FAST 25
+#define DELAY_SLOW 30
 
 #define U_MOUSE_MOVE_MAX 2700                     /* <--- New max speed setting (default: 600) */
 #undef MOVE_UP
@@ -226,12 +227,12 @@ combos {
             bindings = <&kp RBRC>;
         };
         ccpipe {
-            timeout-ms = <DELAY_FAST>;
+            timeout-ms = <DELAY_SLOW>;
             key-positions = <33 35>;
             bindings = <&kp LS(BSLH)>;
         };
         ccbslh {
-            timeout-ms = <DELAY_FAST>;
+            timeout-ms = <DELAY_SLOW>;
             key-positions = <34 35>;
             bindings = <&kp BSLH>;
         };
@@ -247,7 +248,7 @@ combos {
         };
         ccrepkey {
             timeout-ms = <DELAY_FAST>;
-            key-positions = <42 32>;
+            key-positions = <3 4>;
             bindings = <&key_repeat>;
         };
         ccshret {
@@ -292,7 +293,7 @@ combos {
         };
         ccunsc {
             timeout-ms = <DELAY_FAST>;
-            key-positions = <9 21>;
+            key-positions = <9 10>;
             bindings = <&kp LS(MINUS)>;
         };
         cctab {
@@ -321,12 +322,18 @@ combos {
             bindings = <&kp LG(LS(SPACE))>;
         };
         ccnavj {
-            timeout-ms = <DELAY_FAST>;
+            timeout-ms = <DELAY_SLOW>;
             key-positions = <13 15>;
             bindings = <&kp LG(LS(J))>;
         };
+        ccraycast {
+            timeout-ms = <DELAY_SLOW>;
+            key-positions = <16 39>;
+            bindings = <&kp LG(SPACE)>;
+        };
     };
     /* 
+                        
 
      0  1  2  3  4  5        6  7  8  9 10 11
     12 13 14 15 16 17       18 19 20 21 22 23
@@ -361,7 +368,7 @@ te:
     nav_layer {
       bindings = <
         &none         &kp LG(LA(LC(LS(F))))            &none                  &kp LALT                &kp LG(LA(LC(LS(N1))))  &none                                     &none          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    xxx
-        &none         &sk LSHFT                        &sk LCTRL              &sk LGUI                &kp LG(LA(LC(LS(N3))))  &kp LG(SPACE)                             &none          &kp LEFT       &kp DOWN       xxx         xxx          xxx
+        &none         &sk LSHFT                        &sk LCTRL              &sk LGUI                &kp LG(LA(LC(LS(N3))))  &none                             &none          &kp LEFT       &kp DOWN       xxx         xxx          xxx
         &none         &none                            &kp LG(LA(LC(LS(N0)))) &kp LG(LA(LC(LS(N4))))  &kp LG(LA(LC(LS(N2))))  xxx             &kp LA(LC(SPACE))         &none          xxx            xxx            xxx         xxx          &kp LS(RET)
                                                                               &none                   xxx                     &trans       xxx           &td7           &kp RET        &none          &none
       >;
@@ -369,18 +376,18 @@ te:
    };
     num_layer {
       bindings = <
-        &none         &none          &none          &kp LALT    &none     &none                             &none              &kp N7         &none            &kp N8      &kp N9          &kp SPACE
-        &none         &kp LSHFT      &kp LCTRL      &kp LGUI    &none     &none                             &kp BACKSPACE      &kp N1         &kp N2           &kp N3      &kp N4          &none
-        &none         &none          &none          &none       &none     xxx             &kp C_MUTE        &none              &kp N0         &kp SPACE        &none       &none           &none
-                                         &none           &none           &none       &trans       &kp N6    &kp N5             &none          &none  
+        &none         &none          &none          &kp LALT    &none       &none                             &none              &kp N7         &none            &kp N8      &kp N9          &kp SPACE
+        &none         &kp LSHFT      &kp LCTRL      &kp LGUI    &kp SPACE   &none                             &kp BACKSPACE      &kp N1         &kp N2           &kp N3      &kp N4          &none
+        &none         &none          &none          &none       &none       xxx             &kp C_MUTE        &none              &kp N0         &kp SPACE        &none       &none           &none
+                                                    &none       &none       &none       &trans       &kp N6   &kp N5             &none          &none  
        >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
     };
     function_layer {
       bindings = <
-        xxx           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                      &none         &kp F7         &kp F8      &kp F9      &kp F10         &none
-        &none         &bt BT_CLR      &none           &out OUT_BLE    &out OUT_USB    &none                             &none         &kp F1         &kp F2      &kp F3      &kp F4          &none
-        &bootloader   &reset          &none           &none           &none           &none              &to QWERTY     &none         &kp F11        &kp F12     &kp F13     &kp F14         &none
+        xxx                  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                      &none         &kp F7         &kp F8      &kp F9      &kp F10         &none
+        &kp LA(LC(SPACE))    &bt BT_CLR      &none           &out OUT_BLE    &out OUT_USB    &none                             &none         &kp F1         &kp F2      &kp F3      &kp F4          &none
+        &bootloader          &reset          &none           &none           &none           &none              &to QWERTY     &none         &kp F11        &kp F12     &kp F13     &kp F14         &none
                                                       &none           &none           &none    &none     &kp F6        &kp F5         &kp F15      &none
       >;
     };
