@@ -68,6 +68,8 @@
 #define GO_TOGGLE &kp LG(LA(LC(LS(N5))))
 
 #define C_LANG &kp LA(LC(SPACE))
+#define GO_NAV &kp LG(LS(SPACE))
+#define GO_RAYCAST &kp LG(SPACE)
 
 &mwh {
   time-to-max-speed-ms = <500>;                 /* <--- How long time until max speed is reached */
@@ -327,14 +329,9 @@ combos {
             key-positions = <15 16>;
             bindings = <&sl SYM>;
         };
-        ccnavspace {
-            timeout-ms = <DELAY_FAST>;
-            key-positions = <13 14>;
-            bindings = <&kp LG(LS(SPACE))>;
-        };
         ccnavj {
             timeout-ms = <DELAY_SLOW>;
-            key-positions = <13 15>;
+            key-positions = <27 39>;
             bindings = <&kp LG(LS(J))>;
         };
         ccraycast {
@@ -382,9 +379,9 @@ combos {
     nav_layer {
       bindings = <
         xxx         GO_FINDER       GO_TOGGLE          &kp LALT        GO_VSCODE         xxx                                  xxx          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    xxx
-        xxx         &kp LSHFT       &kp LCTRL          &kp LGUI        GO_ITERM          xxx                                  xxx          &kp LEFT       &kp DOWN       xxx         xxx          xxx
-        xxx         xxx             GO_OBSIDIAN        GO_DISCORD      GO_SAFARI         xxx             &kp LA(LC(SPACE))    xxx          xxx            xxx            xxx         xxx          &kp LS(RET)
-                                                                   xxx          xxx    &trans          xxx         &td7       &kp RET      xxx            xxx
+        xxx         &kp LSHFT       &kp LCTRL          &kp LGUI        GO_ITERM          GO_NAV                               xxx          &kp LEFT       &kp DOWN       xxx         xxx          xxx
+        xxx         xxx             GO_OBSIDIAN        GO_DISCORD      GO_SAFARI         xxx             C_LANG               xxx          xxx            xxx            xxx         xxx          &kp LS(RET)
+                                                                   xxx          xxx    &trans          xxx         &td7       GO_RAYCAST   xxx            xxx
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
