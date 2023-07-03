@@ -65,6 +65,8 @@
 #define GO_DISCORD &kp LG(LA(LC(LS(N4))))
 #define GO_OBSIDIAN &kp LG(LA(LC(LS(N0))))
 #define GO_FINDER &kp LG(LA(LC(LS(F))))
+#define GO_TOGGLE &kp LG(LA(LC(LS(N5))))
+
 #define C_LANG &kp LA(LC(SPACE))
 
 &mwh {
@@ -349,6 +351,10 @@ combos {
     24 25 26 27 28 29  30   31 32 33 34 35 36
              37 38 39 40 41 42 43 44 
 
+
+             todo 
+             add toggle floating note
+
     */
 
   keymap {
@@ -375,7 +381,7 @@ combos {
 
     nav_layer {
       bindings = <
-        xxx         GO_FINDER       xxx                &kp LALT        GO_VSCODE         xxx                                  xxx          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    xxx
+        xxx         GO_FINDER       GO_TOGGLE          &kp LALT        GO_VSCODE         xxx                                  xxx          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    xxx
         xxx         &kp LSHFT       &kp LCTRL          &kp LGUI        GO_ITERM          xxx                                  xxx          &kp LEFT       &kp DOWN       xxx         xxx          xxx
         xxx         xxx             GO_OBSIDIAN        GO_DISCORD      GO_SAFARI         xxx             &kp LA(LC(SPACE))    xxx          xxx            xxx            xxx         xxx          &kp LS(RET)
                                                                    xxx          xxx    &trans          xxx         &td7       &kp RET      xxx            xxx
