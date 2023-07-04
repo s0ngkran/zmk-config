@@ -80,9 +80,6 @@
   time-to-max-speed-ms = <500>;                 /* <--- How long time until max speed is reached */
 };
 
-&lt {
-    tapping-term-ms = <150>;
-};
 
 &mt {
     tapping-term-ms = <75>;
@@ -349,8 +346,8 @@ combos {
     nav_layer {
       bindings = <
         &kp CAPS            GO_FINDER       GO_TOGGLE          &kp LALT        GO_VSCODE         xxx                                  xxx          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    &td7
-        C_LANG              &kp LSHFT       &kp LCTRL          &kp LGUI        GO_ITERM          xxx                                  xxx          &kp LEFT       &kp DOWN       &kp RIGHT   &kp TAB      xxx
-        xxx                 xxx             GO_OBSIDIAN        GO_DISCORD      GO_SAFARI         xxx             C_LANG               xxx          COPY           xxx            PASTE       UNDO         &kp LS(RET)
+        C_LANG              &kp LSHFT       &kp LCTRL          &kp LGUI        GO_ITERM          GO_OBSIDIAN                          xxx          &kp LEFT       &kp DOWN       &kp RIGHT   &kp TAB      xxx
+        xxx                 xxx             xxx                GO_DISCORD      GO_SAFARI         xxx             C_LANG               xxx          COPY           xxx            PASTE       UNDO         &kp LS(RET)
                                                                xxx             xxx               &trans      xxx         GO_HOMEROW   GO_RAYCAST   xxx            xxx
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
@@ -401,7 +398,7 @@ combos {
     };
     /* 
 
-    mouse movement using encoder
+    add macro leader q to nav_q
 
     */
         };
