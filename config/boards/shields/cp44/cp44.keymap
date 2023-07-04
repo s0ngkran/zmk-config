@@ -239,14 +239,14 @@ combos {
             layers = <NAV>;
         };
         ccsemi {
-            timeout-ms = <DELAY_SLOW>;
-            key-positions = <21 22>;
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <32 33>;
             bindings = <&kp SEMI>;
             layers = <DEFAULT>;
         };
         cccolon {
-            timeout-ms = <DELAY_SLOW>;
-            key-positions = <21 22>;
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <32 33>;
             bindings = <&kp LS(SEMI)>;
             layers = <NAV>;
         };
@@ -263,14 +263,14 @@ combos {
             layers = <NAV>;
         };
         ccbslash {
-            timeout-ms = <DELAY_FAST>;
-            key-positions = <32 33>;
+            timeout-ms = <DELAY_SLOW>;
+            key-positions = <19 22>;
             bindings = <&kp BSLH>;
             layers = <DEFAULT>;
         };
         ccpipe {
-            timeout-ms = <DELAY_FAST>;
-            key-positions = <32 33>;
+            timeout-ms = <DELAY_SLOW>;
+            key-positions = <19 22>;
             bindings = <&kp LS(BSLH)>;
             layers = <NAV>;
         };
@@ -294,7 +294,7 @@ combos {
         };
         ccautobkt {
             timeout-ms = <DELAY_FAST>;
-            key-positions = <19 22>;
+            key-positions = <19 9>;
             bindings = <&zed_em_kay>;
             layers = <DEFAULT>;
         };
@@ -346,10 +346,9 @@ combos {
                                                     xxx           xxx               &kp SPACE      &kp RET   &kp LS(RET)    &trans       &trans        &trans
       >;
     };
-
     nav_layer {
       bindings = <
-        &kp LOCKING_CAPS    GO_FINDER       GO_TOGGLE          &kp LALT        GO_VSCODE         xxx                                  xxx          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    &td7
+        &kp CAPS            GO_FINDER       GO_TOGGLE          &kp LALT        GO_VSCODE         xxx                                  xxx          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    &td7
         C_LANG              &kp LSHFT       &kp LCTRL          &kp LGUI        GO_ITERM          xxx                                  xxx          &kp LEFT       &kp DOWN       &kp RIGHT   &kp TAB      xxx
         xxx                 xxx             GO_OBSIDIAN        GO_DISCORD      GO_SAFARI         xxx             C_LANG               xxx          COPY           xxx            PASTE       UNDO         &kp LS(RET)
                                                                xxx             xxx               &trans      xxx         GO_HOMEROW   GO_RAYCAST   xxx            xxx
