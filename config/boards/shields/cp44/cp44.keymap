@@ -345,7 +345,7 @@ combos {
     };
     nav_layer {
       bindings = <
-        &to shift_layer     GO_FINDER       GO_TOGGLE          &kp LALT        GO_VSCODE         xxx                                  xxx          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    &td7
+        &to SHIFT           GO_FINDER       GO_TOGGLE          &kp LALT        GO_VSCODE         xxx                                  xxx          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    &td7
         xxx                 &kp LSHFT       &kp LCTRL          &kp LGUI        GO_ITERM          GO_OBSIDIAN                          xxx          &kp LEFT       &kp DOWN       &kp RIGHT   &kp TAB      xxx
         xxx                 xxx             xxx                GO_DISCORD      GO_SAFARI         xxx             C_LANG               xxx          COPY           xxx            PASTE       UNDO         &kp LS(RET)
                                                                C_LANG          xxx               &trans      xxx         GO_HOMEROW   GO_RAYCAST   xxx            xxx
