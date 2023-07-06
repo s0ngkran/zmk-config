@@ -337,18 +337,18 @@ combos {
 
     shift_layer {
       bindings = <
-        &trans      &kp LS(SQT)      &kp LS(COMMA)  &kp LS(DOT)   &kp LS(P)         &kp LS(Y)                               &kp LS(F)      &kp LS(G)     &kp LS(C)     &kp LS(R)      &kp LS(L)          &kp LS(FSLH)  
-        &to DEFAULT &kp LS(A)        &kp LS(O)      &kp LS(E)     &kp LS(U)         &kp LS(I)                               &kp LS(D)      &kp LS(H)     &kp LS(T)     &kp LS(N)      &kp LS(S)          &kp LS(MINUS) 
-        &trans      &kp LS(SEMI)     &kp LS(Q)      &kp LS(J)     &kp LS(K)         &kp LS(X)        &to DEFAULT            &kp LS(B)      &kp LS(M)     &kp LS(W)     &kp LS(V)      &kp LS(Z)          &kp LS(RET)  
-                                                    xxx           xxx               &kp SPACE      &kp RET   &kp LS(RET)    &trans       &trans        &trans
+        &to DEFAULT &kp LS(SQT)      &kp LS(COMMA)  &kp LS(DOT)   &kp LS(P)         &kp LS(Y)                               &kp LS(F)      &kp LS(G)     &kp LS(C)     &kp LS(R)      &kp LS(L)          &kp LS(FSLH)  
+        xxx         &kp LS(A)        &kp LS(O)      &kp LS(E)     &kp LS(U)         &kp LS(I)                               &kp LS(D)      &kp LS(H)     &kp LS(T)     &kp LS(N)      &kp LS(S)          &kp LS(MINUS) 
+        &kp LALT    &kp LS(SEMI)     &kp LS(Q)      &kp LS(J)     &kp LS(K)         &kp LS(X)        &to DEFAULT            &kp LS(B)      &kp LS(M)     &kp LS(W)     &kp LS(V)      &kp LS(Z)          &kp RET  
+                                                    xxx           &kp LCTRL         &kp SPACE    &kp SPACE   &kp BACKSPACE  &sk LSHFT      &kp LGUI      &kp C_PLAY_PAUSE
       >;
     };
     nav_layer {
       bindings = <
-        &kp CAPS            GO_FINDER       GO_TOGGLE          &kp LALT        GO_VSCODE         xxx                                  xxx          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    &td7
-        C_LANG              &kp LSHFT       &kp LCTRL          &kp LGUI        GO_ITERM          GO_OBSIDIAN                          xxx          &kp LEFT       &kp DOWN       &kp RIGHT   &kp TAB      xxx
+        &to shift_layer     GO_FINDER       GO_TOGGLE          &kp LALT        GO_VSCODE         xxx                                  xxx          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    &td7
+        xxx                 &kp LSHFT       &kp LCTRL          &kp LGUI        GO_ITERM          GO_OBSIDIAN                          xxx          &kp LEFT       &kp DOWN       &kp RIGHT   &kp TAB      xxx
         xxx                 xxx             xxx                GO_DISCORD      GO_SAFARI         xxx             C_LANG               xxx          COPY           xxx            PASTE       UNDO         &kp LS(RET)
-                                                               xxx             xxx               &trans      xxx         GO_HOMEROW   GO_RAYCAST   xxx            xxx
+                                                               C_LANG          xxx               &trans      xxx         GO_HOMEROW   GO_RAYCAST   xxx            xxx
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
