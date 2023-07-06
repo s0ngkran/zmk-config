@@ -28,8 +28,11 @@
 #define QWERTY 5
 #define MOUSE 6
 #define SYM 7
+
 #define DELAY_FAST 25
 #define DELAY_SLOW 30
+
+#define DEFAULT_LAYERS DEFAULT, NUM, SYM
 
 #define U_MOUSE_MOVE_MAX 2700                     /* <--- New max speed setting (default: 600) */
 #undef MOVE_UP
@@ -179,19 +182,19 @@ combos {
             timeout-ms = <DELAY_FAST>;
             key-positions = <7 8>;
             bindings = <&kp PLUS>;
-            layers = <DEFAULT>;
+            layers = <DEFAULT_LAYERS>;
         };
         ccmulti {
             timeout-ms = <DELAY_FAST>;
             key-positions = <7 9>;
             bindings = <&kp LS(N8)>;
-            layers = <DEFAULT>;
+            layers = <DEFAULT_LAYERS>;
         };
         ccminus {
             timeout-ms = <DELAY_FAST>;
             key-positions = <9 8>;
             bindings = <&kp MINUS>;
-            layers = <DEFAULT>;
+            layers = <DEFAULT_LAYERS>;
         };
         ccminusup {
             timeout-ms = <DELAY_FAST>;
@@ -203,7 +206,7 @@ combos {
             timeout-ms = <DELAY_FAST>;
             key-positions = <19 20>;
             bindings = <&kp LS(N9)>;
-            layers = <DEFAULT>;
+            layers = <DEFAULT_LAYERS>;
         };
         cclparupkt {
             timeout-ms = <DELAY_FAST>;
@@ -215,7 +218,7 @@ combos {
             timeout-ms = <DELAY_FAST>;
             key-positions = <19 21>;
             bindings = <&kp EQUAL>;
-            layers = <DEFAULT>;
+            layers = <DEFAULT_LAYERS>;
         };
         ccequalup {
             timeout-ms = <DELAY_FAST>;
@@ -227,7 +230,7 @@ combos {
             timeout-ms = <DELAY_FAST>;
             key-positions = <20 21>;
             bindings = <&kp LS(N0)>;
-            layers = <DEFAULT>;
+            layers = <DEFAULT_LAYERS>;
         };
         ccrparup {
             timeout-ms = <DELAY_FAST>;
@@ -239,7 +242,7 @@ combos {
             timeout-ms = <DELAY_FAST>;
             key-positions = <32 33>;
             bindings = <&kp SEMI>;
-            layers = <DEFAULT>;
+            layers = <DEFAULT_LAYERS>;
         };
         cccolon {
             timeout-ms = <DELAY_FAST>;
@@ -263,7 +266,7 @@ combos {
             timeout-ms = <DELAY_SLOW>;
             key-positions = <19 22>;
             bindings = <&kp BSLH>;
-            layers = <DEFAULT>;
+            layers = <DEFAULT_LAYERS>;
         };
         ccpipe {
             timeout-ms = <DELAY_SLOW>;
@@ -275,7 +278,7 @@ combos {
             timeout-ms = <DELAY_FAST>;
             key-positions = <33 34>;
             bindings = <&kp GRAVE>;
-            layers = <DEFAULT>;
+            layers = <DEFAULT_LAYERS>;
         };
         ccgravels {
             timeout-ms = <DELAY_FAST>;
@@ -287,25 +290,25 @@ combos {
             timeout-ms = <DELAY_FAST>;
             key-positions = <32 34>;
             bindings = <&key_repeat>;
-            layers = <DEFAULT>;
+            layers = <DEFAULT_LAYERS>;
         };
         ccautobkt {
             timeout-ms = <DELAY_FAST>;
             key-positions = <19 9>;
             bindings = <&zed_em_kay>;
-            layers = <DEFAULT>;
+            layers = <DEFAULT_LAYERS>;
         };
         ccslsym {
             timeout-ms = <DELAY_FAST>;
             key-positions = <15 16>;
             bindings = <&sl SYM>;
-            layers = <DEFAULT>;
+            layers = <DEFAULT_LAYERS>;
         };
         ccnavj {
             timeout-ms = <DELAY_SLOW>;
             key-positions = <27 39>;
             bindings = <&kp LG(LS(J))>;
-            layers = <DEFAULT>;
+            layers = <DEFAULT_LAYERS>;
         };
     };
     /* 
@@ -337,10 +340,10 @@ combos {
 
     shift_layer {
       bindings = <
-        &to DEFAULT &kp LS(SQT)      &kp LS(COMMA)  &kp LS(DOT)   &kp LS(P)         &kp LS(Y)                               &kp LS(F)      &kp LS(G)     &kp LS(C)     &kp LS(R)      &kp LS(L)          &kp LS(FSLH)  
-        xxx         &kp LS(A)        &kp LS(O)      &kp LS(E)     &kp LS(U)         &kp LS(I)                               &kp LS(D)      &kp LS(H)     &kp LS(T)     &kp LS(N)      &kp LS(S)          &kp LS(MINUS) 
-        &kp LALT    &kp LS(SEMI)     &kp LS(Q)      &kp LS(J)     &kp LS(K)         &kp LS(X)        &to DEFAULT            &kp LS(B)      &kp LS(M)     &kp LS(W)     &kp LS(V)      &kp LS(Z)          &kp RET  
-                                                    xxx           &kp LCTRL         &kp SPACE    &kp SPACE   &kp BACKSPACE  &sk LSHFT      &kp LGUI      &kp C_PLAY_PAUSE
+        &to DEFAULT &kp LS(SQT)      &kp LS(COMMA)  &kp LS(DOT)   &kp LS(P)         &kp LS(Y)                                           &kp LS(F)      &kp LS(G)     &kp LS(C)     &kp LS(R)      &kp LS(L)          &kp LS(FSLH)  
+        xxx         &kp LS(A)        &kp LS(O)      &kp LS(E)     &kp LS(U)         &kp LS(I)                                           &kp LS(D)      &kp LS(H)     &kp LS(T)     &kp LS(N)      &kp LS(S)          &kp LS(MINUS) 
+        &kp LALT    &kp LS(SEMI)     &kp LS(Q)      &kp LS(J)     &kp LS(K)         &kp LS(X)        &to DEFAULT                        &kp LS(B)      &kp LS(M)     &kp LS(W)     &kp LS(V)      &kp LS(Z)          &kp RET  
+                                                    xxx           &kp LCTRL         &kp SPACE    &lt NUM LS(BACKSPACE)   &kp BACKSPACE  &sk LSHFT      &kp LGUI      &kp C_PLAY_PAUSE
       >;
     };
     nav_layer {
