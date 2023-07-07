@@ -111,6 +111,7 @@
             bindings
                 = <GO_DISCORD>
                 , <&kp LG(LS(M))>
+                , <GO_DISCORD>
                 ;
         };
     };
