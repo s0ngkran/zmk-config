@@ -60,8 +60,6 @@
 #define SCROLL_RIGHT SCROLL_HOR(U_MOUSE_SCROLL_MAX)
 #define xxx &none
 
-
-
 #define GO_VSCODE &kp LG(LA(LC(LS(N1))))
 #define GO_ITERM  &kp LG(LA(LC(LS(N3))))
 #define GO_SAFARI &kp LG(LA(LC(LS(N2))))
@@ -80,7 +78,7 @@
 #define GO_RAYCAST &kp LG(SPACE)
 
 &mwh {
-  time-to-max-speed-ms = <500>;                 /* <--- How long time until max speed is reached */
+ time-to-max-speed-ms = <500>;                 /* <--- How long time until max speed is reached */
 };
 
 
@@ -100,12 +98,23 @@
             label = "ZM_zed_em_kay";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             bindings
                 = <&kp LPAR>
                 , <&kp RPAR &kp LBRC>
                 , <&kp RBRC>
+                ;
+        };
+        disc_mic: disc_mic {
+            label = "disc_mic";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <20>;
+            bindings
+                = <GO_DISCORD>
+                , <&kp LG(LS(M))>
                 ;
         };
     };
@@ -351,7 +360,7 @@ combos {
         &to SHIFT           GO_FINDER       GO_TOGGLE          &kp LALT        GO_VSCODE         xxx                                  xxx          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    &td7
         xxx                 &kp LSHFT       &kp LCTRL          &kp LGUI        GO_ITERM          GO_OBSIDIAN                          xxx          &kp LEFT       &kp DOWN       &kp RIGHT   &kp TAB      xxx
         xxx                 xxx             xxx                GO_DISCORD      GO_SAFARI         xxx             C_LANG               xxx          COPY           xxx            PASTE       UNDO         &kp LS(RET)
-                                                               C_LANG          xxx               &trans      xxx         GO_HOMEROW   GO_RAYCAST   xxx            xxx
+                                                               C_LANG          xxx               &trans      xxx         GO_HOMEROW   GO_RAYCAST   &disc_mic       xxx
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
