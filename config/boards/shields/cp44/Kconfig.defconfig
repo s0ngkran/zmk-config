@@ -4,5 +4,5 @@
 if SHIELD_CP44
 
 config ZMK_KEYBOARD_NAME
-    default "CP 44"
+    default "s0ngkran keyboard"
 endif
