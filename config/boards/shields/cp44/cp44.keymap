@@ -28,11 +28,12 @@
 #define QWERTY 5
 #define MOUSE 6
 #define SYM 7
+#define DEFAULT_WINDOW 8
 
 #define DELAY_FAST 25
 #define DELAY_SLOW 30
 
-#define DEFAULT_LAYERS DEFAULT NUM SYM
+#define DEFAULT_LAYERS DEFAULT DEFAULT_WINDOW NUM SYM
 
 #define U_MOUSE_MOVE_MAX 2700                     /* <--- New max speed setting (default: 600) */
 #undef MOVE_UP
@@ -352,12 +353,13 @@ combos {
                                                     xxx           &kp LCTRL         &kp SPACE    &lt NUM LS(BACKSPACE)   &kp BACKSPACE  &sk LSHFT      &kp LGUI      &kp C_PLAY_PAUSE
       >;
     };
+
     nav_layer {
       bindings = <
         &to SHIFT           GO_FINDER       GO_TOGGLE          &kp LALT        GO_VSCODE         xxx                                  xxx          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    &td7
         xxx                 &kp LSHFT       &kp LCTRL          &kp LGUI        GO_ITERM          GO_OBSIDIAN                          xxx          &kp LEFT       &kp DOWN       &kp RIGHT   &kp TAB      xxx
         xxx                 xxx             xxx                GO_DISCORD      GO_SAFARI         xxx             C_LANG               xxx          COPY           xxx            PASTE       UNDO         &kp LS(RET)
-                                                               C_LANG          xxx               &trans      xxx         GO_HOMEROW   GO_RAYCAST   &disc_mic       xxx
+                                                               C_LANG          xxx               xxx      xxx         GO_HOMEROW   GO_RAYCAST   &disc_mic       xxx
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
@@ -366,16 +368,16 @@ combos {
         xxx         xxx          xxx          &kp LALT    xxx         xxx                             xxx       &kp N7         &kp DOT     &kp N8      &kp N9      &kp BACKSPACE
         xxx         &kp LSHFT    &kp LCTRL    &kp LGUI    &kp SPACE   xxx                             xxx       &kp N1         &kp N2      &kp N3      &kp N4      xxx
         xxx         xxx          xxx          xxx         xxx         xxx       xxx                   xxx       &kp N0         xxx         xxx         xxx         &kp RET
-                                              xxx         xxx         xxx      &trans     &kp N6      &kp N5    xxx            xxx  
+                                              xxx         xxx         xxx       xxx     &kp N6      &kp N5    xxx            xxx  
        >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
     };
     function_layer {
       bindings = <
-        xxx                  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                    xxx         &kp F7         &kp F8      &kp F9      &kp F10         xxx
-        C_LANG               &bt BT_CLR      xxx             &out OUT_BLE    &out OUT_USB    xxx                             xxx         &kp F1         &kp F2      &kp F3      &kp F4          xxx
-        &bootloader          &reset          xxx             xxx             xxx             xxx              &to QWERTY     xxx         &kp F11        &kp F12     &kp F13     &kp F14         xxx
-                                                      xxx           xxx           xxx    xxx     &kp F6        &kp F5         &kp F15      xxx
+        xxx                  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                    &tog DEFAULT_WINDOW    &kp F7         &kp F8      &kp F9      &kp F10         xxx
+        C_LANG               &bt BT_CLR      xxx             &out OUT_BLE    &out OUT_USB    xxx                             xxx                    &kp F1         &kp F2      &kp F3      &kp F4          xxx
+        &bootloader          &reset          xxx             xxx             xxx             xxx              &to QWERTY     xxx                    &kp F11        &kp F12     &kp F13     &kp F14         xxx
+                                                             xxx             xxx             xxx         xxx     &kp F6      &kp F5                 &kp F15        xxx
       >;
     };
 
@@ -404,6 +406,16 @@ combos {
         xxx         xxx          xxx          xxx         xxx       xxx             xxx              xxx              xxx            xxx              xxx         xxx           xxx                        
                                               xxx         &kp LCTRL &to DEFAULT   xxx   &kp LS(N6)   &kp LS(N5)       &kp LGUI       xxx
       >;
+    };
+
+    default_window_layer {
+      bindings = <
+        &lt FUNC ESC       &kp SQT      &kp COMMA  &kp DOT   &kp P         &kp Y                                          &kp F      &kp G     &kp C     &kp R      &kp L   &kp FSLH  
+        &kp TAB            &kp A        &kp O      &kp E     &kp U         &kp I                                          &kp D      &kp H     &kp T     &kp N      &kp S   &kp MINUS 
+        &kp LALT           &kp SEMI     &kp Q      &kp J     &kp K         &kp X        &kp C_PLAY_PAUSE                  &kp B      &kp M     &kp W     &kp V      &kp Z   &kp RET  
+                                                   &mo MOUSE &kp LGUI  &lt NAV SPACE &lt NUM LS(BACKSPACE)  &kp BACKSPACE &sk LSHFT  &kp LCTRL &kp C_PLAY_PAUSE 
+      >;
+      sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
     };
     /* 
 
