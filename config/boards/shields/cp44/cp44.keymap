@@ -106,8 +106,8 @@
             label = "disc_mic";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
+            wait-ms = <1>;
+            tap-ms = <1>;
             bindings
                 = <GO_DISCORD>
                 , <&kp LG(LS(M))>
