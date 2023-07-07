@@ -98,20 +98,16 @@
             label = "ZM_zed_em_kay";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <20>;
-            bindings
-                = <&kp LPAR>
-                , <&kp RPAR &kp LBRC>
-                , <&kp RBRC>
-                ;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp LPAR &kp RPAR &kp LBRC &kp RBRC>;
         };
         disc_mic: disc_mic {
             label = "disc_mic";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <20>;
+            wait-ms = <10>;
+            tap-ms = <10>;
             bindings
                 = <GO_DISCORD>
                 , <&kp LG(LS(M))>
