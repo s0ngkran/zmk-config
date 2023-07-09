@@ -135,7 +135,7 @@
                 ;
         };
         snphone: snphone {
-            label = "snphone";
+            label = "sn phone";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <10>;
@@ -143,12 +143,16 @@
             bindings = <&kp N0 &kp N8 &kp N0 &kp N9 &kp N0 &kp N7 &kp N0 &kp N1 &kp N1 &kp N7>;
         };
         snemail: snemail {
-            label = "snemail";
+            label = "sn email";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&kp J &kp I &kp N &kp N &kp A &kp W &kp A &kp T &kp N8 &kp LS(N2) &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            bindings
+                = <&kp J &kp I &kp N &kp N &kp A &kp W &kp A &kp T &kp N8>
+                , <&kp LS(N2)>
+                , <&kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>
+                ;
         };
     };
   behaviors {
@@ -346,6 +350,12 @@ combos {
             bindings = <&sl SYM>;
             layers = <NAV>;
         };
+        ccslsymub {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <15 16>;
+            bindings = <&sl SYM_UBUNTU>;
+            layers = <NAV_UBUNTU>;
+        };
         ccnavj {
             timeout-ms = <DELAY_SLOW>;
             key-positions = <27 39>;
@@ -482,6 +492,14 @@ combos {
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
 
+    sym_ubuntu_layer{
+      bindings = <
+        xxx         xxx          xxx          xxx         xxx       xxx                              xxx              &kp LS(N7)     xxx              &kp LS(N8)  xxx           &kp BSLH                     
+        xxx         xxx          xxx          xxx         xxx       xxx                              xxx              &kp LS(N1)     &kp LS(N2)       &kp LS(N3)  &kp LS(N4)    xxx                        
+        xxx         xxx          xxx          xxx         xxx       xxx             xxx              xxx              xxx            xxx              xxx         xxx           xxx                        
+                                              xxx         &kp LCTRL &to UBUNTU   xxx   &kp LS(N6)   &kp LS(N5)       &kp LGUI       xxx
+      >;
+    };
     
     snippet_layer{
       bindings = <
