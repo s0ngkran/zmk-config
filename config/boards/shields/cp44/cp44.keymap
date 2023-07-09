@@ -134,6 +134,22 @@
                 , <GO_DISCORD>
                 ;
         };
+        snphone: snphone {
+            label = "snphone";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp N0 &kp N8 &kp N0 &kp N9 &kp N0 &kp N7 &kp N0 &kp N1 &kp N1 &kp N7>;
+        };
+        snemail: snemail {
+            label = "snemail";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp J &kp I &kp N &kp N &kp A &kp W &kp A &kp T &kp N8 &kp LS(N2) &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+        };
     };
   behaviors {
          td0: tap_dance {
@@ -388,7 +404,6 @@ combos {
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
-
     num_layer {
       bindings = <
         xxx         xxx          xxx          &kp LALT    xxx         xxx                             xxx       &kp N7         &kp DOT     &kp N8      &kp N9      &kp BACKSPACE
@@ -485,7 +500,7 @@ combos {
     snippet_layer{
       bindings = <
         xxx         xxx          xxx          xxx       xxx     xxx                         xxx         xxx         xxx         xxx         xxx       xxx
-        xxx         xxx          xxx          xxx       xxx     xxx                         xxx         xxx         xxx         xxx         xxx       xxx
+        xxx         xxx          xxx          xxx       xxx     xxx                         xxx         &snphone    &snemail    xxx         xxx       xxx
         xxx         xxx          xxx          xxx       xxx     xxx          xxx            xxx         xxx         xxx         xxx         xxx       xxx
                                               xxx       xxx     xxx     xxx     xxx         xxx         xxx         xxx
       >;
