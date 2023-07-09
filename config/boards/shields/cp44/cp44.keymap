@@ -500,7 +500,7 @@ combos {
     snippet_layer{
       bindings = <
         xxx         xxx          xxx          xxx       xxx     xxx                         xxx         xxx         xxx         xxx         xxx       xxx
-        xxx         xxx          xxx          xxx       xxx     xxx                         xxx         snphone     snemail     xxx         xxx       xxx
+        xxx         xxx          xxx          xxx       xxx     xxx                         xxx         &snphone    &snemail    xxx         xxx       xxx
         xxx         xxx          xxx          xxx       xxx     xxx          xxx            xxx         xxx         xxx         xxx         xxx       xxx
                                               xxx       xxx     xxx     xxx     xxx         xxx         xxx         xxx
       >;
