@@ -482,14 +482,6 @@ combos {
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
 
-    sym_ubuntu_layer{
-      bindings = <
-        xxx         xxx          xxx          xxx         xxx       xxx                              xxx              &kp LS(N7)     xxx              &kp LS(N8)  xxx           &kp BSLH                     
-        xxx         xxx          xxx          xxx         xxx       xxx                              xxx              &kp LS(N1)     &kp LS(N2)       &kp LS(N3)  &kp LS(N4)    xxx                        
-        xxx         xxx          xxx          xxx         xxx       xxx             xxx              xxx              xxx            xxx              xxx         xxx           xxx                        
-                                              xxx         &kp LCTRL &to UBUNTU   xxx   &kp LS(N6)   &kp LS(N5)       &kp LGUI       xxx
-      >;
-    };
     
     snippet_layer{
       bindings = <
