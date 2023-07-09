@@ -5,10 +5,10 @@
 
     jump_layer{
       bindings = <
-        &none         &none          &none          &none       &none     &none                         &none         &none         &none         &none         &none       &none
-        &none         &none          &none          &none       &none     &none                         &none         &none         &none         &none         &none       &none
-        &none         &none          &none          &none       &none     &none          &none          &none         &none         &none         &none         &none       &none
-                                                       &trans          &trans          &trans   &trans    &trans       &trans         &trans         &trans
+        xxx         xxx          xxx          xxx       xxx     xxx                         xxx         xxx         xxx         xxx         xxx       xxx
+        xxx         xxx          xxx          xxx       xxx     xxx                         xxx         xxx         xxx         xxx         xxx       xxx
+        xxx         xxx          xxx          xxx       xxx     xxx          xxx            xxx         xxx         xxx         xxx         xxx       xxx
+                                              xxx       xxx     xxx     xxx     xxx         xxx         xxx         xxx
       >;
     };
  */
@@ -29,11 +29,17 @@
 #define MOUSE 6
 #define SYM 7
 #define DEFAULT_WINDOW 8
+#define UBUNTU 9
+#define SHIFT_UBUNTU 10
+#define NAV_UBUNTU 11
+#define SYM_UBUNTU 12
+#define SNIPPET 13
 
 #define DELAY_FAST 25
 #define DELAY_SLOW 30
 
-#define DEFAULT_LAYERS DEFAULT DEFAULT_WINDOW NUM SYM
+#define DEFAULT_LAYERS DEFAULT DEFAULT_WINDOW NUM SYM UBUNTU SYM_UBUNTU 
+#define NAV_LAYERS NAV NAV_UBUNTU
 
 #define U_MOUSE_MOVE_MAX 2700                     /* <--- New max speed setting (default: 600) */
 #undef MOVE_UP
@@ -68,15 +74,28 @@
 #define GO_OBSIDIAN &kp LG(LA(LC(LS(N0))))
 #define GO_FINDER &kp LG(LA(LC(LS(F))))
 #define GO_TOGGLE &kp LG(LA(LC(LS(N5))))
-
+#define GO_HOMEROW &kp LG(LS(SPACE))
+#define GO_RAYCAST &kp LG(SPACE)
 #define COPY &kp LG(C)
 #define PASTE &kp LG(V)
 #define KILL_WINDOW &kp LG(W)
 #define UNDO &kp LG(Z)
 
+#define UB_GO_VSCODE &kp LG(N4)
+#define UB_GO_ITERM  &kp LG(N1)
+#define UB_GO_CHROME &kp LG(N2)
+#define UB_GO_DISCORD &kp LG(N3)
+#define UB_GO_OBSIDIAN &kp LG(N5)
+#define UB_GO_FINDER &kp LG(N6) 
+#define UB_GO_TOGGLE &kp LG(N7)
+#define UB_GO_HOMEROW &kp LG(LS(SPACE))
+#define UB_GO_RAYCAST &kp LG(SPACE)
+#define UB_COPY &kp LC(C)
+#define UB_PASTE &kp LC(V)
+#define UB_KILL_WINDOW &kp LC(W)
+#define UB_UNDO &kp LC(Z)
+
 #define C_LANG &kp LA(LC(SPACE))
-#define GO_HOMEROW &kp LG(LS(SPACE))
-#define GO_RAYCAST &kp LG(SPACE)
 
 &mwh {
  time-to-max-speed-ms = <500>;                 /* <--- How long time until max speed is reached */
@@ -114,6 +133,22 @@
                 , <&kp LG(LS(M))>
                 , <GO_DISCORD>
                 ;
+        };
+        snphone: snphone {
+            label = "snphone";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp N0 &kp N8 &kp N0 &kp N9 &kp N0 &kp N7 &kp N0 &kp N1 &kp N1 &kp N7>;
+        };
+        snemail: snemail {
+            label = "snemail";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp j &kp i &kp n &kp n &kp a &kp w &kp a &kp t &kp N8 &kp LS(N2) &kp g &kp m &kp a &kp i &kp l &kp DOT &kp c &kp o &kp m>;
         };
     };
   behaviors {
@@ -207,7 +242,7 @@ combos {
             timeout-ms = <DELAY_FAST>;
             key-positions = <9 8>;
             bindings = <&kp LS(MINUS)>;
-            layers = <NAV>;
+            layers = <NAV_LAYERS>;
         };
         cclpar {
             timeout-ms = <DELAY_FAST>;
@@ -219,7 +254,7 @@ combos {
             timeout-ms = <DELAY_FAST>;
             key-positions = <19 20>;
             bindings = <&kp LBRC>;
-            layers = <NAV>;
+            layers = <NAV_LAYERS>;
         };
         ccequal {
             timeout-ms = <DELAY_FAST>;
@@ -231,7 +266,7 @@ combos {
             timeout-ms = <DELAY_FAST>;
             key-positions = <19 21>;
             bindings = <&kp PLUS>;
-            layers = <NAV>;
+            layers = <NAV_LAYERS>;
         };
         ccrpar {
             timeout-ms = <DELAY_FAST>;
@@ -243,7 +278,7 @@ combos {
             timeout-ms = <DELAY_FAST>;
             key-positions = <20 21>;
             bindings = <&kp RBRC>;
-            layers = <NAV>;
+            layers = <NAV_LAYERS>;
         };
         ccsemi {
             timeout-ms = <DELAY_FAST>;
@@ -255,19 +290,19 @@ combos {
             timeout-ms = <DELAY_FAST>;
             key-positions = <32 33>;
             bindings = <&kp LS(SEMI)>;
-            layers = <NAV>;
+            layers = <NAV_LAYERS>;
         };
         cclbktnav {
             timeout-ms = <DELAY_SLOW>;
             key-positions = <18 20>;
             bindings = <&kp LBKT>;
-            layers = <NAV>;
+            layers = <NAV_LAYERS>;
         };
         ccrbktnav {
             timeout-ms = <DELAY_SLOW>;
             key-positions = <20 22>;
             bindings = <&kp RBKT>;
-            layers = <NAV>;
+            layers = <NAV_LAYERS>;
         };
         ccbslash {
             timeout-ms = <DELAY_SLOW>;
@@ -279,7 +314,7 @@ combos {
             timeout-ms = <DELAY_SLOW>;
             key-positions = <19 22>;
             bindings = <&kp LS(BSLH)>;
-            layers = <NAV>;
+            layers = <NAV_LAYERS>;
         };
         ccgrave {
             timeout-ms = <DELAY_FAST>;
@@ -291,7 +326,7 @@ combos {
             timeout-ms = <DELAY_FAST>;
             key-positions = <33 34>;
             bindings = <&kp LS(GRAVE)>;
-            layers = <NAV>;
+            layers = <NAV_LAYERS>;
         };
         ccrepkey {
             timeout-ms = <DELAY_FAST>;
@@ -309,7 +344,13 @@ combos {
             timeout-ms = <DELAY_FAST>;
             key-positions = <15 16>;
             bindings = <&sl SYM>;
-            layers = <DEFAULT_LAYERS>;
+            layers = <NAV>;
+        };
+        ccslsymub {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <15 16>;
+            bindings = <&sl SYM_UBUNTU>;
+            layers = <NAV_UBUNTU>;
         };
         ccnavj {
             timeout-ms = <DELAY_SLOW>;
@@ -358,8 +399,8 @@ combos {
       bindings = <
         &to SHIFT           GO_FINDER       GO_TOGGLE          &kp LALT        GO_VSCODE         xxx                                  xxx          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    &td7
         xxx                 &kp LSHFT       &kp LCTRL          &kp LGUI        GO_ITERM          GO_OBSIDIAN                          xxx          &kp LEFT       &kp DOWN       &kp RIGHT   &kp TAB      xxx
-        xxx                 xxx             xxx                GO_DISCORD      GO_SAFARI         xxx             C_LANG               xxx          COPY           xxx            PASTE       UNDO         &kp LS(RET)
-                                                               C_LANG          xxx               xxx      xxx         GO_HOMEROW   GO_RAYCAST   &disc_mic       xxx
+        xxx                 xxx             xxx                GO_DISCORD      GO_SAFARI         xxx             C_LANG               xxx          COPY           KILL_WINDOW     PASTE       UNDO         &kp LS(RET)
+                                                               C_LANG          xxx               xxx      SNIPPET        GO_HOMEROW   GO_RAYCAST   &disc_mic       xxx
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
@@ -368,14 +409,14 @@ combos {
         xxx         xxx          xxx          &kp LALT    xxx         xxx                             xxx       &kp N7         &kp DOT     &kp N8      &kp N9      &kp BACKSPACE
         xxx         &kp LSHFT    &kp LCTRL    &kp LGUI    &kp SPACE   xxx                             xxx       &kp N1         &kp N2      &kp N3      &kp N4      xxx
         xxx         xxx          xxx          xxx         xxx         xxx       xxx                   xxx       &kp N0         xxx         xxx         xxx         &kp RET
-                                              xxx         xxx         xxx       xxx     &kp N6      &kp N5    xxx            xxx  
+                                              xxx         xxx         SNIPPET   xxx     &kp N6     &kp N5    xxx            xxx  
        >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
     };
     function_layer {
       bindings = <
-        xxx                  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                    &tog DEFAULT_WINDOW    &kp F7         &kp F8      &kp F9      &kp F10         xxx
-        C_LANG               &bt BT_CLR      xxx             &out OUT_BLE    &out OUT_USB    xxx                             xxx                    &kp F1         &kp F2      &kp F3      &kp F4          xxx
+        xxx                  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                    &tog DEFAULT_WINDOW    &kp F7         &kp F8      &kp F9      &kp F10         &to DEFAULT
+        C_LANG               &bt BT_CLR      xxx             &out OUT_BLE    &out OUT_USB    xxx                             &tog UBUNTU            &kp F1         &kp F2      &kp F3      &kp F4          xxx
         &bootloader          &reset          xxx             xxx             xxx             xxx              &to QWERTY     xxx                    &kp F11        &kp F12     &kp F13     &kp F14         xxx
                                                              xxx             xxx             xxx         xxx     &kp F6      &kp F5                 &kp F15        xxx
       >;
@@ -417,9 +458,59 @@ combos {
       >;
       sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
     };
+
+    ubuntu_layer {
+      bindings = <
+        &lt FUNC ESC       &kp SQT      &kp COMMA  &kp DOT   &kp P         &kp Y                                          &kp F      &kp G     &kp C     &kp R      &kp L   &kp FSLH  
+        &kp TAB            &kp A        &kp O      &kp E     &kp U         &kp I                                          &kp D      &kp H     &kp T     &kp N      &kp S   &kp MINUS 
+        &kp LALT           &kp SEMI     &kp Q      &kp J     &kp K         &kp X        &kp C_PLAY_PAUSE                  &kp B      &kp M     &kp W     &kp V      &kp Z   &kp RET  
+                                                   &mo MOUSE &kp LCTRL  &lt NAV_UBUNTU SPACE &lt NUM LS(BACKSPACE)  &kp BACKSPACE  &sk LSHFT  &kp LGUI  &kp C_PLAY_PAUSE 
+      >;
+      sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+    };
+
+    ubuntu_shift_layer {
+      bindings = <
+        &to UBUNTU  &kp LS(SQT)      &kp LS(COMMA)  &kp LS(DOT)   &kp LS(P)         &kp LS(Y)                                           &kp LS(F)      &kp LS(G)     &kp LS(C)     &kp LS(R)      &kp LS(L)          &kp LS(FSLH)  
+        xxx         &kp LS(A)        &kp LS(O)      &kp LS(E)     &kp LS(U)         &kp LS(I)                                           &kp LS(D)      &kp LS(H)     &kp LS(T)     &kp LS(N)      &kp LS(S)          &kp LS(MINUS) 
+        &kp LALT    &kp LS(SEMI)     &kp LS(Q)      &kp LS(J)     &kp LS(K)         &kp LS(X)        &to UBUNTU                         &kp LS(B)      &kp LS(M)     &kp LS(W)     &kp LS(V)      &kp LS(Z)          &kp RET  
+                                                    xxx           &kp LCTRL         &kp SPACE    &lt NUM LS(BACKSPACE)   &kp BACKSPACE  &sk LSHFT      &kp LGUI      &kp C_PLAY_PAUSE
+      >;
+    };
+
+    nav_ubuntu_layer {
+      bindings = <
+        &to SHIFT_UBUNTU    UB_GO_FINDER    UB_GO_TOGGLE       &kp LALT        UB_GO_VSCODE         xxx                                       xxx             &kp PG_DN      &kp UP           &kp PG_UP   &kp RIGHT    &td7
+        xxx                 &kp LSHFT       &kp LCTRL          &kp LGUI        UB_GO_ITERM          UB_GO_OBSIDIAN                            xxx             &kp LEFT       &kp DOWN         &kp RIGHT   &kp TAB      xxx
+        xxx                 xxx             xxx                UB_GO_DISCORD   UB_GO_CHROME         xxx                xxx                    xxx             UB_COPY        UB_KILL_WINDOW   UB_PASTE    UB_UNDO      &kp LS(RET)
+                                                               xxx             xxx                  SNIPPET    &to UBUNTU     UB_GO_HOMEROW   UB_GO_RAYCAST   &disc_mic      xxx
+      >;
+      sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
+   };
+
+    sym_ubuntu_layer{
+      bindings = <
+        xxx         xxx          xxx          xxx         xxx       xxx                              xxx              &kp LS(N7)     xxx              &kp LS(N8)  xxx           &kp BSLH                     
+        xxx         xxx          xxx          xxx         xxx       xxx                              xxx              &kp LS(N1)     &kp LS(N2)       &kp LS(N3)  &kp LS(N4)    xxx                        
+        xxx         xxx          xxx          xxx         xxx       xxx             xxx              xxx              xxx            xxx              xxx         xxx           xxx                        
+                                              xxx         &kp LCTRL &to UBUNTU   xxx   &kp LS(N6)   &kp LS(N5)       &kp LGUI       xxx
+      >;
+    };
+    
+    snippet_layer{
+      bindings = <
+        xxx         xxx          xxx          xxx       xxx     xxx                         xxx         xxx         xxx         xxx         xxx       xxx
+        xxx         xxx          xxx          xxx       xxx     xxx                         xxx         snphone     snemail     xxx         xxx       xxx
+        xxx         xxx          xxx          xxx       xxx     xxx          xxx            xxx         xxx         xxx         xxx         xxx       xxx
+                                              xxx       xxx     xxx     xxx     xxx         xxx         xxx         xxx
+      >;
+    };
+
     /* 
 
     add macro leader q to nav_q
+    snippet
+    nav
 
     */
         };
