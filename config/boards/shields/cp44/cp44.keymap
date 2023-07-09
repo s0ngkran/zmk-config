@@ -346,12 +346,6 @@ combos {
             bindings = <&sl SYM>;
             layers = <NAV>;
         };
-        ccslsymub {
-            timeout-ms = <DELAY_FAST>;
-            key-positions = <15 16>;
-            bindings = <&sl SYM_UBUNTU>;
-            layers = <NAV_UBUNTU>;
-        };
         ccnavj {
             timeout-ms = <DELAY_SLOW>;
             key-positions = <27 39>;
