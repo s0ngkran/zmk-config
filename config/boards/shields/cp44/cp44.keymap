@@ -383,17 +383,18 @@ combos {
       bindings = <
         &to SHIFT           GO_FINDER       GO_TOGGLE          &kp LALT        GO_VSCODE         xxx                                  xxx          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    &td7
         xxx                 &kp LSHFT       &kp LCTRL          &kp LGUI        GO_ITERM          GO_OBSIDIAN                          xxx          &kp LEFT       &kp DOWN       &kp RIGHT   &kp TAB      xxx
-        xxx                 xxx             xxx                GO_DISCORD      GO_SAFARI         xxx             C_LANG               xxx          COPY           KILL_WINDOW     PASTE       UNDO         &kp LS(RET)
-                                                               C_LANG          xxx               xxx      SNIPPET        GO_HOMEROW   GO_RAYCAST   &disc_mic       xxx
+        xxx                 xxx             xxx                GO_DISCORD      GO_SAFARI         xxx             C_LANG               xxx          COPY           KILL_WINDOW    PASTE       UNDO         &kp LS(RET)
+                                                               C_LANG          xxx               xxx      &sl SNIPPET        GO_HOMEROW   GO_RAYCAST   &disc_mic      xxx
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
+
     num_layer {
       bindings = <
         xxx         xxx          xxx          &kp LALT    xxx         xxx                             xxx       &kp N7         &kp DOT     &kp N8      &kp N9      &kp BACKSPACE
         xxx         &kp LSHFT    &kp LCTRL    &kp LGUI    &kp SPACE   xxx                             xxx       &kp N1         &kp N2      &kp N3      &kp N4      xxx
-        xxx         xxx          xxx          xxx         xxx         xxx       xxx                   xxx       &kp N0         xxx         xxx         xxx         &kp RET
-                                              xxx         xxx         SNIPPET   xxx     &kp N6     &kp N5    xxx            xxx  
+        xxx         xxx          xxx          xxx         xxx         xxx           xxx               xxx       &kp N0         xxx         xxx         xxx         &kp RET
+                                              xxx         xxx         &sl SNIPPET   xxx     &kp N6    &kp N5    xxx            xxx  
        >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
     };
@@ -464,10 +465,10 @@ combos {
 
     nav_ubuntu_layer {
       bindings = <
-        &to SHIFT_UBUNTU    UB_GO_FINDER    UB_GO_TOGGLE       &kp LALT        UB_GO_VSCODE         xxx                                       xxx             &kp PG_DN      &kp UP           &kp PG_UP   &kp RIGHT    &td7
-        xxx                 &kp LSHFT       &kp LCTRL          &kp LGUI        UB_GO_ITERM          UB_GO_OBSIDIAN                            xxx             &kp LEFT       &kp DOWN         &kp RIGHT   &kp TAB      xxx
-        xxx                 xxx             xxx                UB_GO_DISCORD   UB_GO_CHROME         xxx                xxx                    xxx             UB_COPY        UB_KILL_WINDOW   UB_PASTE    UB_UNDO      &kp LS(RET)
-                                                               xxx             xxx                  SNIPPET    &to UBUNTU     UB_GO_HOMEROW   UB_GO_RAYCAST   &disc_mic      xxx
+        &to SHIFT_UBUNTU    UB_GO_FINDER    UB_GO_TOGGLE       &kp LALT        UB_GO_VSCODE         xxx                                           xxx             &kp PG_DN      &kp UP           &kp PG_UP   &kp RIGHT    &td7
+        xxx                 &kp LSHFT       &kp LCTRL          &kp LGUI        UB_GO_ITERM          UB_GO_OBSIDIAN                                xxx             &kp LEFT       &kp DOWN         &kp RIGHT   &kp TAB      xxx
+        xxx                 xxx             xxx                UB_GO_DISCORD   UB_GO_CHROME         xxx                xxx                        xxx             UB_COPY        UB_KILL_WINDOW   UB_PASTE    UB_UNDO      &kp LS(RET)
+                                                               xxx             xxx                  &sl SNIPPET    &to UBUNTU     UB_GO_HOMEROW   UB_GO_RAYCAST   &disc_mic      xxx
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
@@ -477,7 +478,7 @@ combos {
         &to UBUNTU  xxx          xxx          xxx         xxx       xxx                              xxx              &kp LS(N7)     xxx              &kp LS(N8)  xxx           &kp BSLH                     
         xxx         xxx          xxx          xxx         xxx       xxx                              xxx              &kp LS(N1)     &kp LS(N2)       &kp LS(N3)  &kp LS(N4)    xxx                        
         xxx         xxx          xxx          xxx         xxx       xxx             xxx              xxx              xxx            xxx              xxx         xxx           xxx                        
-                                              xxx         &kp LCTRL &to UBUNTU   xxx   &kp LS(N6)   &kp LS(N5)       &kp LGUI       xxx
+                                              xxx         &kp LCTRL &to UBUNTU   xxx   &kp LS(N6)    &kp LS(N5)       &kp LGUI       xxx
       >;
     };
     
