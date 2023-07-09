@@ -148,7 +148,7 @@
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&kp j &kp i &kp n &kp n &kp a &kp w &kp a &kp t &kp N8 &kp LS(N2) &kp g &kp m &kp a &kp i &kp l &kp DOT &kp c &kp o &kp m>;
+            bindings = <&kp J &kp I &kp N &kp N &kp A &kp W &kp A &kp T &kp N8 &kp LS(N2) &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
         };
     };
   behaviors {
