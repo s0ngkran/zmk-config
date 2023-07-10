@@ -344,13 +344,13 @@ combos {
             timeout-ms = <DELAY_FAST>;
             key-positions = <15 16>;
             bindings = <&sl SYM>;
-            layers = <NAV>;
+            layers = <DEFAULT DEFAULT_WINDOW NAV>;
         };
         ccslsymub {
             timeout-ms = <DELAY_FAST>;
             key-positions = <15 16>;
             bindings = <&sl SYM_UBUNTU>;
-            layers = <NAV_UBUNTU>;
+            layers = <UBUNTU NAV_UBUNTU>;
         };
         ccnavj {
             timeout-ms = <DELAY_SLOW>;
