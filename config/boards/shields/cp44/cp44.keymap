@@ -148,73 +148,16 @@
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&kp J &kp I &kp N &kp N &kp A &kp W &kp A &kp T &kp N8 &kp LS(N2) &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            bindings = <&kp J &kp I &kp N &kp N &kp A &kp W &kp A &kp T &kp N8 &kp AT_SIGN &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
         };
     };
   behaviors {
-         td0: tap_dance {
-                    compatible = "zmk,behavior-tap-dance";
-                    label = "TAP_DANCE_0";
-                    #binding-cells = <0>;
-                    tapping-term-ms = <200>;
-                    bindings = <&kp SEMI>, <&kp LS(SEMI)>;
-                };
-         td1: tap_dancee {
-                    compatible = "zmk,behavior-tap-dance";
-                    label = "TAP_DANCE_1";
-                    #binding-cells = <0>;
-                    tapping-term-ms = <200>;
-                    bindings = <&kp EQUAL>, <&kp PLUS>;
-                };
-         td2: tap_dancee2 {
-                    compatible = "zmk,behavior-tap-dance";
-                    label = "TAP_DANCE_2";
-                    #binding-cells = <0>;
-                    tapping-term-ms = <200>;
-                    bindings = <&kp LPAR>, <&kp RPAR>;
-                };
-         td3: tap_dancee3 {
-                    compatible = "zmk,behavior-tap-dance";
-                    label = "TAP_DANCE_3";
-                    #binding-cells = <0>;
-                    tapping-term-ms = <200>;
-                    bindings = <&kp F8>, <&kp LC(N1)>;
-                };
-         td4: tap_dancee4 {
-                    compatible = "zmk,behavior-tap-dance";
-                    label = "TAP_DANCE_4";
-                    #binding-cells = <0>;
-                    tapping-term-ms = <200>;
-                    bindings = <&kp F12>, <&kp Q>;
-                };
-         td5: tap_dancee5 {
-                    compatible = "zmk,behavior-tap-dance";
-                    label = "TAP_DANCE_5";
-                    #binding-cells = <0>;
-                    tapping-term-ms = <200>;
-                    bindings = <&kp LBRC>, <&kp RBRC>;
-                };
-         td6: tap_dancee6 {
-                    compatible = "zmk,behavior-tap-dance";
-                    label = "TAP_DANCE_6";
-                    #binding-cells = <0>;
-                    tapping-term-ms = <200>;
-                    bindings = <&kp LBKT>, <&kp RBKT>;
-                };
- td7: tap_dancee7 {
+                td7: tap_dancee7 {
                     compatible = "zmk,behavior-tap-dance";
                     label = "TAP_DANCE_7";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
                     bindings = <&kp LG(LA(LC(LS(N7))))>, <&kp LG(LA(LC(LS(N8))))>,<&kp LG(LA(LC(LS(N9))))>;
-                };
-         tdshiftspace: tdshiftspace {
-                    compatible = "zmk,behavior-tap-dance";
-                    label = "tdshiftspace";
-                    #binding-cells = <0>;
-                    tapping-term-ms = <200>;
-                    bindings = <&sk LSHFT>, <&kp SPACE>;
-                                                                     
                 };
     };
 
@@ -375,7 +318,6 @@ combos {
 
   keymap {
           compatible = "zmk,keymap";
-
     default_layer {
       bindings = <
         &lt FUNC ESC       &kp SQT      &kp COMMA  &kp DOT   &kp P         &kp Y                                          &kp F      &kp G     &kp C     &kp R      &kp L   &kp FSLH  
@@ -397,28 +339,30 @@ combos {
 
     nav_layer {
       bindings = <
-        &to SHIFT           GO_FINDER       GO_TOGGLE          &kp LALT        GO_VSCODE         xxx                                  xxx          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    &td7
-        xxx                 &kp LSHFT       &kp LCTRL          &kp LGUI        GO_ITERM          GO_OBSIDIAN                          xxx          &kp LEFT       &kp DOWN       &kp RIGHT   &kp TAB      xxx
-        xxx                 xxx             xxx                GO_DISCORD      GO_SAFARI         xxx             C_LANG               xxx          COPY           KILL_WINDOW    PASTE       UNDO         &kp LS(RET)
-                                                               C_LANG          xxx               xxx      &sl SNIPPET        GO_HOMEROW   GO_RAYCAST   &disc_mic      xxx
+        &to SHIFT           GO_FINDER       GO_TOGGLE          &kp LALT        GO_VSCODE         xxx                                      xxx          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    &td7
+        xxx                 &kp LSHFT       &kp LCTRL          &kp LGUI        GO_ITERM          GO_OBSIDIAN                              xxx          &kp LEFT       &kp DOWN       &kp RIGHT   &kp TAB      xxx
+        xxx                 xxx             xxx                GO_DISCORD      GO_SAFARI         xxx             C_LANG                   xxx          COPY           KILL_WINDOW    PASTE       UNDO         &kp LS(RET)
+                                                               C_LANG          xxx               xxx      &mo SNIPPET        GO_HOMEROW   GO_RAYCAST   &disc_mic     &kp D
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
+
     num_layer {
       bindings = <
         xxx         xxx          xxx          &kp LALT    xxx         xxx                             xxx       &kp N7         &kp DOT     &kp N8      &kp N9      &kp BACKSPACE
         xxx         &kp LSHFT    &kp LCTRL    &kp LGUI    &kp SPACE   xxx                             xxx       &kp N1         &kp N2      &kp N3      &kp N4      xxx
         xxx         xxx          xxx          xxx         xxx         xxx           xxx               xxx       &kp N0         xxx         xxx         xxx         &kp RET
-                                              xxx         xxx         &sl SNIPPET   xxx     &kp N6    &kp N5    xxx            xxx  
+                                              xxx         xxx         &mo SNIPPET   xxx     &kp N6    &kp N5    xxx            xxx  
        >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
     };
+
     function_layer {
       bindings = <
-        xxx                  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                    &tog DEFAULT_WINDOW    &kp F7         &kp F8      &kp F9      &kp F10         &to DEFAULT
-        C_LANG               &bt BT_CLR      xxx             &out OUT_BLE    &out OUT_USB    xxx                             &tog UBUNTU            &kp F1         &kp F2      &kp F3      &kp F4          xxx
-        &bootloader          &reset          xxx             xxx             xxx             xxx              &to QWERTY     xxx                    &kp F11        &kp F12     &kp F13     &kp F14         xxx
-                                                             xxx             xxx             xxx         xxx     &kp F6      &kp F5                 &kp F15        xxx
+        xxx                  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                    &to DEFAULT_WINDOW    &kp F7         &kp F8      &kp F9      &kp F10         &to DEFAULT
+        C_LANG               &bt BT_CLR      xxx             &out OUT_BLE    &out OUT_USB    xxx                             &to UBUNTU            &kp F1         &kp F2      &kp F3      &kp F4          xxx
+        &bootloader          &reset          xxx             xxx             xxx             xxx              &to QWERTY     &to DEFAULT           &kp F11        &kp F12     &kp F13     &kp F14         xxx
+                                                             xxx             xxx             xxx         xxx     &kp F6      &kp F5                &kp F15        xxx
       >;
     };
 
@@ -483,7 +427,7 @@ combos {
         &to SHIFT_UBUNTU    UB_GO_FINDER    UB_GO_TOGGLE       &kp LALT        UB_GO_VSCODE         xxx                                           xxx             &kp PG_DN      &kp UP           &kp PG_UP   &kp RIGHT    &td7
         xxx                 &kp LSHFT       &kp LCTRL          &kp LGUI        UB_GO_ITERM          UB_GO_OBSIDIAN                                xxx             &kp LEFT       &kp DOWN         &kp RIGHT   &kp TAB      xxx
         xxx                 xxx             xxx                UB_GO_DISCORD   UB_GO_CHROME         xxx                xxx                        xxx             UB_COPY        UB_KILL_WINDOW   UB_PASTE    UB_UNDO      &kp LS(RET)
-                                                               xxx             xxx                  &sl SNIPPET    &to UBUNTU     UB_GO_HOMEROW   UB_GO_RAYCAST   &disc_mic      xxx
+                                                               xxx             xxx                  xxx      &mo SNIPPET          UB_GO_HOMEROW   UB_GO_RAYCAST   xxx            &kp U
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
@@ -496,7 +440,7 @@ combos {
                                               xxx         &kp LCTRL &to UBUNTU   xxx   &kp LS(N6)    &kp LS(N5)       &kp LGUI       xxx
       >;
     };
-    
+
     snippet_layer{
       bindings = <
         xxx         xxx          xxx          xxx       xxx     xxx                         xxx         xxx         xxx         xxx         xxx       xxx
@@ -510,7 +454,6 @@ combos {
 
     add macro leader q to nav_q
     snippet
-    nav
 
     */
         };
