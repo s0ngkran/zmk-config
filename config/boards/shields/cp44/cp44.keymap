@@ -341,13 +341,13 @@ combos {
             layers = <DEFAULT_LAYERS>;
         };
         ccncodetab {
-            timeout-ms = <DELAY_SLOW>;
+            timeout-ms = <DELAY_FAST>;
             key-positions = <19 8>;
             bindings = <&ncode_tab>;
             layers = <DEFAULT_LAYERS>;
         };
         ccncodeptab {
-            timeout-ms = <DELAY_SLOW>;
+            timeout-ms = <DELAY_FAST>;
             key-positions = <7 20>;
             bindings = <&ncode_p_tab>;
             layers = <DEFAULT_LAYERS>;
