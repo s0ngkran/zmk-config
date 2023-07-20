@@ -138,6 +138,41 @@
                 , <GO_DISCORD>
                 ;
         };
+        ncode_wake_up: ncode_wake_up {
+            label = "ncode_wake_up";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&kp LG(T)>
+                , <&kp LG(W)>
+                ;
+        };
+        ncode_tab: ncode_tab {
+            label = "ncode_tab";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&kp LC(H)>
+                , <&kp J>
+                , <&kp RET>
+                ;
+        };
+        ncode_p_tab: ncode_p_tab {
+            label = "ncode_p_tab";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&kp LC(H)>
+                , <&kp K>
+                , <&kp RET>
+                ;
+        };
         snphone: snphone {
             label = "snphone";
             compatible = "zmk,behavior-macro";
@@ -305,6 +340,18 @@ combos {
             bindings = <&kp LG(LS(J))>;
             layers = <DEFAULT_LAYERS>;
         };
+        ccncodetab {
+            timeout-ms = <DELAY_SLOW>;
+            key-positions = <19 8>;
+            bindings = <&ncode_tab>;
+            layers = <DEFAULT_LAYERS>;
+        };
+        ccncodeptab {
+            timeout-ms = <DELAY_SLOW>;
+            key-positions = <7 20>;
+            bindings = <&ncode_p_tab>;
+            layers = <DEFAULT_LAYERS>;
+        };
     };
     /* 
                         
@@ -351,7 +398,6 @@ combos {
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
 
-
    qwerty_layer{
       bindings = <
         &kp ESC     &kp Q     &kp W       &kp E     &kp R           &kp T                                &kp Y     &kp U     &kp I      &kp O    &kp P     &kp BACKSPACE
@@ -395,7 +441,7 @@ combos {
       bindings = <
         &to SHIFT_UBUNTU    UB_GO_FINDER    UB_GO_TOGGLE       &kp LALT        UB_GO_VSCODE         xxx                                           xxx             &kp PG_DN      &kp UP           &kp PG_UP   &kp RIGHT    &td7
         xxx                 &kp LSHFT       &kp LCTRL          &kp LGUI        UB_GO_ITERM          UB_GO_OBSIDIAN                                xxx             &kp LEFT       &kp DOWN         &kp RIGHT   &kp TAB      xxx
-        xxx                 xxx             xxx                UB_GO_DISCORD   UB_GO_CHROME         xxx                xxx                        xxx             UB_COPY        UB_KILL_WINDOW   UB_PASTE    UB_UNDO      &kp LS(RET)
+        xxx                 xxx             xxx                UB_GO_DISCORD   UB_GO_CHROME         xxx                C_LANG                     xxx             UB_COPY        UB_KILL_WINDOW   UB_PASTE    UB_UNDO      &kp LS(RET)
                                                                xxx             xxx                  xxx      &mo SNIPPET          UB_GO_HOMEROW   UB_GO_RAYCAST   xxx            &kp U
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
@@ -409,7 +455,6 @@ combos {
                                               xxx         &kp LCTRL &to UBUNTU   xxx   &kp LS(N6)    &kp LS(N5)       &kp LGUI       xxx
       >;
     };
-
 
     sym_layer{
       bindings = <
@@ -433,8 +478,8 @@ combos {
     function_layer {
       bindings = <
         xxx                  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                    &to DEFAULT_WINDOW    &kp F7         &kp F8      &kp F9      &kp F10         &to DEFAULT
-        C_LANG               &bt BT_CLR      xxx             &out OUT_BLE    &out OUT_USB    xxx                             &to UBUNTU            &kp F1         &kp F2      &kp F3      &kp F4          xxx
-        &bootloader          &reset          xxx             xxx             xxx             xxx              &to QWERTY     &to DEFAULT           &kp F11        &kp F12     &kp F13     &kp F14         xxx
+        xxx                  &bt BT_CLR      xxx             &out OUT_BLE    &out OUT_USB    xxx                             &to UBUNTU            &kp F1         &kp F2      &kp F3      &kp F4          xxx
+        &bootloader          &reset          xxx             xxx             xxx             xxx              &to QWERTY     xxx                   &kp F11        &kp F12     &kp F13     &kp F14         xxx
                                                              xxx             xxx             xxx         xxx     &kp F6      &kp F5                &kp F15        &kp F
       >;
     };
@@ -460,6 +505,20 @@ combos {
 
     add macro leader q to nav_q
     snippet
+
+
+    how to connect bluetooth
+    1. long press reset button
+    2. connect
+
+    how to forget and reconnect bluetooth
+    1. bl(number) then bl_clear
+    2. bl(other number) then bl(number)
+    3. long press reset button
+    4. forgot device on computer
+    5. turn-off and turn-on bluetooth on computer
+    6. connect new device on computer
+    7. bl(other number) then bl(number)
 
     */
         };
