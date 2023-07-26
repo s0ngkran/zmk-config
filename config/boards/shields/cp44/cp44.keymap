@@ -373,7 +373,7 @@ combos {
       bindings = <
         &lt FUNC ESC       &kp SQT      &kp COMMA  &kp DOT   &kp P         &kp Y                                          &kp F      &kp G     &kp C     &kp R      &kp L   &kp FSLH  
         &kp TAB            &kp A        &kp O      &kp E     &kp U         &kp I                                          &kp D      &kp H     &kp T     &kp N      &kp S   &kp MINUS 
-        &kp LALT           &kp SEMI     &kp Q      &kp J     &kp K         &kp X        &to UBUNTU                        &kp B      &kp M     &kp W     &kp V      &kp Z   &kp RET  
+        &kp LALT           &mo MOUSE    &kp Q      &kp J     &kp K         &kp X        &to UBUNTU                        &kp B      &kp M     &kp W     &kp V      &kp Z   &kp RET  
                                                    &mo MOUSE &kp LCTRL  &lt NAV SPACE &lt NUM LS(BACKSPACE)  &kp BACKSPACE  &sk LSHFT  &kp LGUI  &kp C_PLAY_PAUSE 
       >;
       sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
@@ -383,7 +383,7 @@ combos {
       bindings = <
         &to DEFAULT &kp LS(SQT)      &kp LS(COMMA)  &kp LS(DOT)   &kp LS(P)         &kp LS(Y)                                           &kp LS(F)      &kp LS(G)     &kp LS(C)     &kp LS(R)      &kp LS(L)          &kp LS(FSLH)  
         xxx         &kp LS(A)        &kp LS(O)      &kp LS(E)     &kp LS(U)         &kp LS(I)                                           &kp LS(D)      &kp LS(H)     &kp LS(T)     &kp LS(N)      &kp LS(S)          &kp LS(MINUS) 
-        &kp LALT    &kp LS(SEMI)     &kp LS(Q)      &kp LS(J)     &kp LS(K)         &kp LS(X)        &to DEFAULT                        &kp LS(B)      &kp LS(M)     &kp LS(W)     &kp LS(V)      &kp LS(Z)          &kp RET  
+        &kp LALT    &mo MOUSE        &kp LS(Q)      &kp LS(J)     &kp LS(K)         &kp LS(X)        &to DEFAULT                        &kp LS(B)      &kp LS(M)     &kp LS(W)     &kp LS(V)      &kp LS(Z)          &kp RET  
                                                     xxx           &kp LCTRL         &kp SPACE    &lt NUM LS(BACKSPACE)   &kp BACKSPACE  &sk LSHFT      &kp LGUI      &kp C_PLAY_PAUSE
       >;
     };
@@ -412,7 +412,7 @@ combos {
       bindings = <
         &lt FUNC ESC       &kp SQT      &kp COMMA  &kp DOT   &kp P         &kp Y                                          &kp F      &kp G     &kp C     &kp R      &kp L   &kp FSLH  
         &kp TAB            &kp A        &kp O      &kp E     &kp U         &kp I                                          &kp D      &kp H     &kp T     &kp N      &kp S   &kp MINUS 
-        &kp LALT           &kp SEMI     &kp Q      &kp J     &kp K         &kp X        &kp C_PLAY_PAUSE                  &kp B      &kp M     &kp W     &kp V      &kp Z   &kp RET  
+        &kp LALT           &mo MOUSE    &kp Q      &kp J     &kp K         &kp X        &kp C_PLAY_PAUSE                  &kp B      &kp M     &kp W     &kp V      &kp Z   &kp RET  
                                                    &mo MOUSE &kp LGUI  &lt NAV SPACE &lt NUM LS(BACKSPACE)  &kp BACKSPACE &sk LSHFT  &kp LCTRL &kp C_PLAY_PAUSE 
       >;
       sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
@@ -422,7 +422,7 @@ combos {
       bindings = <
         &lt FUNC ESC       &kp SQT      &kp COMMA  &kp DOT   &kp P         &kp Y                                          &kp F      &kp G     &kp C     &kp R      &kp L   &kp FSLH  
         &kp TAB            &kp A        &kp O      &kp E     &kp U         &kp I                                          &kp D      &kp H     &kp T     &kp N      &kp S   &kp MINUS 
-        &kp LALT           &kp SEMI     &kp Q      &kp J     &kp K         &kp X        &to DEFAULT                       &kp B      &kp M     &kp W     &kp V      &kp Z   &kp RET  
+        &kp LALT           &mo MOUSE    &kp Q      &kp J     &kp K         &kp X        &to DEFAULT                       &kp B      &kp M     &kp W     &kp V      &kp Z   &kp RET  
                                                    &mo MOUSE &kp LCTRL  &lt NAV_UBUNTU SPACE &lt NUM LS(BACKSPACE)  &kp BACKSPACE  &sk LSHFT  &kp LGUI  &kp C_PLAY_PAUSE 
       >;
       sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
@@ -432,7 +432,7 @@ combos {
       bindings = <
         &to UBUNTU  &kp LS(SQT)      &kp LS(COMMA)  &kp LS(DOT)   &kp LS(P)         &kp LS(Y)                                           &kp LS(F)      &kp LS(G)     &kp LS(C)     &kp LS(R)      &kp LS(L)          &kp LS(FSLH)  
         xxx         &kp LS(A)        &kp LS(O)      &kp LS(E)     &kp LS(U)         &kp LS(I)                                           &kp LS(D)      &kp LS(H)     &kp LS(T)     &kp LS(N)      &kp LS(S)          &kp LS(MINUS) 
-        &kp LALT    &kp LS(SEMI)     &kp LS(Q)      &kp LS(J)     &kp LS(K)         &kp LS(X)        &to UBUNTU                         &kp LS(B)      &kp LS(M)     &kp LS(W)     &kp LS(V)      &kp LS(Z)          &kp RET  
+        &kp LALT    &mo MOUSE        &kp LS(Q)      &kp LS(J)     &kp LS(K)         &kp LS(X)        &to UBUNTU                         &kp LS(B)      &kp LS(M)     &kp LS(W)     &kp LS(V)      &kp LS(Z)          &kp RET  
                                                     xxx           &kp LCTRL         &kp SPACE    &lt NUM LS(BACKSPACE)   &kp BACKSPACE  &sk LSHFT      &kp LGUI      &kp C_PLAY_PAUSE
       >;
     };
@@ -467,10 +467,10 @@ combos {
 
     num_layer {
       bindings = <
-        xxx         xxx          xxx          &kp LALT    xxx         xxx                             xxx       &kp N7         &kp DOT     &kp N8      &kp N9      &kp BACKSPACE
-        xxx         &kp LSHFT    &kp LCTRL    &kp LGUI    &kp SPACE   xxx                             xxx       &kp N1         &kp N2      &kp N3      &kp N4      xxx
-        xxx         xxx          xxx          xxx         xxx         xxx           xxx               xxx       &kp N0         xxx         xxx         xxx         &kp RET
-                                              xxx         xxx         &mo SNIPPET   xxx     &kp N6    &kp N5    xxx            xxx  
+        xxx         xxx          xxx          &kp LALT    xxx         xxx                             xxx             &kp N7         &kp N8      &kp N9      xxx      xxx
+        xxx         &kp LSHFT    &kp LCTRL    &kp LGUI    &kp SPACE   xxx                             &kp BACKSPACE   &kp N1         &kp N2      &kp N3      xxx      xxx
+        xxx         xxx          xxx          xxx         xxx         xxx           xxx               xxx             &kp N4         &kp N5      &kp N6      xxx      &kp RET
+                                              xxx         xxx         &mo SNIPPET   xxx     &kp SPACE &kp N0          &kp DOT        xxx  
        >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
     };
@@ -478,9 +478,9 @@ combos {
     function_layer {
       bindings = <
         xxx                  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                    &to DEFAULT_WINDOW    &kp F7         &kp F8      &kp F9      &kp F10         &to DEFAULT
-        xxx                  &bt BT_CLR      xxx             &out OUT_BLE    &out OUT_USB    xxx                             &to UBUNTU            &kp F1         &kp F2      &kp F3      &kp F4          xxx
-        &bootloader          &reset          xxx             xxx             xxx             xxx              &to QWERTY     xxx                   &kp F11        &kp F12     &kp F13     &kp F14         xxx
-                                                             xxx             xxx             xxx         xxx     &kp F6      &kp F5                &kp F15        &kp F
+        xxx                  &bt BT_CLR      xxx             &out OUT_BLE    &out OUT_USB    xxx                             &to UBUNTU            &kp F1         &kp F2      &kp F3      &kp F11         xxx
+        &bootloader          &reset          xxx             xxx             xxx             xxx              &to QWERTY     xxx                   &kp F4         &kp F5      &kp F6      &kp F12         xxx
+                                                             xxx             xxx             xxx         xxx      xxx        xxx                   xxx        &kp F
       >;
     };
 
