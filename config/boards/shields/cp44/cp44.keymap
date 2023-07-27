@@ -467,7 +467,7 @@ combos {
 
     num_layer {
       bindings = <
-        xxx         xxx          xxx          &kp LALT    xxx         xxx                                 xxx             &kp N7         &kp N8      &kp N9      xxx      xxx
+        xxx         xxx          xxx          &kp LALT    xxx         xxx                                 xxx             &kp N7         &kp N8      &kp N9      xxx      &kp FSLH
         xxx         &kp LSHFT    &kp LCTRL    &kp LGUI    xxx         xxx                                 &kp SPACE       &kp N1         &kp N2      &kp N3      xxx      xxx
         xxx         xxx          xxx          xxx         xxx         xxx           xxx                   xxx             &kp N4         &kp N5      &kp N6      xxx      &kp RET
                                               xxx         xxx         &mo SNIPPET   xxx     &kp BACKSPACE &kp N0          &kp DOT        xxx  
