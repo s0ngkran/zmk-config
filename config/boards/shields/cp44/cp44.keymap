@@ -348,9 +348,9 @@ combos {
         };
         ccncodeptab {
             timeout-ms = <DELAY_FAST>;
-            key-positions = <7 20>;
+            key-positions = <19 8>;
             bindings = <&ncode_p_tab>;
-            layers = <DEFAULT_LAYERS>;
+            layers = <NAV_LAYERS>;
         };
     };
     /* 
