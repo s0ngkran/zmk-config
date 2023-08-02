@@ -467,20 +467,20 @@ combos {
 
     num_layer {
       bindings = <
-        xxx         xxx          xxx          &kp LALT    xxx         xxx                                 xxx             &kp N7         &kp N8      &kp N9      xxx      &kp FSLH
-        xxx         &kp LSHFT    &kp LCTRL    &kp LGUI    xxx         xxx                                 &kp SPACE       &kp N1         &kp N2      &kp N3      &kp DOT  xxx
-        xxx         xxx          xxx          xxx         xxx         xxx           xxx                   xxx             &kp N4         &kp N5      &kp N6      xxx      &kp RET
-                                              xxx         xxx         &mo SNIPPET   xxx     &kp BACKSPACE &kp N0          xxx            xxx  
+        xxx         xxx          xxx          &kp LALT    xxx         xxx                                 xxx             &kp N7         &kp DOT     &kp N8      &kp N9   &kp FSLH
+        xxx         &kp LSHFT    &kp LCTRL    &kp LGUI    xxx         xxx                                 &kp SPACE       &kp N1         &kp N2      &kp N3      &kp N4   xxx
+        xxx         xxx          xxx          xxx         xxx         xxx           xxx                   &kp BACKSPACE   &kp N0         xxx         xxx         xxx      &kp RET
+                                              xxx         xxx         &mo SNIPPET   xxx     &kp N6        &kp N5          &kp LS(RET)    xxx  
        >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
     };
 
     function_layer {
       bindings = <
-        xxx                  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                    &to DEFAULT_WINDOW    &kp F7         &kp F8      &kp F9      &kp F10         &to DEFAULT
-        xxx                  &bt BT_CLR      xxx             &out OUT_BLE    &out OUT_USB    xxx                             &to UBUNTU            &kp F1         &kp F2      &kp F3      &kp F11         xxx
-        &bootloader          &reset          xxx             xxx             xxx             xxx              &to QWERTY     xxx                   &kp F4         &kp F5      &kp F6      &kp F12         xxx
-                                                             xxx             xxx             xxx         xxx      xxx        xxx                   xxx        &kp F
+        xxx                  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                    &to DEFAULT_WINDOW    &kp F7         xxx         &kp F8      &kp F9          &to DEFAULT
+        xxx                  &bt BT_CLR      xxx             &out OUT_BLE    &out OUT_USB    xxx                             &to UBUNTU            &kp F1         &kp F2      &kp F3      &kp F4          xxx
+        &bootloader          &reset          xxx             xxx             xxx             xxx              &to QWERTY     xxx                   &kp F11        &kp F12     &kp F13     &kp F14         xxx
+                                                             xxx             xxx             xxx         xxx      &kp F5     &kp F6                xxx            &kp F
       >;
     };
 
