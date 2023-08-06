@@ -480,7 +480,7 @@ combos {
         &lt FUNC ESC      &kp DOT        &kp N9         &kp S       &kp RBKT   &kp L                                                    &kp X         &kp Y         &kp D         &kp B         &kp LBKT      &kp LS(H)
         XXX               &kp SQT        &kp G          &kp I       &kp O      &kp COMMA                                                &kp V         &kp K         &kp J         &kp H         &kp SEMI      &kp N
         &kp LSHFT         &kp N6         &kp W          &kp M       &kp P      &kp N0          xxx                                      &kp N8        &kp U         &kp F         &kp T         &kp LS(N6)    xxx
-                                                  &mo MOUSE   &kp LCTRL  &lt NAV_THAI SPACE &lt NUM LS(BACKSPACE)  &kp BACKSPACE  &sk LSHFT  &kp LGUI  &kp C_PLAY_PAUSE 
+                                                  &mo MOUSE   &kp LCTRL  &lt NAV_THAI SPACE &lt NUM LS(BACKSPACE)  &kp BACKSPACE  &sl THAI_SHIFT  &kp LGUI  &kp C_PLAY_PAUSE 
       >;
     };
     thai_shift_layer{
