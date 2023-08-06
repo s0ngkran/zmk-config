@@ -479,7 +479,7 @@ combos {
       bindings = <
         &lt FUNC ESC      &kp DOT        &kp N9         &kp S       &kp RBKT   &kp L                                                    &kp X         &kp Y         &kp D         &kp B         &kp LBKT      &kp LS(H)
         XXX               &kp SQT        &kp G          &kp I       &kp O      &kp COMMA                                                &kp V         &kp K         &kp J         &kp H         &kp SEMI      &kp N
-        &kp LSHFT         &kp N6         &kp W          &kp M       &kp P      &kp N0          xxx                                      &kp N8        &kp U         &kp F         &kp T         &kp LS(N6)    xxx
+        &kp LSHFT         &kp N6         &kp W          &kp M       &kp P      &kp N0          xxx                                      &kp N8        &kp U         &kp F         &kp T         &kp LS(N6)    &kp RET
                                                   &mo MOUSE   &kp LCTRL  &lt NAV_THAI SPACE &lt NUM LS(BACKSPACE)  &kp BACKSPACE  &sl THAI_SHIFT  &kp LGUI  &kp C_PLAY_PAUSE 
       >;
     };
@@ -487,7 +487,7 @@ combos {
       bindings = <
         &to THAI    &kp LS(COMMA)       &kp LS(D)      &kp LS(SEMI)      &kp LS(P)     &kp A                                &kp LS(C)        &kp N7         &kp LS(T)         &kp LS(LBKT)      &kp LS(E)      &kp LS(S)
         XXX         &kp LS(K)           &kp (N5)       &kp (C)           &kp EQUAL     &kp R                                &kp Z            &kp E          &kp MINUS         &kp LS(F)         &kp N4         &kp LS(W)
-        XXX         &kp LS(A)           &kp FSLH       &kp (Q)           &kp LS(I)     &kp LS(U)          XXX               &kp LS(J)        &kp LS(N)      &kp LS(L)         &kp LS(V)         &kp LS(M)      XXX
+        XXX         &kp LS(A)           &kp FSLH       &kp (Q)           &kp LS(I)     &kp LS(U)          XXX               &kp LS(J)        &kp LS(N)      &kp LS(L)         &kp LS(V)         &kp LS(M)      &kp LS(RET)
                                                        xxx               &kp LCTRL     &kp SPACE    &lt NUM LS(BACKSPACE)   &kp BACKSPACE  &sk LSHFT      &kp LGUI      &kp C_PLAY_PAUSE
       >;
     };
