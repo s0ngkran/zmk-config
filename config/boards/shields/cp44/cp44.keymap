@@ -155,7 +155,6 @@
 #define FG_ZOUT &kp MINUS
 #define FG_UGROUP &kp LG(BACKSPACE)
 #define FG_GROUP &kp LG(G)
-#define FG_T &kp T
 #define FG_V &kp V
 #define FG_K &kp K
 #define FG_MUP &kp RBKT
@@ -246,6 +245,17 @@
             bindings
                 = <&kp LC(SPACE)>
                 , <&tog THAI>
+                ;
+        };
+        figma_t: figma_t {
+            label = "figma_t";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&kp T>
+                , <&to DEFAULT>
                 ;
         };
         snphone: snphone {
@@ -640,7 +650,7 @@ combos {
     figma_layer {
       bindings = <
         &to DEFAULT FG_H         FG_V         FG_COPY   FG_PASTE  xxx                         xxx         xxx         xxx         xxx         xxx       xxx
-        FG_R        FG_T         FG_K         FG_GROUP  FG_ZIN    FG_AUTO                     xxx         xxx         xxx         xxx         xxx       xxx
+        FG_R        &figma_t     FG_K         FG_GROUP  FG_ZIN    FG_AUTO                     xxx         xxx         xxx         xxx         xxx       xxx
         FG_L        FG_MUP       FG_MDOWN     FG_UGROUP FG_ZOUT   FG_NAUTO     &to DEFAULT    xxx         xxx         xxx         xxx         xxx       xxx
                                               xxx       xxx     &mo      FIGMA2     xxx     xxx         xxx         xxx         xxx
       >;
