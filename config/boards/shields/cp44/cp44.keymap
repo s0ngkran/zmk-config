@@ -164,6 +164,7 @@
 #define FG_R &kp R
 #define FG_L &kp L
 #define FG_LL &kp LS(L)
+#define FG_UNDO &kp LG(Z)
 
 &mwh {
  time-to-max-speed-ms = <500>;                 /* <--- How long time until max speed is reached */
@@ -651,9 +652,9 @@ combos {
 
     figma_layer {
       bindings = <
-        FG_K        FG_H         FG_V         FG_COPY   FG_PASTE        GO_ITERM                                 xxx         xxx         xxx         xxx         xxx       xxx
+        FG_K        FG_H         FG_UNDO      FG_COPY   FG_PASTE        GO_ITERM                                 xxx         xxx         xxx         xxx         xxx       xxx
         FG_R        &figma_t     GO_FIGMA     FG_GROUP  FG_ZIN          FG_AUTO                                  xxx         xxx         xxx         xxx         xxx       xxx
-        FG_L        FG_MUP       FG_MDOWN     FG_UGROUP FG_ZOUT         FG_NAUTO          &to DEFAULT            xxx         xxx         xxx         xxx         xxx       xxx
+        FG_L        FG_MUP       FG_MDOWN     FG_UGROUP FG_ZOUT         FG_V              &to DEFAULT            xxx         xxx         xxx         xxx         xxx       xxx
                                               &to DEFAULT   &kp BACKSPACE   &kp LSHFT     &mo FIGMA2     xxx         xxx         xxx         xxx
       >;
       sensor-bindings = <&inc_dec_kp UP DOWN>;
