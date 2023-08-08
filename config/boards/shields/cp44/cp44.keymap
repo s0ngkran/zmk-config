@@ -504,7 +504,7 @@ combos {
       bindings = <
         &to SHIFT           GO_FINDER       GO_TOGGLE          &kp LALT        GO_VSCODE         xxx                                      xxx          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    &td7
         xxx                 &kp LSHFT       &kp LCTRL          &kp LGUI        GO_ITERM          GO_OBSIDIAN                              xxx          &kp LEFT       &kp DOWN       &kp RIGHT   &kp TAB      xxx
-        xxx                 xxx             GO_FIGMA           GO_DISCORD      GO_SAFARI         xxx             C_LAYOUT                 xxx          COPY           KILL_WINDOW    PASTE       UNDO         &kp LS(RET)
+        xxx                 xxx             GO_FIGMA           GO_DISCORD      GO_SAFARI         &to FIGMA             C_LAYOUT           xxx          COPY           KILL_WINDOW    PASTE       UNDO         &kp LS(RET)
                                                                C_LAYOUT          xxx               xxx      &mo SNIPPET        GO_HOMEROW   GO_RAYCAST   &disc_mic     &kp D
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
@@ -652,7 +652,7 @@ combos {
 
     figma_layer {
       bindings = <
-        FG_K        FG_H         FG_UNDO      FG_COPY   FG_PASTE        GO_ITERM                                 xxx         xxx         xxx         xxx         xxx       xxx
+        FG_K        FG_H         FG_UNDO      FG_COPY   FG_PASTE        GO_ITERM                                 xxx         xxx         xxx         xxx         xxx       &to DEFAULT
         FG_R        &figma_t     GO_FIGMA     FG_GROUP  FG_ZIN          FG_AUTO                                  xxx         xxx         xxx         xxx         xxx       xxx
         FG_L        FG_MUP       FG_MDOWN     FG_UGROUP FG_ZOUT         FG_V              &to DEFAULT            xxx         xxx         xxx         xxx         xxx       xxx
                                               &to DEFAULT   &kp BACKSPACE   &kp LSHFT     &mo FIGMA2     xxx         xxx         xxx         xxx
