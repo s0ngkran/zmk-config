@@ -649,10 +649,10 @@ combos {
 
     figma_layer {
       bindings = <
-        &to DEFAULT FG_H         FG_V         FG_COPY   FG_PASTE  xxx                         xxx         xxx         xxx         xxx         xxx       xxx
-        FG_R        &figma_t     FG_K         FG_GROUP  FG_ZIN    FG_AUTO                     xxx         xxx         xxx         xxx         xxx       xxx
-        FG_L        FG_MUP       FG_MDOWN     FG_UGROUP FG_ZOUT   FG_NAUTO     &to DEFAULT    xxx         xxx         xxx         xxx         xxx       xxx
-                                              xxx       xxx       &kp LSHFT     &mo FIGMA2     xxx         xxx         xxx         xxx
+        &to DEFAULT FG_H         FG_V         FG_COPY   FG_PASTE        xxx                                      xxx         xxx         xxx         xxx         xxx       xxx
+        FG_R        &figma_t     FG_K         FG_GROUP  FG_ZIN          FG_AUTO                                  xxx         xxx         xxx         xxx         xxx       xxx
+        FG_L        FG_MUP       FG_MDOWN     FG_UGROUP FG_ZOUT         FG_NAUTO          &to DEFAULT            xxx         xxx         xxx         xxx         xxx       xxx
+                                              xxx       &kp BACKSPACE   &kp LSHFT     &mo FIGMA2     xxx         xxx         xxx         xxx
       >;
       sensor-bindings = <&inc_dec_kp UP DOWN>;
     };
