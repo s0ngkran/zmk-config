@@ -314,18 +314,6 @@ combos {
             bindings = <&kp LS(MINUS)>;
             layers = <NAV_LAYERS>;
         };
-        cclpar {
-            timeout-ms = <DELAY_FAST>;
-            key-positions = <19 20>;
-            bindings = <&kp LS(N9)>;
-            layers = <DEFAULT_LAYERS>;
-        };
-        cclparupkt {
-            timeout-ms = <DELAY_FAST>;
-            key-positions = <19 20>;
-            bindings = <&kp LBRC>;
-            layers = <NAV_LAYERS>;
-        };
         ccequal {
             timeout-ms = <DELAY_FAST>;
             key-positions = <19 21>;
@@ -338,18 +326,6 @@ combos {
             bindings = <&kp PLUS>;
             layers = <NAV_LAYERS>;
         };
-        ccrpar {
-            timeout-ms = <DELAY_FAST>;
-            key-positions = <20 21>;
-            bindings = <&kp LS(N0)>;
-            layers = <DEFAULT_LAYERS>;
-        };
-        ccrparup {
-            timeout-ms = <DELAY_FAST>;
-            key-positions = <20 21>;
-            bindings = <&kp RBRC>;
-            layers = <NAV_LAYERS>;
-        };
         ccsemi {
             timeout-ms = <DELAY_FAST>;
             key-positions = <32 33>;
@@ -360,18 +336,6 @@ combos {
             timeout-ms = <DELAY_FAST>;
             key-positions = <32 33>;
             bindings = <&kp LS(SEMI)>;
-            layers = <NAV_LAYERS>;
-        };
-        cclbktnav {
-            timeout-ms = <DELAY_SLOW>;
-            key-positions = <18 20>;
-            bindings = <&kp LBKT>;
-            layers = <NAV_LAYERS>;
-        };
-        ccrbktnav {
-            timeout-ms = <DELAY_SLOW>;
-            key-positions = <20 22>;
-            bindings = <&kp RBKT>;
             layers = <NAV_LAYERS>;
         };
         ccbslash {
@@ -428,18 +392,6 @@ combos {
             bindings = <&kp LG(LS(J))>;
             layers = <DEFAULT_LAYERS>;
         };
-        ccncodetab {
-            timeout-ms = <DELAY_FAST>;
-            key-positions = <19 8>;
-            bindings = <&ncode_tab>;
-            layers = <DEFAULT_LAYERS>;
-        };
-        ccncodeptab {
-            timeout-ms = <DELAY_FAST>;
-            key-positions = <19 8>;
-            bindings = <&ncode_p_tab>;
-            layers = <NAV_LAYERS>;
-        };
         ccthaiout1 {
             timeout-ms = <DELAY_FAST>;
             key-positions = <21 22>;
@@ -463,6 +415,55 @@ combos {
             key-positions = <9 10>;
             bindings = <&kp LS(G)>;
             layers = <THAI_SHIFT>;
+        };
+        //// all bkt
+       cclpar {
+           timeout-ms = <DELAY_FAST>;
+           key-positions = <19 8>;
+           bindings = <&kp LBKT>;
+           layers = <DEFAULT_LAYERS>;
+       };
+       cclparupkt {
+           timeout-ms = <DELAY_FAST>;
+           key-positions = <19 8>;
+           bindings = <&kp RBKT>;
+           layers = <NAV_LAYERS>;
+       };
+        ccrpar {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <19 20>;
+            bindings = <&kp LPAR>;
+            layers = <DEFAULT_LAYERS>;
+        };
+        ccrparup {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <19 20>;
+            bindings = <&kp RPAR>;
+            layers = <NAV_LAYERS>;
+        };
+        cclbktnav {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <19 33>;
+            bindings = <&kp LBRC>;
+            layers = <DEFAULT_LAYERS>;
+        };
+        ccrbktnav {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <19 33>;
+            bindings = <&kp RBRC>;
+            layers = <NAV_LAYERS>;
+        };
+        ccncodetab {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <32 20>; // 20 32
+            bindings = <&ncode_tab>;
+            layers = <DEFAULT_LAYERS>;
+        };
+        ccncodeptab {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <32 20>; // 20 32
+            bindings = <&ncode_p_tab>;
+            layers = <NAV_LAYERS>;
         };
     };
     /* 
