@@ -84,6 +84,7 @@
 #define MOUSE 17
 #define FIGMA 18
 #define FIGMA2 19
+#define SNIPPET2 20
 
 #define DELAY_FAST 25
 #define DELAY_SLOW 30
@@ -128,6 +129,16 @@
 #define GO_TOGGLE &kp LG(LA(LC(LS(N5))))
 #define GO_HOMEROW &kp LG(LS(SPACE))
 #define GO_RAYCAST &kp LG(SPACE)
+#define H_1 &kp LG(LA(LC(LS(A))))
+#define H_2 &kp LG(LA(LC(LS(B))))
+#define H_3 &kp LG(LA(LC(LS(C))))
+#define H_4 &kp LG(LA(LC(LS(D))))
+#define H_5 &kp LG(LA(LC(LS(E))))
+#define H_6 &kp LG(LA(LC(LS(H))))
+#define H_7 &kp LG(LA(LC(LS(I))))
+#define H_8 &kp LG(LA(LC(LS(J))))
+#define H_9 &kp LG(LA(LC(LS(K))))
+#define H_10 &kp LG(LA(LC(LS(M))))
 #define COPY &kp LG(C)
 #define PASTE &kp LG(V)
 #define KILL_WINDOW &kp LG(W)
@@ -465,6 +476,13 @@ combos {
             bindings = <&ncode_p_tab>;
             layers = <NAV_LAYERS>;
         };
+        ccsnip2 {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <15 28>; 
+            bindings = <&sl SNIPPET2>;
+            layers = <DEFAULT_LAYERS>;
+        };
+
     };
     /* 
                         
@@ -629,7 +647,7 @@ combos {
         xxx                  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                    &to DEFAULT_WINDOW    &kp F7         xxx         &kp F8      &kp F9          &to DEFAULT
         xxx                  &bt BT_CLR      xxx             &out OUT_BLE    &out OUT_USB    xxx                             &to UBUNTU            &kp F1         &kp F2      &kp F3      &kp F4          xxx
         &bootloader          &reset          xxx             xxx             xxx             xxx              &to QWERTY     &to THAI              &kp F11        &kp F12     &kp F13     &kp F14         &macclang
-                                                             &to FIGMA       xxx             xxx         xxx      &kp F5     &kp F6                xxx            &kp F
+                                                             &to FIGMA       xxx             xxx         xxx      &kp F6     &kp F5                xxx            &kp F
       >;
     };
 
@@ -669,6 +687,14 @@ combos {
                                               xxx       xxx     xxx     xxx     xxx         xxx         xxx         xxx
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
+    };
+    snippet2_layer{
+      bindings = <
+        xxx         xxx          xxx          xxx       xxx     xxx                         xxx         H_7         xxx         H_8         H_9       xxx
+        xxx         xxx          xxx          xxx       xxx     xxx                         xxx         H_1         H_2         H_3         H_4       xxx
+        xxx         xxx          xxx          xxx       xxx     xxx          xxx            xxx         H_10        xxx         xxx         xxx       xxx
+                                              xxx       xxx     xxx     xxx     H_6         H_5         xxx         xxx
+      >;
     };
     /* 
 
