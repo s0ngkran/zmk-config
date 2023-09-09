@@ -529,7 +529,7 @@ combos {
       bindings = <
         &lt FUNC ESC       &lt FUNC SQT  &kp COMMA  &kp DOT   &kp P         &kp Y                                          &kp F      &kp G     &kp C     &kp R      &kp L   &kp FSLH  
         &kp TAB            &kp A         &kp O      &kp E     &kp U         &kp I                                          &kp D      &kp H     &kp T     &kp N      &kp S   &kp MINUS 
-        &kp LALT           &mo MOUSE     &kp Q      &kp J     &kp K         &kp X        &to UBUNTU                        &kp B      &kp M     &kp W     &kp V      &kp Z   &kp RET  
+        &kp LALT           &lt MOUSE ESC &kp Q      &kp J     &kp K         &kp X        &to UBUNTU                        &kp B      &kp M     &kp W     &kp V      &kp Z   &kp RET  
                                                    &mo MOUSE &kp LCTRL  &lt NAV SPACE &lt NUM LS(BACKSPACE)  &kp BACKSPACE  &sk LSHFT  &mt LGUI RET  &kp C_PLAY_PAUSE 
       >;
       sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
