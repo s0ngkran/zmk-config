@@ -202,7 +202,7 @@
 
 
 &mt {
-    tapping-term-ms = <75>;
+    tapping-term-ms = <150>;
 };
 
 &sk {  // sticky-key config
