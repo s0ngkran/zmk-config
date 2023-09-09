@@ -360,7 +360,7 @@ combos {
         ccequalup {
             timeout-ms = <DELAY_FAST>;
             key-positions = <19 21>;
-            bindings = <&kp PLUS>;
+            bindings = <&kp FSLH>;
             layers = <NAV_LAYERS>;
         };
         ccsemi {
@@ -524,13 +524,13 @@ combos {
     */
 
   keymap {
-          compatible = "zmk,keymap";
+    compatible = "zmk,keymap";
     default_layer {
       bindings = <
-        &lt FUNC ESC       &kp SQT      &kp COMMA  &kp DOT   &kp P         &kp Y                                          &kp F      &kp G     &kp C     &kp R      &kp L   &kp FSLH  
-        &kp TAB            &kp A        &kp O      &kp E     &kp U         &kp I                                          &kp D      &kp H     &kp T     &kp N      &kp S   &kp MINUS 
-        &kp LALT           &mo MOUSE    &kp Q      &kp J     &kp K         &kp X        &to UBUNTU                        &kp B      &kp M     &kp W     &kp V      &kp Z   &kp RET  
-                                                   &mo MOUSE &kp LCTRL  &lt NAV SPACE &lt NUM LS(BACKSPACE)  &kp BACKSPACE  &sk LSHFT  &kp LGUI  &kp C_PLAY_PAUSE 
+        &lt FUNC ESC       &lt FUNC SQT  &kp COMMA  &kp DOT   &kp P         &kp Y                                          &kp F      &kp G     &kp C     &kp R      &kp L   &kp FSLH  
+        &kp TAB            &kp A         &kp O      &kp E     &kp U         &kp I                                          &kp D      &kp H     &kp T     &kp N      &kp S   &kp MINUS 
+        &kp LALT           &mo MOUSE     &kp Q      &kp J     &kp K         &kp X        &to UBUNTU                        &kp B      &kp M     &kp W     &kp V      &kp Z   &kp RET  
+                                                   &mo MOUSE &kp LCTRL  &lt NAV SPACE &lt NUM LS(BACKSPACE)  &kp BACKSPACE  &sk LSHFT  &lt LGUI RET  &kp C_PLAY_PAUSE 
       >;
       sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
     };
@@ -543,13 +543,12 @@ combos {
                                                     xxx           &kp LCTRL         &kp SPACE    &lt NUM LS(BACKSPACE)   &kp BACKSPACE  &sk LSHFT      &kp LGUI      &kp C_PLAY_PAUSE
       >;
     };
-
     nav_layer {
       bindings = <
-        &to SHIFT           GO_FINDER       GO_TOGGLE          &kp LALT        GO_VSCODE         xxx                                      xxx          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    &td7
-        xxx                 &kp LSHFT       &kp LCTRL          &kp LGUI        GO_ITERM          GO_OBSIDIAN                              xxx          &kp LEFT       &kp DOWN       &kp RIGHT   &kp TAB      &td8
-        xxx                 xxx             GO_FIGMA           GO_DISCORD      GO_SAFARI         &to FIGMA             C_LAYOUT           xxx          COPY           KILL_WINDOW    PASTE       UNDO         &kp LS(RET)
-                                                               C_LAYOUT          xxx               xxx      &mo SNIPPET        GO_HOMEROW   GO_RAYCAST   &disc_mic     &kp D
+        &to SHIFT           &kp ESC      GO_TOGGLE      &sk LALT        GO_VSCODE         xxx                                      xxx          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    &td7
+        xxx                 &kp LSHFT    &kp LCTRL      &kp LGUI        GO_ITERM          GO_OBSIDIAN                              &td7         &kp LEFT       &kp DOWN       &kp RIGHT   &kp TAB      &td8
+        xxx                 GO_FINDER    GO_FIGMA       GO_DISCORD      GO_SAFARI         &to FIGMA             C_LAYOUT           &kp LG(RET)  COPY           KILL_WINDOW    PASTE       UNDO         &kp LS(RET)
+                                                        C_LAYOUT          xxx               xxx      &mo SNIPPET        GO_HOMEROW   GO_RAYCAST   &kp LS(RET)   &kp D
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
@@ -568,7 +567,7 @@ combos {
       bindings = <
         &lt FUNC ESC       &kp SQT      &kp COMMA  &kp DOT   &kp P         &kp Y                                          &kp F      &kp G     &kp C     &kp R      &kp L   &kp FSLH  
         &kp TAB            &kp A        &kp O      &kp E     &kp U         &kp I                                          &kp D      &kp H     &kp T     &kp N      &kp S   &kp MINUS 
-        &kp LALT           &mo MOUSE    &kp Q      &kp J     &kp K         &kp X        &kp C_PLAY_PAUSE                  &kp B      &kp M     &kp W     &kp V      &kp Z   &kp RET  
+        &kp LALT           &mo MOUSE    &kp Q      &kp J     &kp K         &kp X             &to DEFAULT                  &kp B      &kp M     &kp W     &kp V      &kp Z   &kp RET  
                                                    &mo MOUSE &kp LGUI  &lt NAV SPACE &lt NUM LS(BACKSPACE)  &kp BACKSPACE &sk LSHFT  &kp LCTRL &kp C_PLAY_PAUSE 
       >;
       sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
@@ -578,7 +577,7 @@ combos {
       bindings = <
         &lt FUNC ESC      &kp DOT        &kp N9         &kp S       &kp RBKT   &kp L                                                    &kp X         &kp Y         &kp D         &kp B         &kp LBKT      &kp LS(H)
         XXX               &kp SQT        &kp G          &kp I       &kp O      &kp COMMA                                                &kp V         &kp K         &kp J         &kp H         &kp SEMI      &kp N
-        &kp LSHFT         &kp N6         &kp W          &kp M       &kp P      &kp N0          xxx                                      &kp N8        &kp U         &kp F         &kp T         &kp LS(N6)    &kp RET
+        &kp LSHFT         &kp N6         &kp W          &kp M       &kp P      &kp N0          &to DEFAULT                              &kp N8        &kp U         &kp F         &kp T         &kp LS(N6)    &kp RET
                                                   &mo MOUSE   &kp LCTRL  &lt NAV_THAI SPACE &lt NUM LS(BACKSPACE)  &kp BACKSPACE  &sl THAI_SHIFT  &mo GUI_THAI  &kp C_PLAY_PAUSE 
       >;
     };
@@ -586,15 +585,15 @@ combos {
       bindings = <
         &to THAI    &kp LS(COMMA)       &kp LS(D)      &kp LS(SEMI)      &kp LS(P)     &kp A                                &kp LS(C)        &kp N7         &kp LS(T)         &kp LS(LBKT)      &kp LS(E)      &kp LS(S)
         XXX         &kp LS(K)           &kp (N5)       &kp (C)           &kp EQUAL     &kp R                                &kp Z            &kp E          &kp MINUS         &kp LS(F)         &kp N4         &kp LS(W)
-        XXX         &kp LS(A)           &kp FSLH       &kp (Q)           &kp LS(I)     &kp LS(U)          XXX               &kp LS(J)        &kp LS(N)      &kp LS(L)         &kp LS(V)         &kp LS(M)      &kp LS(RET)
+        XXX         &kp LS(A)           &kp FSLH       &kp (Q)           &kp LS(I)     &kp LS(U)           &to DEFAULT      &kp LS(J)        &kp LS(N)      &kp LS(L)         &kp LS(V)         &kp LS(M)      &kp LS(RET)
                                                        xxx               &kp LCTRL     &kp SPACE    &lt NUM LS(BACKSPACE)   &kp BACKSPACE  &sk LSHFT      &mo GUI_THAI      &kp C_PLAY_PAUSE
       >;
     };
     nav_thai_layer {
       bindings = <
-        &to THAI_SHIFT      GO_FINDER       GO_TOGGLE          &kp LALT        GO_VSCODE         xxx                                      xxx          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    &td7
+        &to THAI_SHIFT      &lt FUNC ESC    GO_TOGGLE          &kp LALT        GO_VSCODE         xxx                                      xxx          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    &td7
         xxx                 &kp LSHFT       &kp LCTRL          &kp LGUI        GO_ITERM          GO_OBSIDIAN                              xxx          &kp LEFT       &kp DOWN       &kp RIGHT   &kp TAB      xxx
-        xxx                 xxx             xxx                GO_DISCORD      GO_SAFARI         xxx             C_LAYOUT                 xxx          COPY           KILL_WINDOW    PASTE       UNDO         &kp LS(RET)
+        xxx                 GO_FINDER       xxx                GO_DISCORD      GO_SAFARI         xxx             &to DEFAULT              xxx          COPY           KILL_WINDOW    PASTE       UNDO         &kp LS(RET)
                                                                C_LAYOUT          xxx               xxx      &mo SNIPPET        GO_HOMEROW   GO_RAYCAST   &disc_mic      &kp T
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
@@ -604,7 +603,7 @@ combos {
       bindings = <
         xxx         &kp LG(SQT)      &kp LG(COMMA)  &kp LG(DOT)   &kp LG(P)         &kp LG(Y)                                           &kp LG(F)      &kp LG(G)     &kp LG(C)     &kp LG(R)      &kp LG(L)      &kp LG(FSLH)  
         xxx         &kp LG(A)        &kp LG(O)      &kp LG(E)     &kp LG(U)         &kp LG(I)                                           &kp LG(D)      &kp LG(H)     &kp LG(T)     &kp LG(N)      &kp LG(S)      &kp LG(MINUS) 
-        &kp LALT    xxx              &kp LG(Q)      &kp LG(J)     &kp LG(K)         &kp LG(X)                xxx                        &kp LG(B)      &kp LG(M)     &kp LG(W)     &kp LG(V)      &kp LG(Z)      &kp RET  
+        &kp LALT    xxx              &kp LG(Q)      &kp LG(J)     &kp LG(K)         &kp LG(X)                &to DEFAULT                &kp LG(B)      &kp LG(M)     &kp LG(W)     &kp LG(V)      &kp LG(Z)      &kp RET  
                                                    &mo MOUSE &kp LCTRL  &lt NAV SPACE &lt NUM LS(BACKSPACE)  &kp BACKSPACE  &sk LSHFT  xxx  &kp C_PLAY_PAUSE 
       >;
       sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
@@ -631,9 +630,9 @@ combos {
 
     nav_ubuntu_layer {
       bindings = <
-        &to SHIFT_UBUNTU    UB_GO_FINDER    UB_GO_TOGGLE       &kp LALT        UB_GO_VSCODE         xxx                                           xxx             &kp PG_DN      &kp UP           &kp PG_UP   &kp RIGHT    &td7
+        &to SHIFT_UBUNTU    &lt FUNC ESC    UB_GO_TOGGLE       &kp LALT        UB_GO_VSCODE         xxx                                           xxx             &kp PG_DN      &kp UP           &kp PG_UP   &kp RIGHT    &td7
         xxx                 &kp LSHFT       &kp LCTRL          &kp LGUI        UB_GO_ITERM          UB_GO_OBSIDIAN                                xxx             &kp LEFT       &kp DOWN         &kp RIGHT   &kp TAB      xxx
-        xxx                 xxx             xxx                UB_GO_DISCORD   UB_GO_CHROME         xxx                C_LAYOUT                   xxx             UB_COPY        UB_KILL_WINDOW   UB_PASTE    UB_UNDO      &kp LS(RET)
+        xxx                 UB_GO_FINDER    xxx                UB_GO_DISCORD   UB_GO_CHROME         xxx                C_LAYOUT                   xxx             UB_COPY        UB_KILL_WINDOW   UB_PASTE    UB_UNDO      &kp LS(RET)
                                                                xxx             xxx                  xxx      &mo SNIPPET          UB_GO_HOMEROW   UB_GO_RAYCAST   xxx            &kp U
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
@@ -650,9 +649,9 @@ combos {
 
     sym_layer{
       bindings = <
-        &to DEFAULT xxx          xxx          xxx         xxx       xxx                              xxx              &kp LS(N7)     xxx              &kp LS(N8)  xxx           &kp BSLH                     
-        xxx         xxx          xxx          xxx         xxx       xxx                              xxx              &kp LS(N1)     &kp LS(N2)       &kp LS(N3)  &kp LS(N4)    xxx                        
-        xxx         xxx          xxx          xxx         xxx       xxx             xxx              xxx              xxx            xxx              xxx         xxx           xxx                        
+        &to DEFAULT  &to DEFAULT  xxx          xxx         xxx       xxx                              xxx              &kp LS(N7)     xxx              &kp LS(N8)  xxx           &kp BSLH                     
+        xxx          xxx          xxx          xxx         xxx       xxx                              xxx              &kp LS(N1)     &kp LS(N2)       &kp LS(N3)  &kp LS(N4)    xxx                        
+        xxx          xxx          xxx          xxx         xxx       xxx             xxx              xxx              xxx            xxx              xxx         xxx           xxx                        
                                               xxx         &kp LCTRL &to DEFAULT   xxx   &kp LS(N6)   &kp LS(N5)       &kp LGUI       xxx
       >;
     };
@@ -669,8 +668,8 @@ combos {
 
     function_layer {
       bindings = <
-        xxx                  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                    &to DEFAULT_WINDOW    &kp F7         xxx         &kp F8      &kp F9          &to DEFAULT
-        xxx                  &bt BT_CLR      xxx             &out OUT_BLE    &out OUT_USB    xxx                             &to UBUNTU            &kp F1         &kp F2      &kp F3      &kp F4          xxx
+        xxx                  xxx             &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3                        &to DEFAULT_WINDOW    &kp F7         xxx         &kp F8      &kp F9          &to DEFAULT
+        xxx                  &bt BT_CLR      xxx             &out OUT_BLE    &out OUT_USB    &bt BT_SEL 4                    &to UBUNTU            &kp F1         &kp F2      &kp F3      &kp F4          xxx
         &bootloader          &reset          xxx             xxx             xxx             xxx              &to QWERTY     &to THAI              &kp F11        &kp F12     &kp F13     &kp F14         &macclang
                                                              &to FIGMA       xxx             xxx         xxx      &kp F6     &kp F5                xxx            &kp F
       >;
@@ -717,7 +716,7 @@ combos {
       bindings = <
         xxx         HSQT        HCOMMA       HDOT      HP      HY                         HF         HG         HC         HR         HL       xxx
         xxx         HA          HO           HE        HU      HI                         HD         HH         HT         HN         HS       xxx
-        xxx         XXX         HQ           HJ        HK      HX          XXX            HB         HM         HW         HV         HZ       xxx
+        xxx         XXX         HQ           HJ        HK      HX       &to DEFAULT       HB         HM         HW         HV         HZ       xxx
                                               xxx       xxx     xxx     xxx     xxx       xxx        xxx        xxx
       >;
     };
