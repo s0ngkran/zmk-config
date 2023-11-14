@@ -51,6 +51,14 @@
 กัน กัน กัน กกนน กก่า กัก กัก กัก กัก เกัก เกเก เกเร เกเร เกเร กรัน กัน กัม กัม กัม กัม
 วัก วัก วัก วัก กวม กวม กวม กาน กาน กาน กา กา กา
 
+  ┌───────────────────┐
+  │                   │
+  │ ใ ต ห ล ส ป ั ก ิ บ │
+  │ ง เ ร น ม อ า ่ ้ ว │
+  │ ุ ไ ท ย จ ค ี ด ะ ู  │
+  │                   │
+  └───────────────────┘
+
     change lang is ctrl+space
  */
 
@@ -599,10 +607,10 @@ combos {
 
     thai_layer{
       bindings = <
-        &lt FUNC ESC      &lt FUNC DOT        &kp N9         &kp S       &kp RBKT   &kp L                                                    &kp X         &kp Y         &kp D         &kp B         &kp LBKT      &kp LS(H)
+        &lt FUNC ESC      &lt FUNC DOT   &kp N9         &kp S       &kp RBKT   &kp L                                               &kp X         &kp Y         &kp D         &kp B         &kp LBKT      &kp LS(H)
         XXX               &kp SQT        &kp G          &kp I       &kp O      &kp COMMA                                                &kp V         &kp K         &kp J         &kp H         &kp SEMI      &kp N
         &kp LSHFT         &kp N6         &kp W          &kp M       &kp P      &kp N0          &to DEFAULT                              &kp N8        &kp U         &kp F         &kp T         &kp LS(N6)    &kp RET
-                                                  &mo MOUSE   &kp LCTRL  &lt NAV_THAI SPACE &lt NUM ESC  &kp BACKSPACE  &sl THAI_SHIFT  &mo GUI_THAI  &kp C_PLAY_PAUSE 
+                                                     &mo MOUSE  &kp LCTRL     &lt NAV SPACE       &lt NUM ESC  &kp RET       &sk LSHFT  &kp LGUI  xxx
       >;
     };
     thai_shift_layer{
