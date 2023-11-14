@@ -71,11 +71,11 @@
 
 #define DEFAULT 0
 #define SHIFT 1
-#define NAV 2
+#define THAI 2
+#define NAV 3
 
-#define QWERTY 3
-#define DEFAULT_WINDOW 4
-#define THAI 5
+#define QWERTY 4
+#define DEFAULT_WINDOW 5
 #define THAI_SHIFT 6
 #define NAV_THAI 7
 #define GUI_THAI 8
@@ -577,7 +577,7 @@ combos {
     };
     thai_layer{
       bindings = <
-        &lt FUNC ESC      &lt FUNC DOT   &kp N9         &kp S       &kp RBKT   &kp L                                               &kp X         &kp Y         &kp D         &kp B         &kp LBKT      &kp LS(H)
+        &lt FUNC ESC      &lt FUNC DOT   &kp N9         &kp S       &kp RBKT   &kp L                                                    &kp X         &kp Y         &kp D         &kp B         &kp LBKT      &kp LS(H)
         XXX               &kp SQT        &kp G          &kp I       &kp O      &kp COMMA                                                &kp V         &kp K         &kp J         &kp H         &kp SEMI      &kp N
         &kp LSHFT         &kp N6         &kp W          &kp M       &kp P      &kp N0          &to DEFAULT                              &kp N8        &kp U         &kp F         &kp T         &kp LS(N6)    &kp RET
                                                      &mo MOUSE  &kp LCTRL     &lt NAV SPACE       &lt NUM ESC  &kp RET       &sk LSHFT  &kp LGUI  xxx
