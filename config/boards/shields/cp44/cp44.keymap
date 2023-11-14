@@ -227,7 +227,7 @@
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&kp LC(x) &kp LC(x) &kp J>;
+            bindings = <&kp LC(X) &kp LC(X) &kp J>;
         };
         vim_y: vim_y {
             label = "vim_y";
@@ -235,7 +235,7 @@
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&kp LC(x) &kp LC(x) &kp Y>;
+            bindings = <&kp LC(X) &kp LC(X) &kp Y>;
         };
         disc_mic: disc_mic {
             label = "disc_mic";
@@ -698,7 +698,7 @@ combos {
                                                              &to FIGMA       xxx             xxx         xxx      &kp F6     &kp F5                xxx            &kp F
       >;
     };
-    
+
     snippet_layer{
       bindings = <
         xxx         xxx          xxx          xxx       xxx     xxx                         xxx         xxx         xxx         xxx         xxx       xxx
