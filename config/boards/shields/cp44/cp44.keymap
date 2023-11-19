@@ -50,6 +50,29 @@
 กา กา กา กา มา มา นา ก่า ก่า เก เก เก นัม นัม นัม งัม งัม งัม งัม วัก 
 กัน กัน กัน กกนน กก่า กัก กัก กัก กัก เกัก เกเก เกเร เกเร เกเร กรัน กัน กัม กัม กัม กัม
 วัก วัก วัก วัก กวม กวม กวม กาน กาน กาน กา กา กา
+กิน กิน กิน ติม ติม ติม ริน ริน มิน มิน มิน นิม นิ่ม นิ่ม ติมร ริว ริว ริวว
+วิม วิมม หิน หิน หิน หิน หิน มัน มัน กิน กิน กิน เงิน เงิน เงิน เงิน
+บิน บาร บ่าว บ่าว บ่าว บาร บาร บาน บาน บาง บาง บ่าง บ่าง บ่าง
+บิน บิน บิน บัน บัน บัน บก บก บก บก บิน บิน บิน บาง บาง บาง บาง
+กาง กาง กาง กวาง กวาง กวาง กวาง กวาง กวาง หาง หาง หาง หาง
+การ การ การ กรา กราน กราน กราน กราม กราม ลาง ลาง ลาง ล่าง ล่าง ล่าง 
+กร่าง กร่าง กร่าง กร่าง กร่าง บ้าง บ้าง บ้าง บ้่าง บ้าง บ้าง บ้าง บ้าง สร่าง สร่าง
+สร่าง สว่าง สว่าง สว่าง สว่าง สว่าง สว่าง สว่าง สม สม สม สม สสลล สสลล สสลล
+บบงง บบงง บบวว บวบว บบวว ววบบ สสวว สสวว ง่าน ง่าน ง่าน น่าน น่าน น่า น่า มาม่า
+มาม่า มาม่า มาม่า มาม่า มาม่า สว่าง สว่าง สว่า บ้าน บ้าน บ้าน บาน บาน หา หา สา สา
+ลาลา ลาล่า ลาล่า ลาล่า ใบ ใบ ใบ ใกล้ ใกล้ ใกล้ ใกล้ ใกล้ ใกล้ ใกล้ ใกล้
+ใส้ ใส้ ใส่ ใส่ ใส่ ใส่ ใบ้ ใบ้ ใบ้ ใบ้ ใบ้ งาน งาน งาน มมนน นม นม นม น่า ม่า
+กาน กาน กาน กาน กาน บิน บิน บิน หิน หิน หิน นิ่ม นิ่ม นิ่ม นิ่ม นิ่ม นิ่ม นิ่ม นิ่ม
+ร่าง ร่าง ร่าง ร่าง ร่าง กร่าง กร่าง บิน ใบ ใบ ใส ใส ใล ใล
+สิน สิน สิน สว่าง สว่าน การเงิน การเงิน การเงิน เงิน เงิน บิน บิน บิน
+สิน สิน บ้าน บ้าน ใง้ ใส้ ใส้ ใส้ สว้าง สร้าง สร้าง สว้าง ร้าบาน ร้าบาน ร้าบาน
+กุ กุ กุ สุ สุ สุ สุ บุ บุ บุ ไส ไส ไส มไ มไ มไ ไม ไม ไล ไล ไว ไว ไว ไว ไง ไง ไง ไง
+จจ จจ ทท ทท ยย ยย จจ จจ จจ ไไ ไไ ไไ ไจ ไจ ไจ ไท ไท ไท ทย ทย ทย ยจ ยจ ยจ
+ทน ทน ทน ทน ทาน ทาน ทาน ใย ใย ใย ไย ไย ไย ทาย ทย ทย ทย ไท ไท ไท ไทย
+ไทย ไทย ไทย ไหม ไหม ไหม ไหม ยาย ยาย ยาย ย่า ย่า ย่า น่า ม่า ส่า ใจ ใจ ใจ
+คค ยค คย คย จค จค จค ไค ไค ไค ไย ไย ไทย ไทย ไค ไค ไค คี คี คี วี วี วี 
+นี นี นี มี มี มี สี สี ใย ใย ใค ใค ใค ใคร ใคร ใคร คาน คาน เคน เคร เคร
+คน คน คน คน คม คม มค มค มค คม คม จจจ ยยย จจจ ยยย คคค ยียี จีจี จ่าย
 
   ┌───────────────────┐
   │                   │
@@ -585,10 +608,10 @@ combos {
     };
     nav_layer {
       bindings = <
-        &to SHIFT           &kp ESC      GO_TOGGLE      &sk LALT        GO_VSCODE         xxx                                      &kp BACKSPACE  &kp PG_DN     &kp UP         &kp PG_UP   &kp FSLH     &td7
-        xxx                 &kp LSHFT    &kp LCTRL      &kp LGUI        GO_ITERM          GO_OBSIDIAN                              &td7         &kp LEFT        &kp DOWN       &kp RIGHT   &kp TAB      &td8
-        xxx                 GO_FINDER    GO_FIGMA       GO_DISCORD      GO_SAFARI         &to FIGMA             C_LAYOUT           &kp LG(RET)  &vim_j          &kp LC(G)      &vim_y      UNDO         &kp LS(RET)
-                                                        C_LAYOUT          xxx               xxx      &mo SNIPPET        &kp LS(RET)   GO_RAYCAST   GO_HOMEROW   &kp D
+        xxx         &kp ESC      GO_TOGGLE      &sk LALT        GO_VSCODE         xxx                                        &kp BACKSPACE   &kp PG_DN       &kp UP         &kp PG_UP   &kp FSLH     xxx
+        xxx         &kp LSHFT    &kp LCTRL      &kp LGUI        GO_ITERM          GO_OBSIDIAN                                &td7            &kp LEFT        &kp DOWN       &kp RIGHT   &kp TAB      xxx
+        xxx         GO_FINDER    GO_FIGMA       GO_DISCORD      GO_SAFARI         &to FIGMA             C_LAYOUT             &kp LG(RET)     &vim_j          &vim_y         &kp LG(v)   UNDO         xxx
+                                                C_LAYOUT        C_LAYOUT          xxx           &mo SNIPPET    &kp LS(RET)   GO_RAYCAST   GO_HOMEROW   &kp D
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
@@ -703,7 +726,7 @@ combos {
         xxx                  xxx             &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3                    &to DEFAULT_WINDOW    &kp F7         &to DEFAULT &kp F8      &kp F9          &to DEFAULT
         xxx                  &bt BT_CLR      &to DEFAULT     &out OUT_BLE    &out OUT_USB    &bt BT_SEL 4                    &to UBUNTU            &kp F1         &kp F2      &kp F3      &kp F4          xxx
         xxx                  &bootloader     &reset          xxx             &macclang       xxx              &to QWERTY     &to THAI              &kp F11        &kp F12     &kp F13     &kp F14         &macclang
-                                                             &to FIGMA       xxx             xxx         xxx      &kp F6     &kp F5                xxx            &kp F
+                                                             &to FIGMA       xxx             xxx         xxx      &kp F6     &kp F5                &kp F10        &kp F
       >;
     };
 
@@ -769,6 +792,9 @@ combos {
     5. turn-off and turn-on bluetooth on computer
     6. connect new device on computer
     7. bl(other number) then bl(number)
+
+    this approach is not working on window
+    only work on mac and ipad
     
 thai no sym layer
 
