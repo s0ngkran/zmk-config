@@ -610,7 +610,7 @@ combos {
       bindings = <
         xxx         &kp ESC      GO_TOGGLE      &sk LALT        GO_VSCODE         xxx                                        &kp BACKSPACE   &kp PG_DN       &kp UP         &kp PG_UP   &kp FSLH     xxx
         xxx         &kp LSHFT    &kp LCTRL      &kp LGUI        GO_ITERM          GO_OBSIDIAN                                &td7            &kp LEFT        &kp DOWN       &kp RIGHT   &kp TAB      xxx
-        xxx         GO_FINDER    GO_FIGMA       GO_DISCORD      GO_SAFARI         &to FIGMA             C_LAYOUT             &kp LG(RET)     &vim_j          &vim_y         &kp LG(v)   UNDO         xxx
+        xxx         GO_FINDER    GO_FIGMA       GO_DISCORD      GO_SAFARI         &to FIGMA             C_LAYOUT             &kp LG(RET)     &vim_j          &vim_y         &kp LG(V)   UNDO         xxx
                                                 C_LAYOUT        C_LAYOUT          xxx           &mo SNIPPET    &kp LS(RET)   GO_RAYCAST   GO_HOMEROW   &kp D
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
