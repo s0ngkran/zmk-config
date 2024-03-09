@@ -621,7 +621,7 @@ combos {
     };
     nav_layer {
       bindings = <
-        xxx         &kp ESC      GO_TOGGLE      &sk LALT        GO_VSCODE         xxx                                        &kp BACKSPACE   &kp PG_DN       &kp UP         &kp PG_UP   &kp FSLH     xxx
+        xxx         &kp ESC      GO_TOGGLE      &sk LALT        GO_VSCODE         &kp LS(INS)                                        &kp BACKSPACE   &kp PG_DN       &kp UP         &kp PG_UP   &kp FSLH     xxx
         xxx         &kp LSHFT    &kp LCTRL      &kp LGUI        GO_ITERM          GO_OBSIDIAN                                &td7            &kp LEFT        &kp DOWN       &kp RIGHT   &kp TAB      xxx
         xxx         GO_FINDER    GO_FIGMA       GO_DISCORD      GO_SAFARI         &to FIGMA             C_LAYOUT             &kp LG(RET)     &vim_j          &vim_y         &kp LG(V)   UNDO         xxx
                                                 C_LAYOUT        C_LAYOUT          xxx           &mo SNIPPET    &kp LS(RET)   GO_RAYCAST   GO_HOMEROW   &kp D
@@ -726,9 +726,9 @@ combos {
 
     num_layer {
       bindings = <
-        xxx         xxx          xxx          &kp LALT    xxx         xxx                                 xxx             &kp N7         &kp DOT     &kp N8      &kp N9   &kp FSLH
-        xxx         &kp LSHFT    &kp LCTRL    &kp LGUI    xxx         xxx                                 &kp SPACE       &kp N1         &kp N2      &kp N3      &kp N4   xxx
-        xxx         xxx          xxx          xxx         xxx         xxx           xxx                   &kp BACKSPACE   &kp N0         xxx         xxx         xxx      &kp RET
+        xxx         xxx          xxx          &kp LALT    xxx         xxx                                 &kp BACKSPACE   &kp N7         xxx         &kp N8      &kp N9   &kp FSLH
+        xxx         &kp LSHFT    &kp LCTRL    &kp LGUI    xxx         xxx                                 xxx             &kp N1         &kp N2      &kp N3      &kp N4   xxx
+        xxx         xxx          xxx          xxx         xxx         xxx           xxx                   xxx             &kp N0         &kp DOT     &kp SPACE   &kp BSLH &kp RET
                                               xxx         xxx         &mo SNIPPET   xxx     &kp N6        &kp N5          &kp LS(RET)    xxx  
        >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -787,6 +787,7 @@ combos {
                                               xxx       xxx     xxx     xxx     xxx       xxx        xxx        xxx
       >;
     };
+
    hon_layer{
       bindings = <
         &kp ESC     &lt FUNC Q     &kp W       &kp E     &kp R           &kp T                                &kp Y     &kp U     &kp I      &kp O    &kp P     &kp BACKSPACE
@@ -823,3 +824,6 @@ thai no sym layer
     */
         };
 };
+
+
+
