@@ -1,0 +1,831 @@
+
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+
+    jump_layer{
+      bindings = <
+        xxx         xxx          xxx          xxx       xxx     xxx                         xxx         xxx         xxx         xxx         xxx       xxx
+        xxx         xxx          xxx          xxx       xxx     xxx                         xxx         xxx         xxx         xxx         xxx       xxx
+        xxx         xxx          xxx          xxx       xxx     xxx          xxx            xxx         xxx         xxx         xxx         xxx       xxx
+                                              xxx       xxx     xxx     xxx     xxx         xxx         xxx         xxx
+      >;
+    };
+
+    thai_layer{
+      bindings = <
+        xxx         a.          anum9       as       a]     al                         ax         ay         ad         ab         a[         ash
+        xxx         a'          ag          ai       ao     a,                         av         ak         aj         ah         a;         an
+        xxx         anum6       aw          am       ap     anum0          xxx         anum8      au         af         at         anums6     xxx
+                                              xxx       xxx     xxx     xxx     xxx         xxx         xxx         xxx
+      >;
+    };
+    thai_shift_layer{
+      bindings = <
+        xxx         s,          sd          s;       sp     aa                         sc         anum7         st         s[         se       ss
+        xxx         sk          anum5       ac       a=     ar                         az         ae            a-         sf         anum4    sw
+        xxx         sa          a/          aq       si     su          xxx            sj         sn         sl         sv         sm       xxx
+                                              xxx       xxx     xxx     xxx     xxx         xxx         xxx         xxx
+      >;
+    };
+  งง เเ รร นน มม ออ าา วว
+ งเ งร งร งน งเ งร งน งม งม งอ า
+ เว่า เว่า รร่า ร่า ง้า ง้า ง้า อเร่า เร่า ง่า ง้า ง้า ง้า อ่า ร่า
+ อ่า อ่า มา มา มา มา นา นา าน าน าน นา นา นา น่า น่า น่า
+ ว่า ว่า ว่า ว่า เง่า เง่า เง่า เง่า เง่า เร่า เร่า เร่า เร่า เร่า
+ รเน่า เร่า รเน่า รเน่า ร่า ม่า ม่า ม่า ม่า ร่า ร่า ร้า ร้า ร้า น้า น้า น้า ว้า ว้า ว้า
+ ว่า ว่า ม่า ม่า ม่า น้า น้า น้า น้า ม้า ม้า ม้า ม้า ม้า น้า น้า น้า ง้า ง้า ง้า ง้า เง้า เง้า
+ เร้า เร้า เร้า เร้า เร้า เรา เรา เรา เรา เรา เนา เนา เนา เน่า เน่า เน่า เน่า
+ เม่า เม่า เม่า เม่า เง่า เง่า เง่า เว่า เว่า เว่า เว่า เว่า  
+ 
+ ใใ ตต หห ลล สส ปป งป งป งั งั เงั เงั 
+ ใใ ตต หห ลล สส ใต ให ใล ใส
+ ตต ตต เต เต เต ง่า ว่า ต่า ต่า นต เนต เน่ต่า เต่า เต่า เต่า งต้า ต้า ต้า
+หห หหห ห่า หา หา ห้า เห่า หา หา หา งหา งหา หหา นมห นมห นมห รห รห นร่า
+นมรห่า นร่าห นรห หรน งรห เงรห หหมร รรงนห รนรห นห เห่า เห่า เร่า เรา เรา 
+เหา เหา เหา เตา เตา เตา เต่า เต่า เตหา เลา เลา เลา เลา เสา เสา เสา
+หลรเตรนล เรนหลลห สสสสสล่า นล่า ส่า ส่า สาาา ราาา นาา ลาาา สาาา สาา สาสา
+ใม ใม นใ นนใใ ใล ใส่ ใส่ ใส่ ใส่ ใส่ ใล่ ใลา ใลาใลา ตาให้ ให้ ให้ ให้ ให้ ใว้
+ใล้ ใล้ ใล้ ใส้ ใส้ ใส้ ใง้ ในา ใตรลหเนมส ใร่กตห่
+กา กา กา กา มา มา นา ก่า ก่า เก เก เก นัม นัม นัม งัม งัม งัม งัม วัก 
+กัน กัน กัน กกนน กก่า กัก กัก กัก กัก เกัก เกเก เกเร เกเร เกเร กรัน กัน กัม กัม กัม กัม
+วัก วัก วัก วัก กวม กวม กวม กาน กาน กาน กา กา กา
+กิน กิน กิน ติม ติม ติม ริน ริน มิน มิน มิน นิม นิ่ม นิ่ม ติมร ริว ริว ริวว
+วิม วิมม หิน หิน หิน หิน หิน มัน มัน กิน กิน กิน เงิน เงิน เงิน เงิน
+บิน บาร บ่าว บ่าว บ่าว บาร บาร บาน บาน บาง บาง บ่าง บ่าง บ่าง
+บิน บิน บิน บัน บัน บัน บก บก บก บก บิน บิน บิน บาง บาง บาง บาง
+กาง กาง กาง กวาง กวาง กวาง กวาง กวาง กวาง หาง หาง หาง หาง
+การ การ การ กรา กราน กราน กราน กราม กราม ลาง ลาง ลาง ล่าง ล่าง ล่าง 
+กร่าง กร่าง กร่าง กร่าง กร่าง บ้าง บ้าง บ้าง บ้่าง บ้าง บ้าง บ้าง บ้าง สร่าง สร่าง
+สร่าง สว่าง สว่าง สว่าง สว่าง สว่าง สว่าง สว่าง สม สม สม สม สสลล สสลล สสลล
+บบงง บบงง บบวว บวบว บบวว ววบบ สสวว สสวว ง่าน ง่าน ง่าน น่าน น่าน น่า น่า มาม่า
+มาม่า มาม่า มาม่า มาม่า มาม่า สว่าง สว่าง สว่า บ้าน บ้าน บ้าน บาน บาน หา หา สา สา
+ลาลา ลาล่า ลาล่า ลาล่า ใบ ใบ ใบ ใกล้ ใกล้ ใกล้ ใกล้ ใกล้ ใกล้ ใกล้ ใกล้
+ใส้ ใส้ ใส่ ใส่ ใส่ ใส่ ใบ้ ใบ้ ใบ้ ใบ้ ใบ้ งาน งาน งาน มมนน นม นม นม น่า ม่า
+กาน กาน กาน กาน กาน บิน บิน บิน หิน หิน หิน นิ่ม นิ่ม นิ่ม นิ่ม นิ่ม นิ่ม นิ่ม นิ่ม
+ร่าง ร่าง ร่าง ร่าง ร่าง กร่าง กร่าง บิน ใบ ใบ ใส ใส ใล ใล
+สิน สิน สิน สว่าง สว่าน การเงิน การเงิน การเงิน เงิน เงิน บิน บิน บิน
+สิน สิน บ้าน บ้าน ใง้ ใส้ ใส้ ใส้ สว้าง สร้าง สร้าง สว้าง ร้าบาน ร้าบาน ร้าบาน
+กุ กุ กุ สุ สุ สุ สุ บุ บุ บุ ไส ไส ไส มไ มไ มไ ไม ไม ไล ไล ไว ไว ไว ไว ไง ไง ไง ไง
+จจ จจ ทท ทท ยย ยย จจ จจ จจ ไไ ไไ ไไ ไจ ไจ ไจ ไท ไท ไท ทย ทย ทย ยจ ยจ ยจ
+ทน ทน ทน ทน ทาน ทาน ทาน ใย ใย ใย ไย ไย ไย ทาย ทย ทย ทย ไท ไท ไท ไทย
+ไทย ไทย ไทย ไหม ไหม ไหม ไหม ยาย ยาย ยาย ย่า ย่า ย่า น่า ม่า ส่า ใจ ใจ ใจ
+คค ยค คย คย จค จค จค ไค ไค ไค ไย ไย ไทย ไทย ไค ไค ไค คี คี คี วี วี วี 
+นี นี นี มี มี มี สี สี ใย ใย ใค ใค ใค ใคร ใคร ใคร คาน คาน เคน เคร เคร
+คน คน คน คน คม คม มค มค มค คม คม จจจ ยยย จจจ ยยย คคค ยียี จีจี จ่าย
+
+  ┌───────────────────┐
+  │                   │
+  │ ใ ต ห ล ส ป  ก  บ │
+  │ ง เ ร น ม อ า   ว │
+  │  ไ ท ย จ ค  ด ะ   │
+  │                   │
+  └───────────────────┘
+
+    change lang is ctrl+space
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/outputs.h>
+
+#define DEFAULT 0
+#define SHIFT 1
+#define THAI 2
+#define NAV 3
+
+#define QWERTY 4
+#define DEFAULT_WINDOW 5
+#define THAI_SHIFT 6
+#define NAV_THAI 7
+#define GUI_THAI 8
+
+#define UBUNTU 9
+#define SHIFT_UBUNTU 10
+#define NAV_UBUNTU 11
+#define SYM_UBUNTU 12
+
+#define SYM 13
+#define NUM 14
+#define FUNC 15
+#define SNIPPET 16
+#define MOUSE 17
+#define FIGMA 18
+#define FIGMA2 19
+#define SNIPPET2 20
+#define HON 21
+
+#define DELAY_FAST 25
+#define DELAY_SLOW 30
+
+#define DEFAULT_LAYERS DEFAULT DEFAULT_WINDOW NUM SYM UBUNTU SYM_UBUNTU THAI 
+#define NAV_LAYERS NAV NAV_UBUNTU NAV_THAI
+
+#define U_MOUSE_MOVE_MAX 2700                     /* <--- New max speed setting (default: 600) */
+#undef MOVE_UP
+#undef MOVE_DOWN
+#undef MOVE_LEFT
+#undef MOVE_RIGHT
+#define MOVE_UP MOVE_VERT(-U_MOUSE_MOVE_MAX)
+#define MOVE_DOWN MOVE_VERT(U_MOUSE_MOVE_MAX)
+#define MOVE_LEFT MOVE_HOR(-U_MOUSE_MOVE_MAX)
+#define MOVE_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
+
+&mmv {
+    time-to-max-speed-ms = <500>;             /* <--- How long time until max speed is reached (default: 500) */
+};
+
+#define U_MOUSE_SCROLL_MAX 100                    /* <--- New max speed setting (default: 10) */
+
+#undef SCROLL_UP
+#undef SCROLL_DOWN
+#undef SCROLL_LEFT
+#undef SCROLL_RIGHT
+#define SCROLL_UP SCROLL_VERT(U_MOUSE_SCROLL_MAX)
+#define SCROLL_DOWN SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
+#define SCROLL_LEFT SCROLL_HOR(-U_MOUSE_SCROLL_MAX)
+#define SCROLL_RIGHT SCROLL_HOR(U_MOUSE_SCROLL_MAX)
+#define xxx &none
+#define XXX &none
+#define bbb &none
+
+#define GO_VSCODE &kp LG(LA(LC(LS(N1))))
+#define GO_ITERM  &kp LG(LA(LC(LS(N3))))
+#define GO_SAFARI &kp LG(LA(LC(LS(N2))))
+#define GO_DISCORD &kp LG(LA(LC(LS(N4))))
+#define GO_OBSIDIAN &kp LG(LA(LC(LS(N0))))
+#define GO_FINDER &kp LG(LA(LC(LS(F))))
+#define GO_FIGMA &kp LG(LA(LC(LS(G))))
+#define GO_TOGGLE &kp LG(LA(LC(LS(N5))))
+#define GO_HOMEROW &kp LG(LS(SPACE))
+#define GO_RAYCAST &kp LG(SPACE)
+#define HA &kp LG(LA(LC(LS(A))))
+#define HB &kp LG(LA(LC(LS(B))))
+#define HC &kp LG(LA(LC(LS(C))))
+#define HD &kp LG(LA(LC(LS(D))))
+#define HE &kp LG(LA(LC(LS(E))))
+#define HF &kp LG(LA(LC(LS(F))))
+#define HG &kp LG(LA(LC(LS(G))))
+#define HH &kp LG(LA(LC(LS(H))))
+#define HI &kp LG(LA(LC(LS(I))))
+#define HJ &kp LG(LA(LC(LS(J))))
+#define HK &kp LG(LA(LC(LS(K))))
+#define HL &kp LG(LA(LC(LS(L))))
+#define HM &kp LG(LA(LC(LS(M))))
+#define HN &kp LG(LA(LC(LS(N))))
+#define HO &kp LG(LA(LC(LS(O))))
+#define HP &kp LG(LA(LC(LS(P))))
+#define HQ &kp LG(LA(LC(LS(Q))))
+#define HR &kp LG(LA(LC(LS(R))))
+#define HS &kp LG(LA(LC(LS(S))))
+#define HT &kp LG(LA(LC(LS(T))))
+#define HU &kp LG(LA(LC(LS(U))))
+#define HV &kp LG(LA(LC(LS(V))))
+#define HW &kp LG(LA(LC(LS(W))))
+#define HX &kp LG(LA(LC(LS(X))))
+#define HY &kp LG(LA(LC(LS(Y))))
+#define HZ &kp LG(LA(LC(LS(Z))))
+#define HSQT &kp LG(LA(LC(LS(SQT))))
+#define HCOMMA &kp LG(LA(LC(LS(COMMA))))
+#define HDOT &kp LG(LA(LC(LS(DOT))))
+#define COPY &kp LG(C)
+#define PASTE &kp LG(V)
+#define KILL_WINDOW &kp LG(W)
+#define UNDO &kp LG(Z)
+
+#define UB_GO_VSCODE &kp LG(N4)
+#define UB_GO_ITERM  &kp LG(N1)
+#define UB_GO_CHROME &kp LG(N2)
+#define UB_GO_DISCORD &kp LG(N3)
+#define UB_GO_OBSIDIAN &kp LG(N5)
+#define UB_GO_FINDER &kp LG(N6) 
+#define UB_GO_TOGGLE &kp LG(N7)
+#define UB_GO_HOMEROW &kp LG(LS(SPACE))
+#define UB_GO_RAYCAST &kp LG(SPACE)
+#define UB_COPY &kp LC(C)
+#define UB_PASTE &kp LC(V)
+#define UB_KILL_WINDOW &kp LC(W)
+#define UB_UNDO &kp LC(Z)
+
+#define C_LAYOUT &kp LA(LC(SPACE))
+#define FG_COPY &kp LG(C)
+#define FG_PASTE &kp LG(V)
+#define FG_AUTO &kp LS(A)
+#define FG_NAUTO &kp LA(LS(A))
+#define FG_ZIN &kp PLUS
+#define FG_ZOUT &kp MINUS
+#define FG_UGROUP &kp LG(BACKSPACE)
+#define FG_GROUP &kp LG(G)
+#define FG_V &kp V
+#define FG_K &kp K
+#define FG_MUP &kp RBKT
+#define FG_MDOWN &kp LBKT
+#define FG_H &kp H 
+#define FG_R &kp R
+#define FG_L &kp L
+#define FG_LL &kp LS(L)
+#define FG_UNDO &kp LG(Z)
+
+&mwh {
+ time-to-max-speed-ms = <500>;                 /* <--- How long time until max speed is reached */
+};
+
+
+&mt {
+    tapping-term-ms = <150>;
+};
+
+&sk {  // sticky-key config
+    release-after-ms = <900>;  // release after ms
+    quick-release;             // no double capitalization when rolling keys
+};
+
+
+/ {
+    macros {
+        zed_em_kay: zed_em_kay {
+            label = "ZM_zed_em_kay";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp LPAR &kp RPAR &kp LBRC &kp RBRC &kp LEFT &kp RET>;
+        };
+        vim_j: vim_j {
+            label = "vim_j";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp LC(X) &kp LC(X) &kp J>;
+        };
+        vim_y: vim_y {
+            label = "vim_y";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp LC(X) &kp LC(X) &kp Y>;
+        };
+        disc_mic: disc_mic {
+            label = "disc_mic";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <GO_DISCORD>
+                , <&kp LG(LS(M))>
+                , <GO_DISCORD>
+                ;
+        };
+        ncode_wake_up: ncode_wake_up {
+            label = "ncode_wake_up";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&kp LG(T)>
+                , <&kp LG(W)>
+                ;
+        };
+        ncode_tab: ncode_tab {
+            label = "ncode_tab";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&kp LC(H)>
+                , <&kp J>
+                , <&kp RET>
+                ;
+        };
+        ncode_p_tab: ncode_p_tab {
+            label = "ncode_p_tab";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&kp LC(H)>
+                , <&kp K>
+                , <&kp RET>
+                ;
+        };
+        macclang: macclang {
+            label = "macclang";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&kp LC(SPACE)>
+                , <&tog THAI>
+                ;
+        };
+        figma_t: figma_t {
+            label = "figma_t";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&kp T>
+                , <&mkp LCLK>
+                , <&to DEFAULT>
+                ;
+        };
+        snphone: snphone {
+            label = "snphone";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp N0 &kp N8 &kp N0 &kp N9 &kp N0 &kp N7 &kp N0 &kp N1 &kp N1 &kp N7>;
+        };
+        snemail: snemail {
+            label = "snemail";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp J &kp I &kp N &kp N &kp A &kp W &kp A &kp T &kp N8 &kp AT_SIGN &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+        };
+    };
+  behaviors {
+                td7: tap_dancee7 {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "TAP_DANCE_7";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <200>;
+                    bindings = <&kp LG(LA(LC(LS(N7))))>, <&kp LG(LA(LC(LS(N8))))>,<&kp LG(LA(LC(LS(N9))))>;
+                };
+                td8: tap_dancee8 {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "TAP_DANCE_8";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <200>;
+                    bindings = <&kp LG(LA(LC(A)))>, <&kp LG(LA(LC(B)))>;
+                };
+    };
+
+combos {
+        compatible = "zmk,combos";
+        ccplus {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <7 8>;
+            bindings = <&kp PLUS>;
+            layers = <DEFAULT_LAYERS>;
+        };
+        ccmulti {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <7 9>;
+            bindings = <&kp LS(N8)>;
+            layers = <DEFAULT_LAYERS>;
+        };
+        ccminus {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <9 8>;
+            bindings = <&kp MINUS>;
+            layers = <DEFAULT_LAYERS>;
+        };
+        ccminusup {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <9 8>;
+            bindings = <&kp LS(MINUS)>;
+            layers = <NAV_LAYERS>;
+        };
+        ccequal {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <19 21>;
+            bindings = <&kp EQUAL>;
+            layers = <DEFAULT_LAYERS>;
+        };
+        ccsemi {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <32 33>;
+            bindings = <&kp SEMI>;
+            layers = <DEFAULT_LAYERS>;
+        };
+        cccolon {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <32 33>;
+            bindings = <&kp LS(SEMI)>;
+            layers = <NAV_LAYERS>;
+        };
+        ccbslash {
+            timeout-ms = <DELAY_SLOW>;
+            key-positions = <19 22>;
+            bindings = <&kp BSLH>;
+            layers = <DEFAULT_LAYERS>;
+        };
+        ccpipe {
+            timeout-ms = <DELAY_SLOW>;
+            key-positions = <19 22>;
+            bindings = <&kp LS(BSLH)>;
+            layers = <NAV_LAYERS>;
+        };
+        ccgrave {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <33 34>;
+            bindings = <&kp GRAVE>;
+            layers = <DEFAULT_LAYERS>;
+        };
+        ccgravels {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <33 34>;
+            bindings = <&kp LS(GRAVE)>;
+            layers = <NAV_LAYERS>;
+        };
+        ccrepkey {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <32 34>;
+            bindings = <&key_repeat>;
+            layers = <DEFAULT_LAYERS>;
+        };
+        ccautobkt {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <19 9>;
+            bindings = <&zed_em_kay>;
+            layers = <DEFAULT_LAYERS>;
+        };
+        ccslsym {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <15 16>;
+            bindings = <&sl SYM>;
+            layers = <DEFAULT DEFAULT_WINDOW NAV>;
+        };
+        ccslsymub {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <15 16>;
+            bindings = <&sl SYM_UBUNTU>;
+            layers = <UBUNTU NAV_UBUNTU>;
+        };
+        ccnavj {
+            timeout-ms = <DELAY_SLOW>;
+            key-positions = <27 39>;
+            bindings = <&kp LG(LS(J))>;
+            layers = <DEFAULT_LAYERS>;
+        };
+        ccthaiout1 {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <21 22>;
+            bindings = <&kp LS(DOT)>;
+            layers = <THAI>;
+        };
+        ccthaiout1s {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <21 22>;
+            bindings = <&kp LS(R)>;
+            layers = <THAI_SHIFT>;
+        };
+        ccthaiout2 {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <9 10>;
+            bindings = <&kp LS(O)>;
+            layers = <THAI>;
+        };
+        ccthaiout2s {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <9 10>;
+            bindings = <&kp LS(G)>;
+            layers = <THAI_SHIFT>;
+        };
+        //// all bkt
+       cclpar {
+           timeout-ms = <DELAY_FAST>;
+           key-positions = <19 8>;
+           bindings = <&kp LBKT>;
+           layers = <DEFAULT_LAYERS>;
+       };
+       cclparupkt {
+           timeout-ms = <DELAY_FAST>;
+           key-positions = <19 8>;
+           bindings = <&kp RBKT>;
+           layers = <NAV_LAYERS>;
+       };
+        ccrpar {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <19 20>;
+            bindings = <&kp LPAR>;
+            layers = <DEFAULT_LAYERS>;
+        };
+        ccrparup {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <19 20>;
+            bindings = <&kp RPAR>;
+            layers = <NAV_LAYERS>;
+        };
+        cclbktnav {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <19 33>;
+            bindings = <&kp LBRC>;
+            layers = <DEFAULT_LAYERS>;
+        };
+        ccrbktnav {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <19 33>;
+            bindings = <&kp RBRC>;
+            layers = <NAV_LAYERS>;
+        };
+        ccncodetab {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <32 20>; // 20 32
+            bindings = <&ncode_tab>;
+            layers = <DEFAULT_LAYERS>;
+        };
+        ccncodeptab {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <32 20>; // 20 32
+            bindings = <&ncode_p_tab>;
+            layers = <NAV_LAYERS>;
+        };
+        ccsnip2 {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <14 15>; 
+            bindings = <&sl SNIPPET2>;
+            layers = <DEFAULT_LAYERS>;
+        };
+        todefault {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <14 26>; 
+            bindings = <&to DEFAULT>;
+            layers = <DEFAULT_LAYERS NAV_LAYERS>;
+        };
+        ckdefault {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <15 27>; 
+            bindings = <&kp B>;
+            layers = <DEFAULT_LAYERS NAV_LAYERS>;
+        };
+        hongrave {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <15 16>; 
+            bindings = <&kp GRAVE>;
+            layers = <HON>;
+        };
+        hontab {
+            timeout-ms = <DELAY_FAST>;
+            key-positions = <27 28>; 
+            bindings = <&kp TAB>;
+            layers = <HON>;
+        };
+    };
+    /* 
+    key
+    hoo
+                        
+
+     0  1  2  3  4  5        6  7  8  9 10 11
+    12 13 14 15 16 17       18 19 20 21 22 23
+    24 25 26 27 28 29  30   31 32 33 34 35 36
+             37 38 39 40 41 42 43 44 
+
+
+             todo 
+             add toggle floating note
+
+    */
+
+  keymap {
+    compatible = "zmk,keymap";
+    default_layer {
+      bindings = <
+        bbb     &lt FUNC SQT                &kp COMMA   &kp DOT     &kp P               &kp Y                                       &kp F      &kp G      &kp C     &kp R      &kp L   bbb
+        bbb     &kp A                       &kp O       &kp E       &kp U               &kp I                                       &kp D      &kp H      &kp T     &kp N      &kp S   bbb
+        bbb     &lt MOUSE LS(BACKSPACE)     &kp Q       &kp J       &kp K               &kp X               &to UBUNTU              &kp B      &kp M      &kp W     &kp V      &kp Z   bbb
+                                            bbb         &kp LCTRL   &lt NAV SPACE       &lt NUM ESC     &kp RET      &sk LSHFT      &kp LGUI   bbb 
+      >;
+      sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+    };
+
+    shift_layer {
+      bindings = <
+           bbb     &kp LS(SQT)      &kp LS(COMMA)  &kp LS(DOT)   &kp LS(P)         &kp LS(Y)                                             &kp LS(F)      &kp LS(G)     &kp LS(C)     &kp LS(R)      &kp LS(L)     bbb 
+           bbb     &kp LS(A)        &kp LS(O)      &kp LS(E)     &kp LS(U)         &kp LS(I)                                             &kp LS(D)      &kp LS(H)     &kp LS(T)     &kp LS(N)      &kp LS(S)     bbb 
+           bbb     &mo MOUSE        &kp LS(Q)      &kp LS(J)     &kp LS(K)         &kp LS(X)             &to DEFAULT                     &kp LS(B)      &kp LS(M)     &kp LS(W)     &kp LS(V)      &kp LS(Z)     bbb
+                                                   bbb           &kp LCTRL         &kp SPACE    &lt NUM LS(BACKSPACE)  &kp BACKSPACE     &sk LSHFT      &kp LGUI      bbb
+      >;
+    };
+    thai_layer{
+      bindings = <
+          bbb    &lt FUNC DOT   &kp N9         &kp S       &kp RBKT   &kp L                                                    &kp X           &kp Y           &kp D         &kp B         &kp LBKT      bbb
+          bbb    &kp SQT        &kp G          &kp I       &kp O      &kp COMMA                                                &kp V           &kp K           &kp J         &kp H         &kp SEMI      bbb
+          bbb    &kp N6         &kp W          &kp M       &kp P      &kp N0                    &to DEFAULT                    &kp N8          &kp U           &kp F         &kp T         &kp LS(N6)    bbb
+                                               bbb         &kp LCTRL  &lt NAV SPACE       &lt NUM ESC     &kp RET              &sk LSHFT       &kp LGUI        bbb
+      >;
+    };
+    nav_layer {
+      bindings = <
+        bbb     &kp ESC      GO_TOGGLE      &sk LALT        GO_VSCODE         &kp LS(INS)                                &kp BACKSPACE      &kp PG_DN       &kp UP         &kp PG_UP   &kp FSLH     bbb
+        bbb     &kp LSHFT    &kp LCTRL      &kp LGUI        GO_ITERM          GO_OBSIDIAN                                &td7               &kp LEFT        &kp DOWN       &kp RIGHT   &kp TAB      bbb
+        bbb     GO_FINDER    GO_FIGMA       GO_DISCORD      GO_SAFARI         &to FIGMA             C_LAYOUT             &kp LG(RET)        &vim_j          &vim_y         &kp LG(V)   UNDO         bbb
+                                            bbb             C_LAYOUT          xxx           &mo SNIPPET    &kp LS(RET)   GO_RAYCAST         GO_HOMEROW      bbb
+      >;
+      sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
+   };
+
+   qwerty_layer{
+      bindings = <
+       bbb   &lt FUNC Q     &kp W       &kp E       &kp R   &kp T                                &kp Y     &kp U     &kp I      &kp O    &kp P     bbb
+       bbb   &kp A          &kp S       &kp D       &kp F   &kp G                                &kp H     &kp J     &kp K      &kp L    &kp SEMI  bbb
+       bbb   &kp Z          &kp X       &kp C       &kp V   &kp B            &to DEFAULT         &kp N     &kp M     &kp COMMA  &kp DOT  &kp FSLH  bbb
+                                        bbb         xxx     &kp SPACE   &kp SPACE    &kp SPACE   &kp SPACE xxx     bbb
+      >;
+      sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+    };
+
+    default_window_layer {
+      bindings = <
+       bbb    &lt FUNC SQT  &kp COMMA  &kp DOT   &kp P      &kp Y                                          &kp F      &kp G     &kp C     &kp R      &kp L   bbb
+       bbb    &kp A         &kp O      &kp E     &kp U      &kp I                                          &kp D      &kp H     &kp T     &kp N      &kp S   bbb
+       bbb    &mo MOUSE     &kp Q      &kp J     &kp K      &kp X             &to DEFAULT                  &kp B      &kp M     &kp W     &kp V      &kp Z   bbb
+                                                   bbb   &kp LGUI  &lt NAV SPACE &lt NUM ESC  &kp BACKSPACE &sk LSHFT  &kp LCTRL bbb
+      >;
+      sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+    };
+
+    thai_shift_layer{
+      bindings = <
+       bbb    &kp LS(COMMA)       &kp LS(D)      &kp LS(SEMI)      &kp LS(P)     &kp A                                &kp LS(C)        &kp N7         &kp LS(T)         &kp LS(LBKT)      &kp LS(E)      bbb
+       bbb    &kp LS(K)           &kp (N5)       &kp (C)           &kp EQUAL     &kp R                                &kp Z            &kp E          &kp MINUS         &kp LS(F)         &kp N4         bbb
+       bbb    &kp LS(A)           &kp FSLH       &kp (Q)           &kp LS(I)     &kp LS(U)           &to DEFAULT      &kp LS(J)        &kp LS(N)      &kp LS(L)         &kp LS(V)         &kp LS(M)      bbb
+                                                       bbb               &kp LCTRL     &kp SPACE    &lt NUM ESC   &kp BACKSPACE  &sk LSHFT      &mo GUI_THAI      bbb
+      >;
+    };
+    nav_thai_layer {
+      bindings = <
+        &to THAI_SHIFT      &lt FUNC ESC    GO_TOGGLE          &kp LALT        GO_VSCODE         xxx                                      xxx          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    &td7
+        xxx                 &kp LSHFT       &kp LCTRL          &kp LGUI        GO_ITERM          GO_OBSIDIAN                              xxx          &kp LEFT       &kp DOWN       &kp RIGHT   &kp TAB      xxx
+        xxx                 GO_FINDER       xxx                GO_DISCORD      GO_SAFARI         xxx             &to DEFAULT              xxx          COPY           KILL_WINDOW    PASTE       UNDO         &kp LS(RET)
+                                                               C_LAYOUT          xxx               xxx      &mo SNIPPET        GO_HOMEROW   GO_RAYCAST   &disc_mic      &kp T
+      >;
+      sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
+   };
+
+    gui_thai_layer {
+      bindings = <
+        xxx         &kp LG(SQT)      &kp LG(COMMA)  &kp LG(DOT)   &kp LG(P)         &kp LG(Y)                                           &kp LG(F)      &kp LG(G)     &kp LG(C)     &kp LG(R)      &kp LG(L)      &kp LG(FSLH)  
+        xxx         &kp LG(A)        &kp LG(O)      &kp LG(E)     &kp LG(U)         &kp LG(I)                                           &kp LG(D)      &kp LG(H)     &kp LG(T)     &kp LG(N)      &kp LG(S)      &kp LG(MINUS) 
+        &kp LALT    xxx              &kp LG(Q)      &kp LG(J)     &kp LG(K)         &kp LG(X)                &to DEFAULT                &kp LG(B)      &kp LG(M)     &kp LG(W)     &kp LG(V)      &kp LG(Z)      &kp RET  
+                                                   &mo MOUSE &kp LCTRL  &lt NAV SPACE &lt NUM ESC  &kp BACKSPACE  &sk LSHFT  xxx  &kp C_PLAY_PAUSE 
+      >;
+      sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+    };
+
+    ubuntu_layer {
+      bindings = <
+        &lt FUNC ESC       &kp SQT      &kp COMMA  &kp DOT   &kp P         &kp Y                                          &kp F      &kp G     &kp C     &kp R      &kp L   &kp FSLH  
+        &kp TAB            &kp A        &kp O      &kp E     &kp U         &kp I                                          &kp D      &kp H     &kp T     &kp N      &kp S   &kp MINUS 
+        &kp LALT           &mo MOUSE    &kp Q      &kp J     &kp K         &kp X        &to DEFAULT                       &kp B      &kp M     &kp W     &kp V      &kp Z   &kp RET  
+                                                   &mo MOUSE &kp LCTRL  &lt NAV_UBUNTU SPACE &lt NUM ESC  &kp BACKSPACE  &sk LSHFT  &kp LGUI  &kp C_PLAY_PAUSE 
+      >;
+      sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+    };
+
+    ubuntu_shift_layer {
+      bindings = <
+        &to UBUNTU  &kp LS(SQT)      &kp LS(COMMA)  &kp LS(DOT)   &kp LS(P)         &kp LS(Y)                                           &kp LS(F)      &kp LS(G)     &kp LS(C)     &kp LS(R)      &kp LS(L)          &kp LS(FSLH)  
+        xxx         &kp LS(A)        &kp LS(O)      &kp LS(E)     &kp LS(U)         &kp LS(I)                                           &kp LS(D)      &kp LS(H)     &kp LS(T)     &kp LS(N)      &kp LS(S)          &kp LS(MINUS) 
+        &kp LALT    &mo MOUSE        &kp LS(Q)      &kp LS(J)     &kp LS(K)         &kp LS(X)        &to UBUNTU                         &kp LS(B)      &kp LS(M)     &kp LS(W)     &kp LS(V)      &kp LS(Z)          &kp RET  
+                                                    xxx           &kp LCTRL         &kp SPACE    &lt NUM ESC   &kp BACKSPACE  &sk LSHFT      &kp LGUI      &kp C_PLAY_PAUSE
+      >;
+    };
+
+    nav_ubuntu_layer {
+      bindings = <
+        &to SHIFT_UBUNTU    &lt FUNC ESC    UB_GO_TOGGLE       &kp LALT        UB_GO_VSCODE         xxx                                           xxx             &kp PG_DN      &kp UP           &kp PG_UP   &kp RIGHT    &td7
+        xxx                 &kp LSHFT       &kp LCTRL          &kp LGUI        UB_GO_ITERM          UB_GO_OBSIDIAN                                xxx             &kp LEFT       &kp DOWN         &kp RIGHT   &kp TAB      xxx
+        xxx                 UB_GO_FINDER    xxx                UB_GO_DISCORD   UB_GO_CHROME         xxx                C_LAYOUT                   xxx             UB_COPY        UB_KILL_WINDOW   UB_PASTE    UB_UNDO      &kp LS(RET)
+                                                               xxx             xxx                  xxx      &mo SNIPPET          UB_GO_HOMEROW   UB_GO_RAYCAST   xxx            &kp U
+      >;
+      sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
+   };
+
+    sym_ubuntu_layer{
+      bindings = <
+        &to UBUNTU  xxx          xxx          xxx         xxx       xxx                              xxx              &kp LS(N7)     xxx              &kp LS(N8)  xxx           &kp BSLH                     
+        xxx         xxx          xxx          xxx         xxx       xxx                              xxx              &kp LS(N1)     &kp LS(N2)       &kp LS(N3)  &kp LS(N4)    xxx                        
+        xxx         xxx          xxx          xxx         xxx       xxx             xxx              xxx              xxx            xxx              xxx         xxx           xxx                        
+                                              xxx         &kp LCTRL &to UBUNTU   xxx   &kp LS(N6)    &kp LS(N5)       &kp LGUI       xxx
+      >;
+    };
+
+    sym_layer{
+      bindings = <
+        xxx        &to DEFAULT  xxx          xxx         xxx       xxx                              xxx              &kp LS(N7)     xxx              &kp LS(N8)  xxx           xxx
+        xxx        xxx          xxx          xxx         xxx       xxx                              xxx              &kp LS(N1)     &kp LS(N2)       &kp LS(N3)  &kp LS(N4)    xxx                        
+        xxx        xxx          xxx          xxx         xxx       xxx             xxx              xxx              xxx            xxx              xxx         xxx           xxx                        
+                                              xxx         &kp LCTRL &to DEFAULT   xxx   &kp LS(N6)   &kp LS(N5)       &kp LGUI       xxx
+      >;
+    };
+
+    num_layer {
+      bindings = <
+        xxx         xxx          xxx          &kp LALT    xxx         xxx                                 &kp BACKSPACE   &kp N7         xxx         &kp N8      &kp N9   xxx
+        xxx         &kp LSHFT    &kp LCTRL    &kp LGUI    xxx         xxx                                 xxx             &kp N1         &kp N2      &kp N3      &kp N4   xxx
+        xxx         xxx          xxx          xxx         xxx         xxx           xxx                   xxx             &kp N0         &kp DOT     &kp SPACE   &kp FSLH xxx
+                                              xxx         xxx         &mo SNIPPET   xxx     &kp N6        &kp N5          &kp LS(RET)    xxx  
+       >;
+      sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+    };
+
+    function_layer {
+      bindings = <
+        xxx                  xxx             &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3                    &to DEFAULT_WINDOW    &kp F7         &to DEFAULT &kp F8      &kp F9    xxx
+        xxx                  &bt BT_CLR      &to DEFAULT     &out OUT_BLE    &out OUT_USB    &bt BT_SEL 4                    &to UBUNTU            &kp F1         &kp F2      &kp F3      &kp F4    xxx
+        xxx                  &bootloader     &reset          xxx             &macclang       xxx              &to QWERTY     &to THAI              &kp F11        &kp F12     &kp F13     &kp F14   xxx
+                                                             &to FIGMA       xxx             xxx         &to HON      &kp F6     &kp F5                &kp F10        &kp F
+      >;
+    };
+
+    snippet_layer{
+      bindings = <
+        xxx         xxx          xxx          xxx       xxx     xxx                         xxx         xxx         xxx         xxx         xxx       xxx
+        xxx         xxx          xxx          xxx       xxx     xxx                         xxx         &snphone    &snemail    xxx         xxx       xxx
+        xxx         xxx          xxx          xxx       xxx     xxx          xxx            xxx         xxx         xxx         xxx         xxx       xxx
+                                              xxx       xxx     xxx     xxx     xxx         xxx         xxx         xxx
+      >;
+    };
+
+    mouse_layer{
+      bindings = <
+        xxx         xxx          xxx          xxx         xxx       xxx                         xxx         xxx            &mmv MOVE_UP   xxx             xxx                xxx     
+        xxx         xxx          xxx          &mkp RCLK   &mkp LCLK xxx                         xxx         &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT xxx                xxx     
+        xxx         xxx          xxx          xxx         xxx       xxx       &mkp LCLK         xxx         xxx            xxx            xxx             xxx                &mkp LCLK 
+                                                 xxx          xxx     xxx     xxx      xxx    &mkp LCLK     &mkp RCLK      xxx
+      >;
+    };
+    figma_layer {
+      bindings = <
+        FG_K        FG_H         FG_UNDO      FG_COPY   FG_PASTE        GO_ITERM                                 xxx         xxx         xxx         xxx         xxx       &to DEFAULT
+        FG_R        &figma_t     GO_FIGMA     FG_GROUP  FG_ZIN          FG_AUTO                                  xxx         xxx         xxx         xxx         xxx       xxx
+        FG_L        FG_MUP       FG_MDOWN     FG_UGROUP FG_ZOUT         FG_V              &to DEFAULT            xxx         xxx         xxx         xxx         xxx       xxx
+                                              &to DEFAULT   &kp BACKSPACE   &kp LSHFT     &mo FIGMA2     xxx         xxx         xxx         xxx
+      >;
+      sensor-bindings = <&inc_dec_kp UP DOWN>;
+    };
+
+    figma2_layer {
+      bindings = <
+        xxx         xxx          xxx          xxx       xxx     xxx                         xxx         xxx         xxx         xxx         xxx       xxx
+        xxx         xxx          xxx          xxx       xxx     xxx                         xxx         xxx         xxx         xxx         xxx       xxx
+        xxx         xxx          xxx          xxx       xxx     xxx          xxx            xxx         xxx         xxx         xxx         xxx       xxx
+                                              xxx       xxx     xxx     xxx     xxx         xxx         xxx         xxx
+      >;
+      sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
+    };
+    snippet2_layer{
+      bindings = <
+        xxx         HSQT        HCOMMA       HDOT      HP      HY                         HF         HG         HC         HR         HL       xxx
+        xxx         HA          HO           HE        HU      HI                         HD         HH         HT         HN         HS       xxx
+        xxx         XXX         HQ           HJ        HK      HX       &to DEFAULT       HB         HM         HW         HV         HZ       xxx
+                                              xxx       xxx     xxx     xxx     xxx       xxx        xxx        xxx
+      >;
+    };
+
+   hon_layer{
+      bindings = <
+        &kp ESC     &lt FUNC Q     &kp W       &kp E     &kp R           &kp T                                &kp Y     &kp U     &kp I      &kp O    &kp P     &kp BACKSPACE
+        xxx         &kp A          &kp S       &kp D     &kp F           &kp G                                &kp H     &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+        &kp LSHFT   &kp Z          &kp X       &kp C     &kp V           &kp B            &to DEFAULT         &kp N     &kp M     &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT RET
+                                          xxx            &kp LSHFT       &kp LALT      &kp ESC      &mt LCTRL RET   &kp SPACE &kp LGUI  xxx
+      >;
+      sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+    };
+    /* 
+
+    add macro leader q to nav_q
+    snippet
+
+
+    how to connect bluetooth
+    1. long press reset button
+    2. connect
+
+    how to forget and reconnect bluetooth
+    1. bl(number) then bl_clear
+    2. bl(other number) then bl(number)
+    3. long press reset button
+    4. forgot device on computer
+    5. turn-off and turn-on bluetooth on computer
+    6. connect new device on computer
+    7. bl(other number) then bl(number)
+
+    this approach is not working on window
+    only work on mac and ipad
+    
+thai no sym layer
+
+    */
+        };
+};
+
+
+
