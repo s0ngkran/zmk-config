@@ -76,9 +76,9 @@
 
   ┌───────────────────┐
   │                   │
-  │ ใ ต ห ล ส ป ั ก ิ บ │
-  │ ง เ ร น ม อ า ่ ้ ว │
-  │ ุ ไ ท ย จ ค ี ด ะ ู  │
+  │ ใ ต ห ล ส ป  ก  บ │
+  │ ง เ ร น ม อ า   ว │
+  │  ไ ท ย จ ค  ด ะ   │
   │                   │
   └───────────────────┘
 
@@ -135,7 +135,7 @@
 #define MOVE_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
 
 &mmv {
-	time-to-max-speed-ms = <500>;             /* <--- How long time until max speed is reached (default: 500) */
+    time-to-max-speed-ms = <500>;             /* <--- How long time until max speed is reached (default: 500) */
 };
 
 #define U_MOUSE_SCROLL_MAX 100                    /* <--- New max speed setting (default: 10) */
@@ -150,6 +150,7 @@
 #define SCROLL_RIGHT SCROLL_HOR(U_MOUSE_SCROLL_MAX)
 #define xxx &none
 #define XXX &none
+#define bbb &none
 
 #define GO_VSCODE &kp LG(LA(LC(LS(N1))))
 #define GO_ITERM  &kp LG(LA(LC(LS(N3))))
@@ -595,66 +596,66 @@ combos {
     compatible = "zmk,keymap";
     default_layer {
       bindings = <
-        &lt FUNC ESC       &lt FUNC SQT            &kp COMMA  &kp DOT    &kp P         &kp Y                                          &kp F      &kp G     &kp C     &kp R      &kp L   &kp FSLH  
-        &kp TAB            &kp A                   &kp O      &kp E      &kp U         &kp I                                          &kp D      &kp H     &kp T     &kp N      &kp S   &kp MINUS 
-        &kp LALT           &lt MOUSE LS(BACKSPACE) &kp Q      &kp J      &kp K         &kp X                    &to UBUNTU            &kp B      &kp M     &kp W     &kp V      &kp Z   &kp RET  
-                                                              &mo MOUSE  &kp LCTRL     &lt NAV SPACE       &lt NUM ESC  &kp RET       &sk LSHFT  &kp LGUI  &kp C_PLAY_PAUSE 
+        bbb     &lt FUNC SQT                &kp COMMA   &kp DOT     &kp P               &kp Y                                       &kp F      &kp G      &kp C     &kp R      &kp L   bbb
+        bbb     &kp A                       &kp O       &kp E       &kp U               &kp I                                       &kp D      &kp H      &kp T     &kp N      &kp S   bbb
+        bbb     &lt MOUSE LS(BACKSPACE)     &kp Q       &kp J       &kp K               &kp X               &to UBUNTU              &kp B      &kp M      &kp W     &kp V      &kp Z   bbb
+                                            bbb         &kp LCTRL   &lt NAV SPACE       &lt NUM ESC     &kp RET      &sk LSHFT      &kp LGUI   bbb 
       >;
       sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
     };
 
     shift_layer {
       bindings = <
-        &to DEFAULT &kp LS(SQT)      &kp LS(COMMA)  &kp LS(DOT)   &kp LS(P)         &kp LS(Y)                                           &kp LS(F)      &kp LS(G)     &kp LS(C)     &kp LS(R)      &kp LS(L)          &kp LS(FSLH)  
-        xxx         &kp LS(A)        &kp LS(O)      &kp LS(E)     &kp LS(U)         &kp LS(I)                                           &kp LS(D)      &kp LS(H)     &kp LS(T)     &kp LS(N)      &kp LS(S)          &kp LS(MINUS) 
-        &kp LALT    &mo MOUSE        &kp LS(Q)      &kp LS(J)     &kp LS(K)         &kp LS(X)        &to DEFAULT                        &kp LS(B)      &kp LS(M)     &kp LS(W)     &kp LS(V)      &kp LS(Z)          &kp RET  
-                                                    xxx           &kp LCTRL         &kp SPACE    &lt NUM LS(BACKSPACE)   &kp BACKSPACE  &sk LSHFT      &kp LGUI      &kp C_PLAY_PAUSE
+           bbb     &kp LS(SQT)      &kp LS(COMMA)  &kp LS(DOT)   &kp LS(P)         &kp LS(Y)                                             &kp LS(F)      &kp LS(G)     &kp LS(C)     &kp LS(R)      &kp LS(L)     bbb 
+           bbb     &kp LS(A)        &kp LS(O)      &kp LS(E)     &kp LS(U)         &kp LS(I)                                             &kp LS(D)      &kp LS(H)     &kp LS(T)     &kp LS(N)      &kp LS(S)     bbb 
+           bbb     &mo MOUSE        &kp LS(Q)      &kp LS(J)     &kp LS(K)         &kp LS(X)             &to DEFAULT                     &kp LS(B)      &kp LS(M)     &kp LS(W)     &kp LS(V)      &kp LS(Z)     bbb
+                                                   bbb           &kp LCTRL         &kp SPACE    &lt NUM LS(BACKSPACE)  &kp BACKSPACE     &sk LSHFT      &kp LGUI      bbb
       >;
     };
     thai_layer{
       bindings = <
-        &lt FUNC ESC      &lt FUNC DOT   &kp N9         &kp S       &kp RBKT   &kp L                                                    &kp X         &kp Y         &kp D         &kp B         &kp LBKT      &kp LS(H)
-        XXX               &kp SQT        &kp G          &kp I       &kp O      &kp COMMA                                                &kp V         &kp K         &kp J         &kp H         &kp SEMI      &kp N
-        &kp LSHFT         &kp N6         &kp W          &kp M       &kp P      &kp N0          &to DEFAULT                              &kp N8        &kp U         &kp F         &kp T         &kp LS(N6)    &kp RET
-                                                     &mo MOUSE  &kp LCTRL     &lt NAV SPACE       &lt NUM ESC  &kp RET       &sk LSHFT  &kp LGUI  xxx
+          bbb    &lt FUNC DOT   &kp N9         &kp S       &kp RBKT   &kp L                                                    &kp X           &kp Y           &kp D         &kp B         &kp LBKT      bbb
+          bbb    &kp SQT        &kp G          &kp I       &kp O      &kp COMMA                                                &kp V           &kp K           &kp J         &kp H         &kp SEMI      bbb
+          bbb    &kp N6         &kp W          &kp M       &kp P      &kp N0                    &to DEFAULT                    &kp N8          &kp U           &kp F         &kp T         &kp LS(N6)    bbb
+                                               bbb         &kp LCTRL  &lt NAV SPACE       &lt NUM ESC     &kp RET              &sk LSHFT       &kp LGUI        bbb
       >;
     };
     nav_layer {
       bindings = <
-        xxx         &kp ESC      GO_TOGGLE      &sk LALT        GO_VSCODE         &kp LS(INS)                                        &kp BACKSPACE   &kp PG_DN       &kp UP         &kp PG_UP   &kp FSLH     xxx
-        xxx         &kp LSHFT    &kp LCTRL      &kp LGUI        GO_ITERM          GO_OBSIDIAN                                &td7            &kp LEFT        &kp DOWN       &kp RIGHT   &kp TAB      xxx
-        xxx         GO_FINDER    GO_FIGMA       GO_DISCORD      GO_SAFARI         &to FIGMA             C_LAYOUT             &kp LG(RET)     &vim_j          &vim_y         &kp LG(V)   UNDO         xxx
-                                                C_LAYOUT        C_LAYOUT          xxx           &mo SNIPPET    &kp LS(RET)   GO_RAYCAST   GO_HOMEROW   &kp D
+        bbb     &kp ESC      GO_TOGGLE      &sk LALT        GO_VSCODE         &kp LS(INS)                                &kp BACKSPACE      &kp PG_DN       &kp UP         &kp PG_UP   &kp FSLH     bbb
+        bbb     &kp LSHFT    &kp LCTRL      &kp LGUI        GO_ITERM          GO_OBSIDIAN                                &td7               &kp LEFT        &kp DOWN       &kp RIGHT   &kp TAB      bbb
+        bbb     GO_FINDER    GO_FIGMA       GO_DISCORD      GO_SAFARI         &to FIGMA             C_LAYOUT             &kp LG(RET)        &vim_j          &vim_y         &kp LG(V)   UNDO         bbb
+                                            bbb             C_LAYOUT          xxx           &mo SNIPPET    &kp LS(RET)   GO_RAYCAST         GO_HOMEROW      bbb
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
 
    qwerty_layer{
       bindings = <
-        &kp ESC     &lt FUNC Q     &kp W       &kp E     &kp R           &kp T                                &kp Y     &kp U     &kp I      &kp O    &kp P     &kp BACKSPACE
-        xxx         &kp A          &kp S       &kp D     &kp F           &kp G                                &kp H     &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-        &kp LSHFT   &kp Z          &kp X       &kp C     &kp V           &kp B            &to DEFAULT         &kp N     &kp M     &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT RET
-                                          xxx     xxx           &kp SPACE   &kp SPACE    &kp SPACE   &kp SPACE xxx     xxx
+       bbb   &lt FUNC Q     &kp W       &kp E       &kp R   &kp T                                &kp Y     &kp U     &kp I      &kp O    &kp P     bbb
+       bbb   &kp A          &kp S       &kp D       &kp F   &kp G                                &kp H     &kp J     &kp K      &kp L    &kp SEMI  bbb
+       bbb   &kp Z          &kp X       &kp C       &kp V   &kp B            &to DEFAULT         &kp N     &kp M     &kp COMMA  &kp DOT  &kp FSLH  bbb
+                                        bbb         xxx     &kp SPACE   &kp SPACE    &kp SPACE   &kp SPACE xxx     bbb
       >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
     };
 
     default_window_layer {
       bindings = <
-        &lt FUNC ESC       &lt FUNC SQT      &kp COMMA  &kp DOT   &kp P         &kp Y                                          &kp F      &kp G     &kp C     &kp R      &kp L   &kp FSLH  
-        &kp TAB            &kp A        &kp O      &kp E     &kp U         &kp I                                          &kp D      &kp H     &kp T     &kp N      &kp S   &kp MINUS 
-        &kp LALT           &mo MOUSE    &kp Q      &kp J     &kp K         &kp X             &to DEFAULT                  &kp B      &kp M     &kp W     &kp V      &kp Z   &kp RET  
-                                                   &mo MOUSE &kp LGUI  &lt NAV SPACE &lt NUM ESC  &kp BACKSPACE &sk LSHFT  &kp LCTRL &kp C_PLAY_PAUSE 
+       bbb    &lt FUNC SQT  &kp COMMA  &kp DOT   &kp P      &kp Y                                          &kp F      &kp G     &kp C     &kp R      &kp L   bbb
+       bbb    &kp A         &kp O      &kp E     &kp U      &kp I                                          &kp D      &kp H     &kp T     &kp N      &kp S   bbb
+       bbb    &mo MOUSE     &kp Q      &kp J     &kp K      &kp X             &to DEFAULT                  &kp B      &kp M     &kp W     &kp V      &kp Z   bbb
+                                                   bbb   &kp LGUI  &lt NAV SPACE &lt NUM ESC  &kp BACKSPACE &sk LSHFT  &kp LCTRL bbb
       >;
       sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
     };
 
     thai_shift_layer{
       bindings = <
-        &to THAI    &kp LS(COMMA)       &kp LS(D)      &kp LS(SEMI)      &kp LS(P)     &kp A                                &kp LS(C)        &kp N7         &kp LS(T)         &kp LS(LBKT)      &kp LS(E)      &kp LS(S)
-        XXX         &kp LS(K)           &kp (N5)       &kp (C)           &kp EQUAL     &kp R                                &kp Z            &kp E          &kp MINUS         &kp LS(F)         &kp N4         &kp LS(W)
-        XXX         &kp LS(A)           &kp FSLH       &kp (Q)           &kp LS(I)     &kp LS(U)           &to DEFAULT      &kp LS(J)        &kp LS(N)      &kp LS(L)         &kp LS(V)         &kp LS(M)      &kp LS(RET)
-                                                       xxx               &kp LCTRL     &kp SPACE    &lt NUM ESC   &kp BACKSPACE  &sk LSHFT      &mo GUI_THAI      &kp C_PLAY_PAUSE
+       bbb    &kp LS(COMMA)       &kp LS(D)      &kp LS(SEMI)      &kp LS(P)     &kp A                                &kp LS(C)        &kp N7         &kp LS(T)         &kp LS(LBKT)      &kp LS(E)      bbb
+       bbb    &kp LS(K)           &kp (N5)       &kp (C)           &kp EQUAL     &kp R                                &kp Z            &kp E          &kp MINUS         &kp LS(F)         &kp N4         bbb
+       bbb    &kp LS(A)           &kp FSLH       &kp (Q)           &kp LS(I)     &kp LS(U)           &to DEFAULT      &kp LS(J)        &kp LS(N)      &kp LS(L)         &kp LS(V)         &kp LS(M)      bbb
+                                                       bbb               &kp LCTRL     &kp SPACE    &lt NUM ESC   &kp BACKSPACE  &sk LSHFT      &mo GUI_THAI      bbb
       >;
     };
     nav_thai_layer {
@@ -717,18 +718,18 @@ combos {
 
     sym_layer{
       bindings = <
-        &to DEFAULT  &to DEFAULT  xxx          xxx         xxx       xxx                              xxx              &kp LS(N7)     xxx              &kp LS(N8)  xxx           &kp BSLH                     
-        xxx          xxx          xxx          xxx         xxx       xxx                              xxx              &kp LS(N1)     &kp LS(N2)       &kp LS(N3)  &kp LS(N4)    xxx                        
-        xxx          xxx          xxx          xxx         xxx       xxx             xxx              xxx              xxx            xxx              xxx         xxx           xxx                        
+        xxx        &to DEFAULT  xxx          xxx         xxx       xxx                              xxx              &kp LS(N7)     xxx              &kp LS(N8)  xxx           xxx
+        xxx        xxx          xxx          xxx         xxx       xxx                              xxx              &kp LS(N1)     &kp LS(N2)       &kp LS(N3)  &kp LS(N4)    xxx                        
+        xxx        xxx          xxx          xxx         xxx       xxx             xxx              xxx              xxx            xxx              xxx         xxx           xxx                        
                                               xxx         &kp LCTRL &to DEFAULT   xxx   &kp LS(N6)   &kp LS(N5)       &kp LGUI       xxx
       >;
     };
 
     num_layer {
       bindings = <
-        xxx         xxx          xxx          &kp LALT    xxx         xxx                                 &kp BACKSPACE   &kp N7         xxx         &kp N8      &kp N9   &kp FSLH
+        xxx         xxx          xxx          &kp LALT    xxx         xxx                                 &kp BACKSPACE   &kp N7         xxx         &kp N8      &kp N9   xxx
         xxx         &kp LSHFT    &kp LCTRL    &kp LGUI    xxx         xxx                                 xxx             &kp N1         &kp N2      &kp N3      &kp N4   xxx
-        xxx         xxx          xxx          xxx         xxx         xxx           xxx                   xxx             &kp N0         &kp DOT     &kp SPACE   &kp BSLH &kp RET
+        xxx         xxx          xxx          xxx         xxx         xxx           xxx                   xxx             &kp N0         &kp DOT     &kp SPACE   &kp FSLH xxx
                                               xxx         xxx         &mo SNIPPET   xxx     &kp N6        &kp N5          &kp LS(RET)    xxx  
        >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -736,9 +737,9 @@ combos {
 
     function_layer {
       bindings = <
-        xxx                  xxx             &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3                    &to DEFAULT_WINDOW    &kp F7         &to DEFAULT &kp F8      &kp F9          &to DEFAULT
-        xxx                  &bt BT_CLR      &to DEFAULT     &out OUT_BLE    &out OUT_USB    &bt BT_SEL 4                    &to UBUNTU            &kp F1         &kp F2      &kp F3      &kp F4          xxx
-        xxx                  &bootloader     &reset          xxx             &macclang       xxx              &to QWERTY     &to THAI              &kp F11        &kp F12     &kp F13     &kp F14         &macclang
+        xxx                  xxx             &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3                    &to DEFAULT_WINDOW    &kp F7         &to DEFAULT &kp F8      &kp F9    xxx
+        xxx                  &bt BT_CLR      &to DEFAULT     &out OUT_BLE    &out OUT_USB    &bt BT_SEL 4                    &to UBUNTU            &kp F1         &kp F2      &kp F3      &kp F4    xxx
+        xxx                  &bootloader     &reset          xxx             &macclang       xxx              &to QWERTY     &to THAI              &kp F11        &kp F12     &kp F13     &kp F14   xxx
                                                              &to FIGMA       xxx             xxx         &to HON      &kp F6     &kp F5                &kp F10        &kp F
       >;
     };
