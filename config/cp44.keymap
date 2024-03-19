@@ -337,12 +337,6 @@ combos {
             bindings = <&key_repeat>;
             layers = <DEFAULT_LAYERS>;
         };
-        ccautobkt {
-            timeout-ms = <DELAY_FAST>;
-            key-positions = <19 9>;
-            bindings = <&zed_em_kay>;
-            layers = <DEFAULT_LAYERS>;
-        };
         ccslsym {
             timeout-ms = <DELAY_FAST>;
             key-positions = <15 16>;
@@ -420,18 +414,6 @@ combos {
             timeout-ms = <DELAY_FAST>;
             key-positions = <19 33>;
             bindings = <&kp RBRC>;
-            layers = <NAV_LAYERS>;
-        };
-        ccncodetab {
-            timeout-ms = <DELAY_FAST>;
-            key-positions = <32 20>; // 20 32
-            bindings = <&ncode_tab>;
-            layers = <DEFAULT_LAYERS>;
-        };
-        ccncodeptab {
-            timeout-ms = <DELAY_FAST>;
-            key-positions = <32 20>; // 20 32
-            bindings = <&ncode_p_tab>;
             layers = <NAV_LAYERS>;
         };
         ccsnip2 {
@@ -513,7 +495,7 @@ combos {
       bindings = <
         bbb     &kp ESC      GO_TOGGLE      &sk LALT        GO_VSCODE         &kp LS(INS)                                &kp BACKSPACE      &kp PG_DN       &kp UP         &kp PG_UP   &kp FSLH     bbb
         bbb     &kp LSHFT    &kp LCTRL      &kp LGUI        GO_ITERM          GO_OBSIDIAN                                &td7               &kp LEFT        &kp DOWN       &kp RIGHT   &kp TAB      bbb
-        bbb     GO_FINDER    GO_FIGMA       GO_DISCORD      GO_SAFARI         &to FIGMA             C_LAYOUT             &kp LG(RET)        &vim_j          &vim_y         &kp LG(V)   UNDO         bbb
+        bbb     GO_FINDER    GO_FIGMA       GO_DISCORD      GO_SAFARI         &to FIGMA             C_LAYOUT             &kp LG(RET)        xxx          xxx         &kp LG(V)   UNDO         bbb
                                             bbb             C_LAYOUT          xxx           &mo SNIPPET    &kp LS(RET)   GO_RAYCAST         GO_HOMEROW      bbb
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
@@ -552,7 +534,7 @@ combos {
         &to THAI_SHIFT      &lt FUNC ESC    GO_TOGGLE          &kp LALT        GO_VSCODE         xxx                                      xxx          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    &td7
         xxx                 &kp LSHFT       &kp LCTRL          &kp LGUI        GO_ITERM          GO_OBSIDIAN                              xxx          &kp LEFT       &kp DOWN       &kp RIGHT   &kp TAB      xxx
         xxx                 GO_FINDER       xxx                GO_DISCORD      GO_SAFARI         xxx             &to DEFAULT              xxx          COPY           KILL_WINDOW    PASTE       UNDO         &kp LS(RET)
-                                                               C_LAYOUT          xxx               xxx      &mo SNIPPET        GO_HOMEROW   GO_RAYCAST   &disc_mic      &kp T
+                                                               C_LAYOUT          xxx               xxx      &mo SNIPPET        GO_HOMEROW   GO_RAYCAST   xxx      &kp T
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
@@ -628,7 +610,7 @@ combos {
       bindings = <
         xxx                  xxx             &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3                    &to DEFAULT_WINDOW    &kp F7         &to DEFAULT &kp F8      &kp F9    xxx
         xxx                  &bt BT_CLR      &to DEFAULT     &out OUT_BLE    &out OUT_USB    &bt BT_SEL 4                    &to UBUNTU            &kp F1         &kp F2      &kp F3      &kp F4    xxx
-        xxx                  &bootloader     &reset          xxx             &macclang       xxx              &to QWERTY     &to THAI              &kp F11        &kp F12     &kp F13     &kp F14   xxx
+        xxx                  &bootloader     &reset          xxx             xxx       xxx              &to QWERTY     &to THAI              &kp F11        &kp F12     &kp F13     &kp F14   xxx
                                                              &to FIGMA       xxx             xxx         &to HON      &kp F6     &kp F5                &kp F10        &kp F
       >;
     };
@@ -636,7 +618,7 @@ combos {
     snippet_layer{
       bindings = <
         xxx         xxx          xxx          xxx       xxx     xxx                         xxx         xxx         xxx         xxx         xxx       xxx
-        xxx         xxx          xxx          xxx       xxx     xxx                         xxx         &snphone    &snemail    xxx         xxx       xxx
+        xxx         xxx          xxx          xxx       xxx     xxx                         xxx         xxx         xxx         xxx         xxx       xxx
         xxx         xxx          xxx          xxx       xxx     xxx          xxx            xxx         xxx         xxx         xxx         xxx       xxx
                                               xxx       xxx     xxx     xxx     xxx         xxx         xxx         xxx
       >;
@@ -653,7 +635,7 @@ combos {
     figma_layer {
       bindings = <
         FG_K        FG_H         FG_UNDO      FG_COPY   FG_PASTE        GO_ITERM                                 xxx         xxx         xxx         xxx         xxx       &to DEFAULT
-        FG_R        &figma_t     GO_FIGMA     FG_GROUP  FG_ZIN          FG_AUTO                                  xxx         xxx         xxx         xxx         xxx       xxx
+        FG_R        xxx     GO_FIGMA     FG_GROUP  FG_ZIN          FG_AUTO                                  xxx         xxx         xxx         xxx         xxx       xxx
         FG_L        FG_MUP       FG_MDOWN     FG_UGROUP FG_ZOUT         FG_V              &to DEFAULT            xxx         xxx         xxx         xxx         xxx       xxx
                                               &to DEFAULT   &kp BACKSPACE   &kp LSHFT     &mo FIGMA2     xxx         xxx         xxx         xxx
       >;
