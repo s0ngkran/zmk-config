@@ -622,7 +622,7 @@ combos {
     };
     nav_layer {
       bindings = <
-        bbb     &kp ESC      GO_TOGGLE      &sk LALT        GO_VSCODE         &kp LS(INS)                                &kp BACKSPACE      &kp PG_DN       &kp UP         &kp PG_UP   &kp FSLH     bbb
+        bbb     &kp ESC      GO_TOGGLE      &sk LALT        GO_VSCODE         &kp INS                                    &kp BACKSPACE      &kp PG_DN       &kp UP         &kp PG_UP   &kp FSLH     bbb
         bbb     &kp LSHFT    &kp LCTRL      &kp LGUI        GO_ITERM          GO_OBSIDIAN                                &td7               &kp LEFT        &kp DOWN       &kp RIGHT   &kp TAB      bbb
         bbb     GO_FINDER    GO_FIGMA       GO_DISCORD      GO_SAFARI         &to FIGMA             C_LAYOUT             &kp LG(RET)        &vim_j          &vim_y         &kp LG(V)   UNDO         bbb
                                             bbb             C_LAYOUT          xxx           &mo SNIPPET    &kp LS(RET)   GO_RAYCAST         GO_HOMEROW      bbb
