@@ -3,6 +3,14 @@
  *
  * SPDX-License-Identifier: MIT
 
+    mouse_layer{
+      bindings = <
+        xxx         xxx          xxx          xxx         xxx       xxx                         xxx         xxx            &mmv MOVE_UP   xxx             xxx                xxx     
+        xxx         xxx          xxx          &mkp RCLK   &mkp LCLK xxx                         xxx         &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT xxx                xxx     
+        xxx         xxx          xxx          xxx         xxx       xxx       &mkp LCLK         xxx         xxx            xxx            xxx             xxx                &mkp LCLK 
+                                                 xxx          xxx     xxx     xxx      xxx    &mkp LCLK     &mkp RCLK      xxx
+      >;
+    };
     jump_layer{
       bindings = <
         xxx         xxx          xxx          xxx       xxx     xxx                         xxx         xxx         xxx         xxx         xxx       xxx
@@ -89,7 +97,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
-#include <dt-bindings/zmk/mouse.h>
+// #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
@@ -326,18 +334,6 @@
             bindings
                 = <&kp LC(SPACE)>
                 , <&tog THAI>
-                ;
-        };
-        figma_t: figma_t {
-            label = "figma_t";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings
-                = <&kp T>
-                , <&mkp LCLK>
-                , <&to DEFAULT>
                 ;
         };
         snphone: snphone {
@@ -753,18 +749,10 @@ combos {
       >;
     };
 
-    mouse_layer{
-      bindings = <
-        xxx         xxx          xxx          xxx         xxx       xxx                         xxx         xxx            &mmv MOVE_UP   xxx             xxx                xxx     
-        xxx         xxx          xxx          &mkp RCLK   &mkp LCLK xxx                         xxx         &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT xxx                xxx     
-        xxx         xxx          xxx          xxx         xxx       xxx       &mkp LCLK         xxx         xxx            xxx            xxx             xxx                &mkp LCLK 
-                                                 xxx          xxx     xxx     xxx      xxx    &mkp LCLK     &mkp RCLK      xxx
-      >;
-    };
     figma_layer {
       bindings = <
         FG_K        FG_H         FG_UNDO      FG_COPY   FG_PASTE        GO_ITERM                                 xxx         xxx         xxx         xxx         xxx       &to DEFAULT
-        FG_R        &figma_t     GO_FIGMA     FG_GROUP  FG_ZIN          FG_AUTO                                  xxx         xxx         xxx         xxx         xxx       xxx
+        FG_R        xxx     GO_FIGMA     FG_GROUP  FG_ZIN          FG_AUTO                                  xxx         xxx         xxx         xxx         xxx       xxx
         FG_L        FG_MUP       FG_MDOWN     FG_UGROUP FG_ZOUT         FG_V              &to DEFAULT            xxx         xxx         xxx         xxx         xxx       xxx
                                               &to DEFAULT   &kp BACKSPACE   &kp LSHFT     &mo FIGMA2     xxx         xxx         xxx         xxx
       >;
