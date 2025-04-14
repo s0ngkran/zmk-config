@@ -622,10 +622,10 @@ combos {
     };
     nav_layer {
       bindings = <
-        bbb     &kp ESC      GO_TOGGLE      &sk LALT        GO_VSCODE         &kp INS                                    &kp BACKSPACE      &kp PG_DN       &kp UP         &kp PG_UP   &kp FSLH     bbb
+        bbb     C_LAYOUT      GO_TOGGLE      &sk LALT       GO_VSCODE         &kp INS                                    &kp BACKSPACE      &kp PG_DN       &kp UP         &kp PG_UP   &kp FSLH     bbb
         bbb     &kp LSHFT    &kp LCTRL      &kp LGUI        GO_ITERM          GO_OBSIDIAN                                &td7               &kp LEFT        &kp DOWN       &kp RIGHT   &kp TAB      bbb
         bbb     GO_FINDER    GO_FIGMA       GO_DISCORD      GO_SAFARI         &to FIGMA             C_LAYOUT             &kp LG(RET)        &vim_j          &vim_y         &kp LG(V)   UNDO         bbb
-                                            bbb             C_LAYOUT          xxx           &mo SNIPPET    &kp LS(RET)   GO_RAYCAST         GO_HOMEROW      bbb
+                                            bbb             xxx          xxx           &mo SNIPPET    &kp LS(RET)   GO_RAYCAST         GO_HOMEROW      bbb
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
    };
@@ -740,7 +740,7 @@ combos {
         xxx                  xxx             &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3                    &to DEFAULT_WINDOW    &kp F7         &to DEFAULT &kp F8      &kp F9    xxx
         xxx                  &bt BT_CLR      &to DEFAULT     &out OUT_BLE    &out OUT_USB    &bt BT_SEL 4                    &to UBUNTU            &kp F1         &kp F2      &kp F3      &kp F4    xxx
         xxx                  &bootloader     &reset          xxx             &macclang       xxx              &to QWERTY     &to THAI              &kp F11        &kp F12     &kp F13     &kp F14   xxx
-                                                             &to FIGMA       xxx             xxx         &to HON      &kp F6     &kp F5                &kp F10        &kp F
+                                                             &to FIGMA       xxx             C_LAYOUT         &to HON      &kp F6     &kp F5                &kp F10        &kp F
       >;
     };
 
