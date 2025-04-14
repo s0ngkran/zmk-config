@@ -98,6 +98,11 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 // #include <dt-bindings/zmk/mouse.h>
+
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
@@ -142,9 +147,6 @@
 #define MOVE_LEFT MOVE_HOR(-U_MOUSE_MOVE_MAX)
 #define MOVE_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
 
-&mmv {
-    time-to-max-speed-ms = <500>;             /* <--- How long time until max speed is reached (default: 500) */
-};
 
 #define U_MOUSE_SCROLL_MAX 100                    /* <--- New max speed setting (default: 10) */
 
@@ -237,11 +239,6 @@
 #define FG_LL &kp LS(L)
 #define FG_UNDO &kp LG(Z)
 
-&mwh {
- time-to-max-speed-ms = <500>;                 /* <--- How long time until max speed is reached */
-};
-
-
 &mt {
     tapping-term-ms = <150>;
 };
@@ -250,7 +247,6 @@
     release-after-ms = <900>;  // release after ms
     quick-release;             // no double capitalization when rolling keys
 };
-
 
 / {
     macros {
@@ -654,6 +650,7 @@ combos {
                                                        bbb               &kp LCTRL     &kp SPACE    &lt NUM ESC   &kp BACKSPACE  &sk LSHFT      &mo GUI_THAI      bbb
       >;
     };
+    
     nav_thai_layer {
       bindings = <
         &to THAI_SHIFT      &lt FUNC ESC    GO_TOGGLE          &kp LALT        GO_VSCODE         xxx                                      xxx          &kp PG_DN      &kp UP         &kp PG_UP   &kp RIGHT    &td7
@@ -712,7 +709,7 @@ combos {
       >;
     };
 
-    sym_layer{
+    sym_layer {
       bindings = <
         xxx        &to DEFAULT  xxx          xxx         xxx       xxx                              xxx              &kp LS(N7)     xxx              &kp LS(N8)  xxx           xxx
         xxx        xxx          xxx          xxx         xxx       xxx                              xxx              &kp LS(N1)     &kp LS(N2)       &kp LS(N3)  &kp LS(N4)    xxx                        
@@ -735,7 +732,7 @@ combos {
       bindings = <
         xxx                  xxx             &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3                    &to DEFAULT_WINDOW    &kp F7         &to DEFAULT &kp F8      &kp F9    xxx
         xxx                  &bt BT_CLR      &to DEFAULT     &out OUT_BLE    &out OUT_USB    &bt BT_SEL 4                    &to UBUNTU            &kp F1         &kp F2      &kp F3      &kp F4    xxx
-        xxx                  &bootloader     &reset          xxx             &macclang       xxx              &to QWERTY     &to THAI              &kp F11        &kp F12     &kp F13     &kp F14   xxx
+        xxx                  &bootloader     &sys_reset          xxx             &macclang       xxx              &to QWERTY     &to THAI              &kp F11        &kp F12     &kp F13     &kp F14   xxx
                                                              &to FIGMA       xxx             C_LAYOUT         &to HON      &kp F6     &kp F5                &kp F10        &kp F
       >;
     };
@@ -744,6 +741,15 @@ combos {
       bindings = <
         xxx         xxx          xxx          xxx       xxx     xxx                         xxx         xxx         xxx         xxx         xxx       xxx
         xxx         xxx          xxx          xxx       xxx     xxx                         xxx         &snphone    &snemail    xxx         xxx       xxx
+        xxx         xxx          xxx          xxx       xxx     xxx          xxx            xxx         xxx         xxx         xxx         xxx       xxx
+                                              xxx       xxx     xxx     xxx     xxx         xxx         xxx         xxx
+      >;
+    };
+
+    mouse_layer{
+      bindings = <
+        xxx         xxx          xxx          xxx       xxx     xxx                         xxx         xxx         xxx         xxx         xxx       xxx
+        xxx         xxx          &msc SCRL_DOWN          &mmv MOVE_X(100)       &mkp LCLK     xxx                         xxx         xxx         xxx         xxx         xxx       xxx
         xxx         xxx          xxx          xxx       xxx     xxx          xxx            xxx         xxx         xxx         xxx         xxx       xxx
                                               xxx       xxx     xxx     xxx     xxx         xxx         xxx         xxx
       >;
