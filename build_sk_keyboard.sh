@@ -8,5 +8,5 @@ echo
 echo "build/zephyr/zmk.uf2"
 echo
 
-open build/zephyr/
+# open build/zephyr/
 
