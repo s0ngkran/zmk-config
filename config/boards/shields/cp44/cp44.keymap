@@ -787,8 +787,8 @@ combos {
       bindings = <
         xxx                  xxx             &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3                    &to DEFAULT_WINDOW    &kp F7         &to DEFAULT &kp F8      &kp F9    xxx
         xxx                  &bt BT_CLR      &to DEFAULT     &out OUT_BLE    &out OUT_USB    &bt BT_SEL 4                    &to UBUNTU            &kp F1         &kp F2      &kp F3      &kp F4    xxx
-        xxx                  &bootloader     &sys_reset          xxx             &macclang       xxx              &to QWERTY     &to THAI              &kp F11        &kp F12     &kp F13     &kp F14   xxx
-                                                             &to FIGMA       xxx             C_LAYOUT         &to HON      &kp F6     &kp F5                &kp F10        &kp F
+        xxx                  &bootloader     &sys_reset      xxx             &macclang       xxx              &to QWERTY     &to THAI              &kp F11        &kp F12     &kp F13     &kp F14   xxx
+                                                             &to FIGMA       xxx       C_LAYOUT         &to HON      &kp F6     &kp F5                &kp F10        &kp F
       >;
     };
 
