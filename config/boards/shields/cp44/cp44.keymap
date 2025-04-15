@@ -249,6 +249,22 @@
 };
 
 / {
+  behaviors {
+                td7: tap_dancee7 {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "TAP_DANCE_7";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <200>;
+                    bindings = <&kp LG(LA(LC(LS(N7))))>, <&kp LG(LA(LC(LS(N8))))>,<&kp LG(LA(LC(LS(N9))))>;
+                };
+                td8: tap_dancee8 {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "TAP_DANCE_8";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <200>;
+                    bindings = <&kp LG(LA(LC(A)))>, <&kp LG(LA(LC(B)))>;
+                };
+    };
     macros {
         zed_em_kay: zed_em_kay {
             label = "ZM_zed_em_kay";
@@ -348,22 +364,6 @@
             tap-ms = <10>;
             bindings = <&kp J &kp I &kp N &kp N &kp A &kp W &kp A &kp T &kp N8 &kp AT_SIGN &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
         };
-    };
-  behaviors {
-                td7: tap_dancee7 {
-                    compatible = "zmk,behavior-tap-dance";
-                    label = "TAP_DANCE_7";
-                    #binding-cells = <0>;
-                    tapping-term-ms = <200>;
-                    bindings = <&kp LG(LA(LC(LS(N7))))>, <&kp LG(LA(LC(LS(N8))))>,<&kp LG(LA(LC(LS(N9))))>;
-                };
-                td8: tap_dancee8 {
-                    compatible = "zmk,behavior-tap-dance";
-                    label = "TAP_DANCE_8";
-                    #binding-cells = <0>;
-                    tapping-term-ms = <200>;
-                    bindings = <&kp LG(LA(LC(A)))>, <&kp LG(LA(LC(B)))>;
-                };
     };
 
 combos {
