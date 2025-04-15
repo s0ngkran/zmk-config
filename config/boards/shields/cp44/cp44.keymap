@@ -803,11 +803,12 @@ combos {
 
     mouse_layer{
       bindings = <
-        xxx         xxx          xxx          xxx       xxx             xxx                                             xxx         &kp PG_DN       &mmv MOVE_Y(-MROUGH)     &kp PG_UP         xxx       xxx
-        xxx         xxx          xxx          xxx     &mo MOUSE_FINE    xxx                                             xxx         &mmv MOVE_X(-MROUGH)   &mmv MOVE_Y(MROUGH)     &mmv MOVE_X(MROUGH)         xxx       xxx
-        xxx         xxx          xxx          xxx       xxx             xxx                 xxx                         xxx         xxx                   xxx         xxx         xxx       xxx
-                                              xxx       xxx             xxx     xxx                 &mkp MCLK        &mkp LCLK      &mkp RCLK         xxx
+        xxx         xxx          xxx          xxx                                 xxx                                       xxx                                             xxx         &kp PG_DN              &mmv MOVE_Y(-MROUGH)     &kp PG_UP         xxx       xxx
+        xxx         xxx          xxx          &kp PRINTSCREEN                     &mo MOUSE_FINE                            xxx                                             xxx         &mmv MOVE_X(-MROUGH)   &mmv MOVE_Y(MROUGH)     &mmv MOVE_X(MROUGH)         xxx       xxx
+        xxx         xxx          xxx          &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS   &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS    xxx                 xxx                         xxx         xxx                   xxx         xxx         xxx       xxx
+                                              xxx                                 &kp K_POWER                               xxx               xxx                 &mkp MCLK        &mkp LCLK      &mkp RCLK         xxx
       >;
+      sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
     };
 
     mouse_fine_layer{
